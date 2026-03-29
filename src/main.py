@@ -94,6 +94,7 @@ async def interactive_mode() -> None:
 
     print("=" * 60)
     print("  ComInc. AI Agent System v0.2")
+    print(f"  Orchestrator: ottar")
     print(f"  Team: {agent_names}")
     print("  Type your instruction. 'quit' to exit.")
     print("  Use '@agent_name message' to talk directly to an agent.")

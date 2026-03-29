@@ -1,5 +1,6 @@
 """Base configuration shared across all ComInc. agents."""
 
+import os
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).parent.parent.parent
@@ -47,6 +48,10 @@ MCP_SERVERS = {
         "command": "npx",
         "args": ["-y", "@anthropic-ai/figma-mcp"],
     },
+    "stitch": {
+        "url": "https://stitch.googleapis.com/mcp",
+        "headers": {"X-Goog-Api-Key": os.environ.get("STITCH_API_KEY", "")},
+    },
 }
 
 
@@ -71,10 +76,10 @@ AGENT_MCP = {
     "hana":   ("notion", "gmail", "google-calendar"),
     "fin":    ("notion",),
     "law":    ("notion",),
-    "webber": ("notion", "figma", "github"),
-    "clare":  ("notion", "figma"),
-    "yuri":   ("notion", "figma"),
-    "dev":    ("notion", "github", "figma"),
+    "webber": ("notion", "figma", "github", "stitch"),
+    "clare":  ("notion", "figma", "stitch"),
+    "yuri":   ("notion", "figma", "stitch"),
+    "dev":    ("notion", "github", "figma", "stitch"),
     "cat":    ("notion",),
     "kai":    ("notion", "gmail", "google-calendar"),
     "min":    ("notion", "gmail", "google-calendar"),
