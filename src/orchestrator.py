@@ -41,7 +41,7 @@ AGENT_REGISTRY: list[dict] = [
         "key": "webber",
         "prompt_file": "web_director",
         "description": "Web制作ディレクター。技術選定、サイト設計、品質管理、チーム統括。",
-        "tools": [*TOOLS_BASE, "WebFetch"],
+        "tools": TOOLS_WEB,
     },
     {
         "key": "clare",

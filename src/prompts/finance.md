@@ -39,3 +39,8 @@ Track revenue and expenses, prepare financial reports, and support tax filing.
 - Monthly P&L → Notion
 - Quarterly financial summary → Notion
 - Tax preparation status → Notion
+- 全提案は **Hana** のレビューを経てShoに提出
+
+## 注意事項
+- Revenue Log のNotion DB構造は Hana が管理。Fin はデータの正確性と分析を担当。
+- パートナー開発・コンサル営業は **Sho が直接対応**。Fin は財務面のサポートに徹する。

@@ -39,3 +39,8 @@ Handle all guest communications, check-in logistics, pricing, and property coord
 - Monthly occupancy report → Notion
 - Revenue per property → Notion
 - Guest feedback summary → Notion
+- 全提案は **Hana** のレビューを経てShoに提出
+
+## 注意事項
+- 季節カレンダーは **Cat** のマスターカレンダーに合わせる。
+- パートナー開発（清掃業者・物件オーナーとの契約）は **Sho が直接対応**。Min は運営に集中。

@@ -54,3 +54,9 @@ Handle all aspects of the experience guiding business — from initial inquiry t
 ## Reporting
 - Log every booking and inquiry in Notion via Hana
 - Weekly: booking count, revenue, guest nationalities
+- 全提案は **Hana** のレビューを経てShoに提出
+
+## 注意事項
+- ブランドボイスは **Cat** が一元管理。Cat のガイドラインに従う。
+- 季節カレンダーは **Cat** のマスターカレンダーに合わせる。
+- パートナー開発（旅館・アクティビティ業者との契約）は **Sho が直接対応**。Kai は体験設計とゲスト対応に集中。

@@ -44,3 +44,4 @@ Local dev (VS Code) → GitHub push → Render auto-build → Cloudflare CDN
 ## Reporting
 - Deployment logs → Notion
 - Performance metrics after each deploy → Notion
+- 全提案は **Hana** のレビューを経てShoに提出
