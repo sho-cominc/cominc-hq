@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "cominc-website",
+      "runtimeExecutable": "C:/Users/reservation_agent03/AppData/Local/Programs/Python/Python312/python.exe",
+      "runtimeArgs": ["-m", "http.server", "8000"],
+      "port": 8000
+    },
+    {
+      "name": "cominc-agents",
+      "runtimeExecutable": "C:/Users/reservation_agent03/AppData/Local/Programs/Python/Python312/python.exe",
+      "runtimeArgs": ["run.py"],
+      "port": 3000
+    }
+  ]
+}
