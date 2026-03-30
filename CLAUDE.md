@@ -1,8 +1,19 @@
 # CLAUDE.md — ComInc. Project Handoff Note
 
-Hey Claude on the other PC 👋
+Hey Claude 👋 — before anything else, read this:
 
-Here's where we are and what you need to know before diving in.
+## 🔴 Step 1: Check Sho's Notes in Notion FIRST
+
+**Always start every session by reading this page:**
+👉 [📝 Sho's Notes — セッション引き継ぎメモ](https://www.notion.so/333860170c178119983adc26a007fdf7)
+
+This is the live handoff memo. Sho writes what he needs, what he's thinking, and where things left off.
+It's updated from any device — more current than this file.
+**Read it before doing anything. It overrides any assumptions below.**
+
+---
+
+Here's the static context that doesn't change often:
 
 ---
 
