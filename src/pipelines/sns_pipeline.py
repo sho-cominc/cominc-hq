@@ -16,7 +16,6 @@ from src.agents.base import load_prompt, get_agent_mcp, TOOLS_WEB
 from src.pipelines.sns_prompts import (
     FETCH_IDEAS_PROMPT,
     GENERATE_DRAFTS_PROMPT,
-    REVIEW_DRAFTS_PROMPT,
     WRITE_DRAFTS_PROMPT,
     SCHEDULE_PROMPT,
 )
@@ -137,7 +136,7 @@ def _extract_json(response: str) -> dict | list | None:
 # Pipeline stages
 # ---------------------------------------------------------------------------
 async def run_sns_pipeline() -> None:
-    """Full pipeline: fetch ideas -> generate drafts -> Webber review -> write to Notion."""
+    """Full pipeline: fetch ideas -> Cat generates drafts -> write to Notion -> Sho reviews."""
     print("\n🐱 SNS Content Pipeline v1 starting...\n")
 
     # Stage 1: Fetch unprocessed ideas from Notion
@@ -158,7 +157,7 @@ async def run_sns_pipeline() -> None:
     strategy_excerpt = _load_strategy_excerpt()
     season_context = _get_season_context()
 
-    # Stage 2 + 2.5 + 3: For each idea, generate → review → write
+    # Stage 2 + 3: For each idea, generate → write
     for i, idea in enumerate(ideas, 1):
         title = idea.get("title", "untitled")
         page_id = idea.get("page_id", "unknown")
@@ -181,45 +180,16 @@ async def run_sns_pipeline() -> None:
             print(f"   ⚠️  Could not parse drafts for: {title}. Skipping.")
             continue
 
-        # --- Stage 2.5: Webber reviews drafts ---
-        print(f"🔍 Stage 2.5: Webber reviewing drafts...")
+        draft_count = len(drafts_data.get("drafts", []))
+        skipped = drafts_data.get("skip_platforms", [])
+        quality_note = drafts_data.get("quality_note", "")
+        print(f"   ✅ {draft_count} draft(s) generated.")
+        if skipped:
+            print(f"   ✂️  Skipped: {skipped}")
+        if quality_note and quality_note != "all passed":
+            print(f"   📝 Cat QA: {quality_note}")
 
-        review_prompt = REVIEW_DRAFTS_PROMPT.format(
-            memo_title=title,
-            drafts_json=json.dumps(
-                drafts_data.get("drafts", []),
-                ensure_ascii=False,
-                indent=2,
-            ),
-            sns_strategy_excerpt=strategy_excerpt,
-            source_idea_id=page_id,
-            content_pillar=drafts_data.get("content_pillar", "unseen_japan"),
-            seasonal_score=drafts_data.get("seasonal_relevance_score", 5),
-            suggested_timing=drafts_data.get("suggested_timing", ""),
-        )
-        review_response = await _call_agent("webber", review_prompt)
-        reviewed_data = _extract_json(review_response)
-
-        if reviewed_data:
-            # Filter out cut drafts
-            all_reviewed = reviewed_data.get("drafts", [])
-            approved_drafts = [d for d in all_reviewed if d.get("status") != "cut"]
-            cut_count = len(all_reviewed) - len(approved_drafts)
-
-            if not approved_drafts:
-                print(f"   ✂️  Webber cut all drafts for: {title}. Skipping.")
-                continue
-
-            # Replace drafts with reviewed versions
-            drafts_data["drafts"] = approved_drafts
-            review_summary = reviewed_data.get("review_summary", "")
-            print(f"   ✅ {len(approved_drafts)} approved, {cut_count} cut.")
-            if review_summary:
-                print(f"   📝 Webber: {review_summary}")
-        else:
-            print(f"   ⚠️  Could not parse Webber's review. Using Cat's original drafts.")
-
-        # --- Stage 3: Write approved drafts to Notion ---
+        # --- Stage 3: Write drafts to Notion (Status=draft → Sho reviews) ---
         print(f"📤 Stage 3: Writing drafts to SNS Queue...")
 
         write_prompt = WRITE_DRAFTS_PROMPT.format(
@@ -237,6 +207,7 @@ async def run_sns_pipeline() -> None:
         print(f"   ✅ Done: {title}\n")
 
     print("🎉 SNS Pipeline complete. Check Notion SNS Queue for drafts.")
+    print("   → Sho: SNS Queue の draft を確認して approved に変えてね。")
 
 
 async def run_sns_scheduling() -> None:

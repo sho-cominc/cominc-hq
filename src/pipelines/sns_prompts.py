@@ -90,6 +90,15 @@ Do NOT generate Threads, LinkedIn, YouTube, or TikTok drafts yet.
 - Suggest posting order and timing
 - Include a CTA in every draft (follow, visit cominc.co, DM, save, share, etc.)
 
+### Quality Gate (self-review before output)
+You are a professional marketer. Before returning ANY draft, check:
+1. **Brand voice** — Does this sound like Sho? First-person, warm, slightly irreverent. NOT corporate, NOT tourist-board generic, NOT try-hard.
+2. **2-Layer alignment** — X = Sho's thoughts (Layer 1). Instagram = place/experience (Layer 2). If a draft is on the wrong layer, rewrite it.
+3. **CTA** — Every draft has a natural call-to-action. No exceptions.
+4. **Platform fit** — X under 280 chars? IG caption 50-300 words? Hashtag counts correct?
+5. **"Would Sho actually post this?"** — If no, rewrite or drop it entirely. Set that platform to skip_platforms with a reason.
+Better to output 1 strong draft than 3 mediocre ones. Be ruthless with yourself.
+
 ### Output Format (return ONLY valid JSON):
 ```json
 {{
@@ -122,96 +131,10 @@ Do NOT generate Threads, LinkedIn, YouTube, or TikTok drafts yet.
   ],
   "suggested_post_order": ["x_twitter_en", "instagram_en", "instagram_jp"],
   "suggested_timing": "<reasoning about when to post>",
-  "skip_platforms": []
+  "skip_platforms": [],
+  "quality_note": "<brief note on what was cut or rewritten during self-review, or 'all passed'>"
 }}
 ```
-"""
-
-# ---------------------------------------------------------------------------
-# Stage 2.5: Webber reviews drafts for quality
-# ---------------------------------------------------------------------------
-REVIEW_DRAFTS_PROMPT = """\
-You are reviewing SNS content drafts as Webber, Web Director of ComInc.
-
-Your job is quality control. Review each draft and either approve (with edits) or cut it entirely.
-
-## Review Criteria
-
-### 1. Brand Voice Consistency
-- Tone: warm, knowledgeable, slightly irreverent. Like a well-traveled friend who lives there.
-- First-person always ("I" / "we"), never third-person ("ComInc. offers...")
-- NOT: corporate, overly polished, tourist-board generic, try-hard cool
-- Emoji: minimal (one at most per caption, never a wall)
-- This is Sho's voice. If it doesn't sound like a real person who lives in rural Japan, cut it.
-
-### 2. 2-Layer Strategy Alignment
-""" + TWO_LAYER_STRATEGY + """
-- If a draft puts place/experience content on X or thought/philosophy content on Instagram, rewrite it to fit or cut it.
-
-### 3. CTA Check
-- Every draft MUST include a call-to-action (follow, visit cominc.co, DM, save, share, link in bio, etc.)
-- CTA should feel natural, not forced.
-
-### 4. Platform-Specific Optimization
-""" + PLATFORM_RULES + """
-
-### 5. Quality Gate
-- If a draft is mediocre, generic, or doesn't meet criteria — CUT IT. Better to post nothing than weak content.
-- Be ruthless.
-
-## Source Idea
-{memo_title}
-
-## Drafts to Review
-{drafts_json}
-
-## Strategy Reference
-{sns_strategy_excerpt}
-
----
-
-Return ONLY valid JSON:
-```json
-{{
-  "source_idea_id": "{source_idea_id}",
-  "content_pillar": "{content_pillar}",
-  "seasonal_relevance_score": {seasonal_score},
-  "review_summary": "<1-2 sentence summary of review>",
-  "drafts": [
-    {{
-      "platform": "x_twitter",
-      "language": "en",
-      "status": "approved",
-      "content": "<final content — edited if needed>",
-      "edits_made": "<what was changed, or 'none'>",
-      "thread_count": 1
-    }},
-    {{
-      "platform": "instagram",
-      "language": "en",
-      "status": "approved",
-      "content": "<final caption>",
-      "hashtags": ["#tag1"],
-      "format_suggestion": "reel",
-      "visual_direction": "<specific direction>",
-      "edits_made": "<what was changed, or 'none'>"
-    }},
-    {{
-      "platform": "instagram",
-      "language": "jp",
-      "status": "approved",
-      "content": "<final caption in Japanese>",
-      "hashtags": ["#tag1"],
-      "format_suggestion": "reel",
-      "visual_direction": "<same as EN>",
-      "edits_made": "<what was changed, or 'none'>"
-    }}
-  ],
-  "suggested_timing": "{suggested_timing}"
-}}
-```
-
-For cut drafts, set status to "cut" and include "cut_reason".
 """
 
 # ---------------------------------------------------------------------------
