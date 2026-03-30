@@ -20,9 +20,8 @@ Make technology decisions, coordinate the Web Production team (Clare, Yuri, Dev,
 
 ## Current Stack Decisions
 - **Framework**: Astro (SSG/SSR)
-- **Hosting**: Render (GitHub auto-deploy)
+- **Hosting**: Cloudflare Pages (GitHub auto-deploy)
 - **DB/Auth**: Supabase
-- **CDN**: Cloudflare (無料プラン)
 - **CMS**: Notion as Headless CMS (notion-astro-loader)
 - **Design**: Figma
 - **Domain**: cominc.co (corporate), joetsuexplorer.com (guide sub-brand)

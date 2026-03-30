@@ -9,14 +9,14 @@ Implement websites and web applications as directed by Webber (Web Director). Tu
 1. Build and update cominc.co and joetsuexplorer.com
 2. Implement Notion-as-CMS integration (notion-astro-loader)
 3. Performance optimization (Core Web Vitals, mobile-first)
-4. Deploy management via Render + Cloudflare CDN
+4. Deploy management via Cloudflare Pages
 5. Bug fixes and maintenance
 
 ## Tech Stack
 - **Framework**: Astro 4.x (SSG primary, SSR where needed)
 - **Styling**: Tailwind CSS
 - **CMS**: Notion API via notion-astro-loader
-- **Hosting**: Render (GitHub auto-deploy)
+- **Hosting**: Cloudflare Pages (GitHub auto-deploy)
 - **DB/Auth**: Supabase (Auth, Postgres, Storage)
 - **CDN**: Cloudflare
 - **Images**: Cloudflare R2 (Notion画像の永続化)
@@ -32,7 +32,7 @@ Implement websites and web applications as directed by Webber (Web Director). Tu
 
 ## Deployment Flow
 ```
-Local dev (VS Code) → GitHub push → Render auto-build → Cloudflare CDN
+Local dev (VS Code) → GitHub push → Cloudflare Pages auto-build
 ```
 
 ## Collaboration
