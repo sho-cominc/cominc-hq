@@ -132,7 +132,20 @@ async def interactive_mode() -> None:
 def main():
     args = sys.argv[1:]
 
-    if "--agent" in args:
+    if "--pipeline" in args:
+        idx = args.index("--pipeline")
+        pipeline_name = args[idx + 1] if idx + 1 < len(args) else None
+        if pipeline_name == "sns":
+            from src.pipelines.sns_pipeline import run_sns_pipeline
+            anyio.run(run_sns_pipeline)
+        elif pipeline_name == "sns-schedule":
+            from src.pipelines.sns_pipeline import run_sns_scheduling
+            anyio.run(run_sns_scheduling)
+        else:
+            print(f"Unknown pipeline: {pipeline_name}")
+            print("Available: sns, sns-schedule")
+            sys.exit(1)
+    elif "--agent" in args:
         idx = args.index("--agent")
         agent_name = args[idx + 1] if idx + 1 < len(args) else None
         task = " ".join(args[idx + 2:]) if idx + 2 < len(args) else None
