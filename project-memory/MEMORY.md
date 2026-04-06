@@ -1,0 +1,9 @@
+- [John hotel × Kawano](project_john_hotel_kawano.md) — hotel renovation referral, active deal as of 2026-04-01
+- [Kominka location](project_kominka_location.md) — central Takada castle town, NOT rural farmhouse; 5min park, 25min ski/beach
+- [Startup loan](project_startup_loan.md) — 創業融資: 民泊届出・全体見積もり・家具見積もりが次回までの宿題 (2026-04-01)
+- [Kominka furniture](project_kominka_furniture.md) — 布団5セット・ダイニング6人・収納 / Muji統一で揃えたい
+- [Org chart](reference_org_chart.md) — Full 11-member team in Notion; always check there, not just cominc-agents code
+- [JP site BtoB](project_jp_site_btob.md) — JPサイトは日本企業向けBtoB（海外展開支援）、観光客向けではない
+- [Agent convention](feedback_agent_convention.md) — @Name で指名呼び出し、@Webteam で全体指示
+- [Subsidy application](project_subsidy_application.md) — 持続化補助金（創業型）200万申請、締切4/30、様式2・3完成済み
+- [Indian Curry Restaurant](project_indian_curry_restaurant.md) — 近隣レストランのWeb制作案件、Clare/Hana/Cat/Webteam使用
