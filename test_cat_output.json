@@ -1,0 +1,65 @@
+```json
+{
+  "source_idea_id": "333860170c1781c9bacfe7e24c8d1a27",
+  "content_pillar": "philosophy_authenticity",
+  "seasonal_relevance_score": 8,
+  "drafts": [
+    {
+      "platform": "x_twitter",
+      "language": "en",
+      "content": "The regions trying hardest to impress me impress me least. I don't want polished. I want the crumbling house, the grandmother's meal, the neighbor who's lived here 80 years. That's the content nobody's making — and exactly where I live.",
+      "thread_count": 1
+    },
+    {
+      "platform": "instagram",
+      "language": "en",
+      "content": "Everyone comes to Takada for the cherry blossoms. They should — it's one of Japan's three great night blossom spots, and right now it is genuinely breathtaking.\n\nBut the thing I love most isn't the famous view.\n\nIt's the old man walking his dog at 6am while the lanterns are still lit. The family who's run the same yakitori cart for three generations. The 150-year-old kominka where the wooden beams creak in a way that no new build ever will.\n\nI've never been interested in Japan that dresses up for guests. I'm interested in Japan that just... lives.\n\nThat's the whole idea behind ComInc. Not a polished tourism product. A real place, with real people, and real food on the table.\n\nTakada is at peak bloom right now. Come see it — not just the castle, but the town around it.\n\nFollow along, or visit cominc.co to plan your stay. The blossoms won't wait.",
+      "hashtags": [
+        "#HiddenJapan",
+        "#JapanTravel",
+        "#TakadaCastle",
+        "#CherryBlossom",
+        "#Niigata",
+        "#Joetsu",
+        "#KominkaStay",
+        "#SnowCountry",
+        "#AuthenticJapan",
+        "#SlowTravel",
+        "#RuralJapan",
+        "#InboundJapan",
+        "#UncoveredJapan",
+        "#ComInc",
+        "#SakuraSeason"
+      ],
+      "format_suggestion": "carousel",
+      "visual_direction": "5–7 frames. Warm, slightly desaturated tones — lived-in, never styled. Frame 1: Takada castle town street at dawn, lanterns still glowing, blossoms soft in background — not the hero shot, the moment before it. Frame 2: A simple breakfast on tatami — miso, rice, pickles, morning light through shoji. Frame 3: Kominka interior — wooden beams, natural shadow, a coat hung on a hook. Frame 4: An elderly local mid-routine (walking, sweeping, tending something) with blossoms incidentally in frame. Frame 5: The yakitori smoke rising, vendor's hands at work. Final frame: cominc.co CTA card, minimal, black text on off-white. No stock energy. Everything feels like it happened and someone was lucky enough to catch it."
+    },
+    {
+      "platform": "instagram",
+      "language": "jp",
+      "content": "高田に来る人の多くは、桜が目当てだ。それでいいと思う。日本三大夜桜のひとつ——今、本当に美しい。\n\nでも僕が好きなのは、その少し外れにある景色。\n\n早朝6時、提灯がまだついている中を犬と散歩するおじいちゃん。三代続く焼き鳥屋。築150年の古民家で聞こえる、木の軋む音。\n\n着飾った地方には、正直あまり興味がない。ありのままの生活、ありのままの食事、ありのままの住処——それが一番のコンテンツだと思っている。\n\nComInc.はそういう場所を届けたくてつくった。高田に来て、本物の家に泊まって、地元の人が食べるものを食べてほしい。\n\n桜は今が見頃。でも桜だけじゃない、この町全体を見てほしい。\n\nフォローするか、cominc.co から滞在を計画してみてください。",
+      "hashtags": [
+        "#新潟旅行",
+        "#上越",
+        "#高田城址公園",
+        "#日本三大夜桜",
+        "#桜",
+        "#古民家",
+        "#雪国",
+        "#日本の原風景",
+        "#ありのまま",
+        "#インバウンド",
+        "#地方の魅力",
+        "#旅行好きな人と繋がりたい",
+        "#高田"
+      ],
+      "format_suggestion": "carousel",
+      "visual_direction": "ENバージョンと同じフレーム構成。テキストオーバーレイは不要——写真で語る。最終フレームのみ cominc.co のCTAカードを日本語表記で。"
+    }
+  ],
+  "suggested_post_order": ["x_twitter_en", "instagram_en", "instagram_jp"],
+  "suggested_timing": "April 1 is peak Takada blossom — the highest-traffic moment of the year and the exact backdrop that makes this philosophy land. Post X in the morning (7–9am JST) to catch the commute scroll — the hot take travels best when people are half-awake and primed to react. Instagram EN in the early evening (6–8pm JST) when browse intent peaks and the golden-hour visual framing feels earned. Instagram JP can go same evening, 30–60 minutes after EN, to capture the domestic audience without cannibalizing reach. The blossom urgency ('the blossoms won't wait') gives all three posts a natural time hook.",
+  "skip_platforms": [],
+  "quality_note": "The X post leads with the intellectual provocation — no Japan name-drop, no tourist framing, just Sho's worldview in 237 chars. It should feel like something a well-traveled friend posts at 7am with their coffee. The Instagram EN expands that thought into place and experience, grounding the philosophy in Takada right now. The cherry blossom hook is used as contrast (everyone's here for the spectacle, but here's what I see) rather than the main subject — which keeps it true to Layer 2 without being another blossom post. The JP caption is written as natural spoken Japanese, not translated from English — the rhythm and word choices reflect how Sho would actually write in Japanese. All three CTAs are embedded naturally, not appended as afterthoughts."
+}
+```

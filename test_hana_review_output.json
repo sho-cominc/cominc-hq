@@ -1,0 +1,79 @@
+```json
+{
+  "review_summary": "Idea 1 is this week's anchor — timely, on-brand, and well-calibrated across all three platforms. Idea 2's X thread earns a slot as a second Layer 1 beat; its Instagram drafts need reworking before posting. Idea 3 is solid but non-urgent — hold for next week when the sakura urgency fades.",
+  "approved": [
+    {
+      "source_idea_id": "333860170c1781c9bacfe7e24c8d1a27",
+      "platform": "x_twitter",
+      "language": "en",
+      "title_snippet": "[1/2] The most powerful touris",
+      "reason": "Perfect pattern interrupt for April 1 sakura flood. 'Not a drone shot. Not a hidden gem listicle.' — this is exactly Sho's voice. The two-tweet structure earns the link drop in tweet 2. Post immediately at 8-9am JST today."
+    },
+    {
+      "source_idea_id": "333860170c1781c9bacfe7e24c8d1a27",
+      "platform": "instagram",
+      "language": "en",
+      "title_snippet": "Most people come to Takada fo",
+      "reason": "Textbook Layer 2. Sensory, specific, warm — the ¥850 lunch, the 85-year-old pickle seller, the smoke-darkened ceilings. 'That's just a Wednesday in Joetsu' is a genuinely memorable line. Visual direction is smart and anti-Instagram in exactly the right way. CTA lands cleanly. Approve for April 2-3 evening."
+    },
+    {
+      "source_idea_id": "333860170c1781c9bacfe7e24c8d1a27",
+      "platform": "instagram",
+      "language": "jp",
+      "title_snippet": "高田に来る人の多くは、桜を目当てに",
+      "reason": "Natural first-person Japanese that reads like Sho wrote it, not like a translation. 'ただの上越の水曜日だ' mirrors the EN's best line without copying it. Hashtag set is clean and local-relevant. Post alongside the EN within 24 hours."
+    },
+    {
+      "source_idea_id": "333860170c17815e9809ef1949ebf3ab",
+      "platform": "x_twitter",
+      "language": "en",
+      "title_snippet": "Adults built the system. Adul",
+      "reason": "Strong Layer 1 hot take. The three-line opening punch lands hard, and tweet 2 adds Sho's personal stake — without it this risks reading as generic Japan-bashing, but with it, it's a credible provocation with skin in the game. Post April 2 morning at 7-9am JST, 12+ hours after Idea 1 X."
+    }
+  ],
+  "held": [
+    {
+      "source_idea_id": "333860170c17815e9809ef1949ebf3ab",
+      "platform": "instagram",
+      "language": "en",
+      "title_snippet": "Every year, without fail, the",
+      "reason": "Layer 1/2 confusion. Philosophy dominates where place should lead. 'What's your excuse?' is too confrontational for Instagram's register — it closes a door rather than opening one. The sakura accountability metaphor is elegant but the copy needs to land softer and more inviting. Suggested fix: lead with the visceral sensory experience of standing at the moat at night, let the philosophy emerge naturally, and replace 'What's your excuse?' with something that draws in rather than challenges. The visual direction is strong — keep it, fix the copy."
+    },
+    {
+      "source_idea_id": "333860170c17815e9809ef1949ebf3ab",
+      "platform": "instagram",
+      "language": "jp",
+      "title_snippet": "毎年、言い訳なく、桜が咲く。",
+      "reason": "Better balanced than the EN version and the Japanese voice is genuinely natural. '桜は言い訳しない' is a beautiful line. But it still leans too abstract for Layer 2. Fix: trim the philosophical middle section, add more sensory grounding at the moat, close with the castle image rather than the argument. Hold until the EN version is revised so both update together."
+    },
+    {
+      "source_idea_id": "333860170c17813dae50c77c49c3d668",
+      "platform": "x_twitter",
+      "language": "en",
+      "title_snippet": "The \"generational gap\" is a li",
+      "reason": "Solid tweet — clean reframe, good voice, quiet challenge at the end. Not urgent this week. We already have two X posts approved; a third in the same batch dilutes the impact of each. Hold for next week when sakura urgency fades and this standalone philosophy tweet can own the moment on its own."
+    },
+    {
+      "source_idea_id": "333860170c17813dae50c77c49c3d668",
+      "platform": "instagram",
+      "language": "en",
+      "title_snippet": "Every spring, the sakura at T",
+      "reason": "Two problems: (1) Hashtag typo — '#UnseeenJapan' has three e's, fix before this goes anywhere. (2) The text-slide carousel format (slides 2-4 with caption excerpts) risks making this look like a motivational poster account, not ComInc. The idea and place connection are good, but the format needs rethinking — lean harder into photography, pull back on the quote-card slides. Lower seasonal urgency (score 5) means there's time to get this right. Revisit for late April."
+    },
+    {
+      "source_idea_id": "333860170c17813dae50c77c49c3d668",
+      "platform": "instagram",
+      "language": "jp",
+      "title_snippet": "今年も高田城の桜が咲いた。",
+      "reason": "Dependent on the EN version being approved first. Same format concerns apply. The Japanese copy itself is strong and conversational — if the carousel format gets revised, this JP version is close to ready. Hold alongside EN."
+    }
+  ],
+  "suggested_post_order": [
+    "[1/2] The most powerful touris",
+    "Adults built the system. Adul",
+    "Most people come to Takada fo",
+    "高田に来る人の多くは、桜を目当てに"
+  ],
+  "note_to_sho": "Idea 1 is the week's anchor — post all three pieces in the April 1-3 window and let them work as a set. X thread goes first today (April 1, 8-9am JST) as a genuine pattern interrupt against the sakura content flood. Add the Idea 2 X thread tomorrow morning (April 2, 7-9am JST) as a second Layer 1 beat — the accountability take complements the authenticity take without overlapping it. Then let the Idea 1 Instagram EN/JP pair land April 2-3 evening (7-8pm JST) after followers have absorbed the philosophy from X. That's 4 posts across 3 days — tight, strong, doesn't overload the feed. Two things need your attention before anything else goes live: (1) Idea 2 Instagram drafts need the confrontational closing rewritten — 'What's your excuse?' shuts people out on Instagram, it needs to invite not challenge; (2) Idea 3 has a hashtag typo (#UnseeenJapan) and the text-slide carousel format risks making ComInc look like a self-help account. Both can wait until next week — don't rush them."
+}
+```
