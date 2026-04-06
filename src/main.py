@@ -141,9 +141,21 @@ def main():
         elif pipeline_name == "sns-schedule":
             from src.pipelines.sns_pipeline import run_sns_scheduling
             anyio.run(run_sns_scheduling)
+        elif pipeline_name == "sns-factcheck":
+            from src.pipelines.sns_pipeline import run_sns_factcheck
+            anyio.run(run_sns_factcheck)
+        elif pipeline_name == "sns-publish":
+            from src.pipelines.sns_pipeline import run_sns_publish_threads
+            anyio.run(run_sns_publish_threads)
+        elif pipeline_name == "sns-auto":
+            from src.pipelines.sns_pipeline import run_sns_autopost
+            anyio.run(run_sns_autopost)
+        elif pipeline_name == "sns-series":
+            from src.pipelines.sns_pipeline import run_threads_series_post
+            anyio.run(run_threads_series_post)
         else:
             print(f"Unknown pipeline: {pipeline_name}")
-            print("Available: sns, sns-schedule")
+            print("Available: sns, sns-schedule, sns-factcheck, sns-publish, sns-auto, sns-series")
             sys.exit(1)
     elif "--agent" in args:
         idx = args.index("--agent")

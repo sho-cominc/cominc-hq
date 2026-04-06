@@ -1,4 +1,13 @@
-"""Prompt templates for the SNS content pipeline stages."""
+"""Prompt templates for the SNS content pipeline stages.
+
+Stages overview:
+  1. Fetch unprocessed ideas from Notion
+  2. Cat generates platform-specific drafts
+  3. Write drafts to Notion SNS Queue (Status = "draft")
+  4. Hana fact-check gate (Status "draft" -> "checked")
+  5. Publish approved/ready posts to Threads
+  6. Scheduling recommendation
+"""
 
 # ---------------------------------------------------------------------------
 # Shared constants (DRY — used by both generate and review prompts)
@@ -25,12 +34,19 @@ PLATFORM_RULES = """\
 # Stage 1: Fetch unprocessed ideas from Notion
 # ---------------------------------------------------------------------------
 FETCH_IDEAS_PROMPT = """\
-Search the Notion database "SNS Ideas" for all items where Status = "unprocessed".
+Query the Notion database "📱 SNS Ideas" (database URL: https://www.notion.so/8b9aef33c6b64ebaad7269e0e83ffd82) for all items where Status = "unprocessed".
 
-For each item, return the following as a JSON array:
-- page_id (the Notion page URL or ID)
-- title
-- content (full body text of the page)
+IMPORTANT: You MUST fetch EVERY page individually to read its full body content. The database query only returns properties — the actual memo text is in each page's body.
+
+Steps:
+1. Query the database filtering by Status = "unprocessed"
+2. For EACH result, fetch the full page by its page_id to get the body content
+3. Return ALL results as a JSON array
+
+For each item, return:
+- page_id (the Notion page ID — UUID format)
+- title (the "Idea" property value)
+- content (full body text from the page — NOT the title, the actual page body)
 - tags (if any)
 - source (voice_memo, observation, article, thought, photo)
 - created_date
@@ -41,7 +57,7 @@ Example format:
 ```json
 [
   {
-    "page_id": "abc123",
+    "page_id": "33386017-0c17-81c9-bacf-e7e24c8d1a27",
     "title": "Saw amazing sunset at Takada",
     "content": "The sunset over Takada Castle was incredible today...",
     "tags": ["unseen_japan", "seasonal"],
@@ -161,7 +177,98 @@ Here are the drafts to create:
 """
 
 # ---------------------------------------------------------------------------
-# Stage 4: Scheduling recommendation (runs separately)
+# Stage 4: Hana fact-check gate
+# ---------------------------------------------------------------------------
+HANA_FACTCHECK_PROMPT = """\
+You are Hana, the secretary for ComInc. You are performing a fact-check review
+on SNS draft content before it is approved for posting.
+
+Review the following draft for:
+
+1. **Factual accuracy** — Is everything stated actually true RIGHT NOW? Not aspirational,
+   not planned-but-not-yet-real. If the post says "we offer X", do we actually offer X today?
+2. **Capability claims** — Can ComInc. actually do what this post implies? Don't overstate
+   our current capabilities.
+3. **Regional info accuracy** — Are place names, distances, seasonal references correct?
+   (e.g., Takada Castle cherry blossoms are April, not March)
+4. **Tone & appropriateness** — Is this appropriate for our brand? Nothing offensive or
+   culturally insensitive?
+
+## Draft to review
+Page ID: {page_id}
+Platform: {platform}
+Author/Voice: {author}
+Content:
+{content}
+
+## Current date
+{current_date}
+
+## Instructions
+- If the draft passes all checks, update the page status in the Notion "SNS Queue"
+  database from "draft" to "checked".
+- If there are issues, add a comment to the Notion page explaining what needs fixing,
+  and leave the status as "draft".
+
+Return a JSON object:
+```json
+{{
+  "page_id": "{page_id}",
+  "passed": true,
+  "issues": [],
+  "notes": "All checks passed."
+}}
+```
+Or if issues found:
+```json
+{{
+  "page_id": "{page_id}",
+  "passed": false,
+  "issues": ["Issue 1 description", "Issue 2 description"],
+  "notes": "Needs revision before posting."
+}}
+```
+"""
+
+# ---------------------------------------------------------------------------
+# Stage 5: Publish to Threads
+# ---------------------------------------------------------------------------
+THREADS_PUBLISH_PROMPT = """\
+You have access to the Threads MCP server. Publish the following post to Threads.
+
+## Post content
+{content}
+
+## Instructions
+1. Use the Threads MCP to create a new post with the content above.
+2. Return the result as JSON:
+```json
+{{
+  "success": true,
+  "post_id": "<the thread post ID or URL returned by the API>",
+  "error": null
+}}
+```
+If posting fails:
+```json
+{{
+  "success": false,
+  "post_id": null,
+  "error": "<error message>"
+}}
+```
+"""
+
+THREADS_UPDATE_STATUS_PROMPT = """\
+Update the Notion "SNS Queue" page with ID {page_id}:
+- Set Status to "published"
+- Add a note in the page body: "Published to Threads on {publish_date}. Post ID: {post_id}"
+
+Also update any tracking fields if they exist (Published Date, Post URL, etc.).
+"""
+
+# ---------------------------------------------------------------------------
+# Stage 6: Scheduling recommendation (runs separately)
 # ---------------------------------------------------------------------------
 SCHEDULE_PROMPT = """\
 Review the Notion "SNS Queue" database. Look at all items with Status = "approved".

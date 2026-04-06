@@ -52,6 +52,10 @@ MCP_SERVERS = {
         "url": "https://stitch.googleapis.com/mcp",
         "headers": {"X-Goog-Api-Key": os.environ.get("STITCH_API_KEY", "")},
     },
+    "threads": {
+        "command": "npx",
+        "args": ["-y", "threads-mcp"],
+    },
 }
 
 
@@ -80,7 +84,7 @@ AGENT_MCP = {
     "clare":  ("notion", "figma", "stitch"),
     "yuri":   ("notion", "figma", "stitch"),
     "dev":    ("notion", "github", "figma", "stitch"),
-    "cat":    ("notion",),
+    "cat":    ("notion", "threads"),
     "kai":    ("notion", "gmail", "google-calendar"),
     "min":    ("notion", "gmail", "google-calendar"),
 }
