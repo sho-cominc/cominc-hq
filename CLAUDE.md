@@ -28,7 +28,7 @@ Here's the static context that doesn't change often:
 
 ## Current Status (as of 2026-03-30)
 
-- Sho is **still working full-time** — available days in April: 1, 6, 12, 24, 28 only
+- Sho is **still working full-time** — available days in April: 1, 6, 12, 16, 24, 28 only
 - **Minpaku (民泊) registration**: application in progress, awaiting permit number
 - **Airbnb listing**: fully drafted in Notion, ready to publish the moment permit number arrives
 - **cominc.co**: under construction (Astro 4.x + Cloudflare Pages)
@@ -40,6 +40,7 @@ Here's the static context that doesn't change often:
 - **4/1** — Kominka photo shoot (Airbnb) + strategic meeting with Kawano-san (hotel owner x4) & former boss
 - **4/6** — Subsidy consultation meeting 14:00 + Instagram first post
 - **4/12** — City hall (minpaku permit) + Airbnb listing go-live
+- **4/16** — 7:00 見積もり・丸山さん訪問
 - **4/24** — Chamber of Commerce + 小規模事業者持続化補助金 application
 - **4/28** — Subsidy docs final submission + IT導入補助金 consultation
 
