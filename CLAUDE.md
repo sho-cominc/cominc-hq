@@ -90,4 +90,21 @@ All plans live in **ComInc. HQ** on Notion:
 
 ---
 
+## 🖥️ 環境と会話履歴の保存先
+
+Sho は複数のデバイスから Claude Code を使う（PC A / PC B / Mobile App）。repo は 1 つ（`sho-cominc/cominc-hq`）だが、**会話履歴がどこに保存されるかは環境ごとに違う**。混乱したらここを見ること。
+
+| 環境 | 会話履歴の保存先 | 他デバイスと共有 |
+|---|---|---|
+| **claude.ai/code（ブラウザ / Web / モバイルアプリ）** | Anthropic アカウント側にクラウド保存 | ✅ 同じアカウントでログインした全デバイスで共有される。**これが推奨** |
+| **ローカル `claude` CLI** | `~/.claude/projects/<hash>/*.jsonl`（そのマシンのみ） | ❌ 他デバイスからは見えない。新規セッションはここで始めないこと |
+| **Git リポジトリ** | コード本体の変更 + `project-memory/` のマークダウン | ✅ 全デバイスで共有。ただし会話の jsonl は repo には入らない |
+
+**運用ルール**：
+- 新しい作業を始めるときは、どの PC からでも **ブラウザで `claude.ai/code` を開く**（ローカル CLI は使わない）
+- 重要な決定や次回引き継ぎ事項は、Sho の判断で `project-memory/` に手動でマークダウンとして残す（`AGENTS_CALL_SHEET.md` / `MEMORY.md` の延長）
+- 日々の会話ログを自動で commit するような仕掛けは入れていない（Notion の「Sho's Notes」と役割が重複するため）
+
+---
+
 Good luck. The plan is solid. 🏔️
