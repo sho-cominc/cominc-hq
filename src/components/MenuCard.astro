@@ -1,0 +1,59 @@
+---
+import type { Locale } from '~/utils/i18n';
+import { t } from '~/utils/i18n';
+
+interface MenuItem {
+  id: string;
+  name_ja: string;
+  name_en: string;
+  description_ja: string;
+  description_en: string;
+  price: number;
+  allergens_ja: string[];
+  allergens_en: string[];
+  image: string;
+  seasonal: boolean;
+}
+
+interface Props {
+  item: MenuItem;
+  locale: Locale;
+}
+const { item, locale } = Astro.props;
+const dict = t(locale);
+
+const name = locale === 'ja' ? item.name_ja : item.name_en;
+const description = locale === 'ja' ? item.description_ja : item.description_en;
+const allergens = locale === 'ja' ? item.allergens_ja : item.allergens_en;
+const priceLabel = `¥${item.price.toLocaleString()}`;
+---
+
+<article class="group overflow-hidden rounded-blob bg-line/40">
+  <div class="relative aspect-[4/5] overflow-hidden bg-ink">
+    <img
+      src={item.image}
+      alt={name}
+      loading="lazy"
+      decoding="async"
+      class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+      onerror="this.style.opacity='0.25'"
+    />
+    {item.seasonal && (
+      <span class="absolute left-3 top-3 rounded-full bg-berry px-3 py-1 text-[11px] font-bold text-ink">
+        {dict.menu.seasonal}
+      </span>
+    )}
+  </div>
+  <div class="space-y-2 p-5">
+    <div class="flex items-baseline justify-between gap-3">
+      <h3 class="font-display text-xl text-cream">{name}</h3>
+      <span class="text-sm font-semibold text-berry">{priceLabel}</span>
+    </div>
+    <p class="text-sm text-cream/70">{description}</p>
+    {allergens.length > 0 && (
+      <p class="pt-2 text-[11px] text-cream/40">
+        {dict.menu.allergenLabel}: {allergens.join(' / ')}
+      </p>
+    )}
+  </div>
+</article>

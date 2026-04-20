@@ -1,0 +1,90 @@
+---
+import type { Locale } from '~/utils/i18n';
+import { t } from '~/utils/i18n';
+import LangSwitch from './LangSwitch.astro';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const dict = t(locale);
+const base = `/${locale}`;
+
+const nav = [
+  { href: `${base}/`, label: dict.nav.home },
+  { href: `${base}/menu`, label: dict.nav.menu },
+  { href: `${base}/schedule`, label: dict.nav.schedule },
+  { href: `${base}/about`, label: dict.nav.about },
+  { href: `${base}/contact`, label: dict.nav.contact },
+];
+
+const currentPath = Astro.url.pathname.replace(/\/$/, '');
+---
+
+<header class="sticky top-0 z-40 border-b border-line/80 bg-ink/90 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+    <a href={`${base}/`} class="flex items-center gap-2 group">
+      <span class="inline-block h-8 w-8 rounded-full border border-cream/30 grid place-items-center text-[11px] font-display text-cream">BKC</span>
+      <span class="font-display text-xl leading-none tracking-wide text-cream group-hover:text-berry transition-colors">
+        ゆめ
+      </span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-1" aria-label="Primary">
+      {nav.map((item) => {
+        const normalized = item.href.replace(/\/$/, '');
+        const active = currentPath === normalized;
+        return (
+          <a
+            href={item.href}
+            class:list={[
+              'rounded-full px-3 py-1.5 text-sm transition-colors',
+              active
+                ? 'bg-cream/10 text-cream'
+                : 'text-cream/70 hover:text-cream hover:bg-cream/5',
+            ]}
+          >
+            {item.label}
+          </a>
+        );
+      })}
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <LangSwitch locale={locale} />
+      <button
+        type="button"
+        id="nav-toggle"
+        class="md:hidden rounded-full border border-cream/20 p-2 text-cream/80"
+        aria-controls="mobile-nav"
+        aria-expanded="false"
+        aria-label={locale === 'ja' ? 'メニューを開く' : 'Open menu'}
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="17" x2="20" y2="17"></line></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-nav" class="hidden md:hidden border-t border-line" data-open="false">
+    <nav class="mx-auto flex max-w-6xl flex-col px-5 py-3" aria-label="Mobile">
+      {nav.map((item) => (
+        <a href={item.href} class="py-2 text-cream/80 hover:text-cream">
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const panel = document.getElementById('mobile-nav');
+  if (toggle && panel) {
+    toggle.addEventListener('click', () => {
+      const open = panel.getAttribute('data-open') === 'true';
+      panel.setAttribute('data-open', String(!open));
+      panel.classList.toggle('hidden', open);
+      toggle.setAttribute('aria-expanded', String(!open));
+    });
+  }
+</script>

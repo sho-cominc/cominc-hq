@@ -1,0 +1,84 @@
+---
+import type { Locale } from '~/utils/i18n';
+import { t, SOCIAL } from '~/utils/i18n';
+import Base from '~/layouts/Base.astro';
+import SectionHeading from '~/components/SectionHeading.astro';
+import NextEventBanner from '~/components/NextEventBanner.astro';
+import InstagramFeed from '~/components/InstagramFeed.astro';
+import MenuCard from '~/components/MenuCard.astro';
+import menu from '~/data/menu.json';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const dict = t(locale);
+const base = `/${locale}`;
+const highlights = menu.slice(0, 3);
+---
+
+<Base locale={locale} title={dict.meta.home.title} description={dict.meta.home.description}>
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-ink via-ink to-berry/20" aria-hidden="true"></div>
+    <div class="relative mx-auto flex max-w-6xl flex-col gap-10 px-5 pb-16 pt-14 md:pt-24">
+      <div class="max-w-3xl space-y-6">
+        <p class="text-[11px] uppercase tracking-[0.3em] text-berry heart-accent">
+          BLACK KITCHEN CAR
+        </p>
+        <h1 class="heading-display text-5xl md:text-7xl">
+          {dict.brand.tagline}
+        </h1>
+        <p class="max-w-xl text-cream/80 md:text-lg">
+          {dict.brand.lede}
+        </p>
+        <div class="flex flex-wrap items-center gap-3">
+          <a href={`${base}/schedule`} class="btn-primary">{dict.home.heroCta} →</a>
+          <a
+            href={SOCIAL.instagramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-ghost"
+          >
+            {dict.home.heroSubCta}
+          </a>
+        </div>
+      </div>
+
+      <div class="max-w-3xl">
+        <NextEventBanner locale={locale} variant="hero" />
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 py-16 md:py-24 grid gap-10 md:grid-cols-[1fr,1.2fr] md:items-center">
+    <SectionHeading
+      eyebrow="ABOUT"
+      title={dict.home.aboutHeading}
+      lede={dict.home.aboutExcerpt}
+    />
+    <div class="flex md:justify-end">
+      <a href={`${base}/about`} class="btn-ghost">
+        {dict.home.aboutMore} →
+      </a>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 pb-16 md:pb-24">
+    <SectionHeading eyebrow="MENU" title={dict.home.menuHeading} />
+    <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {highlights.map((item) => (
+        <MenuCard item={item} locale={locale} />
+      ))}
+    </div>
+    <div class="mt-8">
+      <a href={`${base}/menu`} class="btn-ghost">{dict.home.menuMore} →</a>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 pb-20 md:pb-28">
+    <SectionHeading eyebrow="INSTAGRAM" title={dict.home.feedHeading} lede={dict.home.feedLede} />
+    <div class="mt-10">
+      <InstagramFeed locale={locale} />
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,68 @@
+---
+import type { Locale } from '~/utils/i18n';
+import { t } from '~/utils/i18n';
+import nextEvent from '~/data/next-event.json';
+
+interface Props {
+  locale: Locale;
+  variant?: 'hero' | 'card';
+}
+const { locale, variant = 'hero' } = Astro.props;
+const dict = t(locale);
+
+const hasEvent = Boolean(nextEvent && nextEvent.date);
+const venue = locale === 'ja' ? nextEvent.venue_ja : nextEvent.venue_en;
+const address = locale === 'ja' ? nextEvent.address_ja : nextEvent.address_en;
+const note = locale === 'ja' ? nextEvent.note_ja : nextEvent.note_en;
+
+const dateFormatted = hasEvent
+  ? new Date(nextEvent.date).toLocaleDateString(locale === 'ja' ? 'ja-JP' : 'en-GB', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      weekday: 'short',
+    })
+  : '';
+
+const wrapperClass =
+  variant === 'hero'
+    ? 'rounded-blob bg-berry text-ink p-6 md:p-8'
+    : 'rounded-blob border border-line bg-ink/60 p-6 md:p-8 text-cream';
+---
+
+<section class={wrapperClass} aria-labelledby="next-event-heading">
+  <p class="text-[11px] uppercase tracking-[0.2em] opacity-70" id="next-event-heading">
+    {dict.nextEvent.label}
+  </p>
+
+  {hasEvent ? (
+    <div class="mt-2 space-y-2">
+      <p class="font-display text-3xl md:text-4xl leading-tight">
+        {dateFormatted}
+      </p>
+      <p class="text-lg font-semibold">{venue}</p>
+      <p class="text-sm opacity-80">{address}</p>
+      <p class="text-sm">
+        {nextEvent.startTime} {dict.nextEvent.timeSeparator} {nextEvent.endTime}
+      </p>
+      {note && <p class="text-xs opacity-70">{note}</p>}
+      {nextEvent.mapsUrl && (
+        <a
+          href={nextEvent.mapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class:list={[
+            'mt-2 inline-flex items-center gap-1 rounded-full px-4 py-2 text-sm font-semibold',
+            variant === 'hero'
+              ? 'bg-ink text-cream hover:bg-line'
+              : 'bg-berry text-ink hover:brightness-110',
+          ]}
+        >
+          {dict.nextEvent.openInMaps} →
+        </a>
+      )}
+    </div>
+  ) : (
+    <p class="mt-2 text-base">{dict.nextEvent.empty}</p>
+  )}
+</section>

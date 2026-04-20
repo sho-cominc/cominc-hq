@@ -1,0 +1,51 @@
+---
+import type { Locale } from '~/utils/i18n';
+import { t, SOCIAL } from '~/utils/i18n';
+
+interface Props {
+  locale: Locale;
+  /**
+   * Behold.so widget ID (once the account is connected, paste it here).
+   * Until then, a graceful fallback card links to Instagram directly.
+   */
+  beholdId?: string;
+}
+
+const { locale, beholdId } = Astro.props;
+const dict = t(locale);
+---
+
+{beholdId ? (
+  <div class="behold-wrapper">
+    <div data-behold-id={beholdId}></div>
+    <script is:inline async src="https://w.behold.so/widget.js"></script>
+    <noscript>
+      <a
+        href={SOCIAL.instagramUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary"
+      >
+        {dict.nav.followInstagram}
+      </a>
+    </noscript>
+  </div>
+) : (
+  <div class="rounded-blob border border-dashed border-cream/20 bg-ink/60 p-8 text-center">
+    <p class="font-display text-2xl text-cream">@{SOCIAL.instagramHandle}</p>
+    <p class="mt-2 text-sm text-cream/70">{dict.home.feedLede}</p>
+    <a
+      href={SOCIAL.instagramUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn-primary mt-5"
+    >
+      {dict.home.followCta} →
+    </a>
+    <p class="mt-4 text-[11px] text-cream/40">
+      {locale === 'ja'
+        ? '※ Instagram の自動表示は Behold.so 接続後に有効化されます。'
+        : '* Auto-feed will activate once the Behold.so connection is wired up.'}
+    </p>
+  </div>
+)}

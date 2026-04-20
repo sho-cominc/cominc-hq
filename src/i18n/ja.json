@@ -1,0 +1,92 @@
+{
+  "brand": {
+    "name": "BLACK KITCHEN CAR ゆめ",
+    "short": "BKC ゆめ",
+    "tagline": "見て楽しんで、食べて楽しんで。",
+    "lede": "上越・妙高をまわる、パフェ専門のキッチンカー。甘すぎない生クリームで、子どもから大人まで。"
+  },
+  "nav": {
+    "home": "ホーム",
+    "menu": "メニュー",
+    "schedule": "出店予定",
+    "about": "ゆめのこと",
+    "contact": "お問い合わせ",
+    "followInstagram": "Instagramをフォロー"
+  },
+  "home": {
+    "heroCta": "次回の出店を見る",
+    "heroSubCta": "Instagramをフォロー",
+    "aboutHeading": "ゆめ のこと",
+    "aboutExcerpt": "黒いキッチンカーに、甘すぎない生クリーム。\nシンプルでちょっと特別な、自分の「好き」を見つけるパフェを。",
+    "aboutMore": "もっと読む",
+    "menuHeading": "きょうのパフェ",
+    "menuMore": "メニュー一覧を見る",
+    "feedHeading": "最新のお知らせ",
+    "feedLede": "出店予定・新作パフェは Instagram で発信中。",
+    "followCta": "@bkc_yu____me をフォロー"
+  },
+  "menu": {
+    "title": "メニュー",
+    "lede": "¥800〜¥1,000。季節や出店先によって登場するパフェが変わります。",
+    "seasonal": "季節限定",
+    "allergenLabel": "含まれる可能性のあるアレルゲン",
+    "note": "※ 価格・内容は出店先によって変わる場合があります。最新情報は Instagram をご確認ください。"
+  },
+  "schedule": {
+    "title": "出店予定",
+    "lede": "次回の出店情報は Instagram で随時お知らせしています。",
+    "nextHeading": "次回の出店",
+    "followHint": "リアルタイムの更新は Instagram でチェック。"
+  },
+  "about": {
+    "title": "ゆめ のこと",
+    "storyHeading": "店名「ゆめ」にこめたこと",
+    "storyBody": "「夢のような一皿を、日常の中で。」\nそんな気持ちで名付けました。（※ 本文はオーナーのお話を元に後日更新予定）",
+    "creamHeading": "こだわりの生クリーム",
+    "creamBody": "甘さを控えめに、素材そのものの味が立つように仕立てています。子どもにも大人にも、最後のひとくちまで軽やかに。",
+    "ownerHeading": "つくっている人",
+    "ownerBody": "上越・妙高のイベントで出会ったら、ぜひ声をかけてください。"
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "lede": "出店のご依頼・取材・そのほかのご連絡は、Instagram DM がいちばん早いです。",
+    "dmButton": "Instagram DM で連絡する",
+    "emailButton": "メールで連絡する",
+    "threadsButton": "Threads を見る",
+    "responseNote": "通常、24時間以内にオーナー本人が返信します。",
+    "eventRequestHeading": "出店のご依頼",
+    "eventRequestBody": "マーケット・イベントへの出店依頼も歓迎です。DM にて、日時・会場・想定来場者数などを添えてご連絡ください。"
+  },
+  "nextEvent": {
+    "label": "次回の出店",
+    "empty": "次回の出店は調整中です。Instagram をチェック。",
+    "openInMaps": "地図を開く",
+    "timeSeparator": "〜"
+  },
+  "footer": {
+    "copyright": "© BLACK KITCHEN CAR ゆめ",
+    "builtWith": "上越・妙高エリアで活動中"
+  },
+  "meta": {
+    "home": {
+      "title": "BLACK KITCHEN CAR ゆめ｜上越・妙高のパフェキッチンカー",
+      "description": "上越・妙高をまわるパフェ専門のキッチンカー。甘すぎないこだわりの生クリームで、子どもから大人まで楽しめる一皿を。"
+    },
+    "menu": {
+      "title": "メニュー｜BLACK KITCHEN CAR ゆめ",
+      "description": "定番と季節限定のパフェをご紹介。価格は ¥800〜¥1,000。"
+    },
+    "schedule": {
+      "title": "出店予定｜BLACK KITCHEN CAR ゆめ",
+      "description": "次回の出店情報と最新のお知らせ。"
+    },
+    "about": {
+      "title": "ゆめ のこと｜BLACK KITCHEN CAR ゆめ",
+      "description": "店名の由来、こだわりの生クリーム、つくっている人のこと。"
+    },
+    "contact": {
+      "title": "お問い合わせ｜BLACK KITCHEN CAR ゆめ",
+      "description": "出店依頼・取材のご相談は Instagram DM へ。"
+    }
+  }
+}

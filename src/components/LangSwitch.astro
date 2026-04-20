@@ -1,0 +1,30 @@
+---
+import type { Locale } from '~/utils/i18n';
+import { swapLocale, locales } from '~/utils/i18n';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const pathname = Astro.url.pathname;
+---
+
+<div class="flex items-center gap-0.5 rounded-full border border-cream/20 p-0.5 text-xs">
+  {locales.map((l) => {
+    const active = l === locale;
+    const href = swapLocale(pathname, l);
+    return (
+      <a
+        href={href}
+        hreflang={l}
+        aria-current={active ? 'true' : undefined}
+        class:list={[
+          'rounded-full px-2.5 py-1 font-medium transition-colors',
+          active ? 'bg-cream text-ink' : 'text-cream/70 hover:text-cream',
+        ]}
+      >
+        {l === 'ja' ? 'JA' : 'EN'}
+      </a>
+    );
+  })}
+</div>

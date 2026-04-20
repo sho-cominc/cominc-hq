@@ -1,0 +1,28 @@
+---
+import type { Locale } from '~/utils/i18n';
+import { t } from '~/utils/i18n';
+import Base from '~/layouts/Base.astro';
+import SectionHeading from '~/components/SectionHeading.astro';
+import MenuCard from '~/components/MenuCard.astro';
+import menu from '~/data/menu.json';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const dict = t(locale);
+---
+
+<Base locale={locale} title={dict.meta.menu.title} description={dict.meta.menu.description}>
+  <section class="mx-auto max-w-6xl px-5 pb-20 pt-16 md:pt-24">
+    <SectionHeading eyebrow="MENU" title={dict.menu.title} lede={dict.menu.lede} />
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {menu.map((item) => (
+        <MenuCard item={item} locale={locale} />
+      ))}
+    </div>
+
+    <p class="mt-10 max-w-2xl text-sm text-cream/50">{dict.menu.note}</p>
+  </section>
+</Base>
