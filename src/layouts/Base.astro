@@ -41,7 +41,7 @@ const canonical = `${siteUrl}${pathname}`;
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
-    <meta property="og:image" content={`${siteUrl}/og.jpg`} />
+    <meta property="og:image" content={`${siteUrl}/og.svg`} />
     <meta name="twitter:card" content="summary_large_image" />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -58,7 +58,7 @@ const canonical = `${siteUrl}${pathname}`;
       href="#main"
       class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-berry focus:px-4 focus:py-2 focus:text-ink"
     >
-      {locale === 'ja' ? 'メインコンテンツへ' : 'Skip to main content'}
+      {dict.a11y.skipToMain}
     </a>
     <Header locale={locale} />
     <main id="main">

@@ -67,6 +67,15 @@
     "copyright": "© BLACK KITCHEN CAR YUME",
     "builtWith": "Rolling around Joetsu & Myoko"
   },
+  "a11y": {
+    "skipToMain": "Skip to main content",
+    "openMenu": "Open menu"
+  },
+  "photoPending": {
+    "owner": "Photo coming soon",
+    "cream": "Cream photo coming soon"
+  },
+  "instagramFallbackNote": "* Auto-feed will activate once the Behold.so connection is wired up.",
   "meta": {
     "home": {
       "title": "BLACK KITCHEN CAR YUME — Parfait kitchen car in Joetsu & Myoko",

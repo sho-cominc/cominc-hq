@@ -22,13 +22,13 @@ const dict = t(locale);
       <p class="whitespace-pre-line text-cream/80 leading-relaxed">{dict.about.storyBody}</p>
     </div>
     <div class="aspect-[4/5] rounded-blob bg-line/60 grid place-items-center text-cream/40 text-sm">
-      {locale === 'ja' ? '写真（準備中）' : 'Photo coming soon'}
+      {dict.photoPending.owner}
     </div>
   </section>
 
   <section class="mx-auto max-w-4xl px-5 pb-16 grid gap-12 md:grid-cols-2 md:items-start">
     <div class="aspect-[4/5] rounded-blob bg-line/60 grid place-items-center text-cream/40 text-sm md:order-1">
-      {locale === 'ja' ? '生クリームの写真（準備中）' : 'Cream photo coming soon'}
+      {dict.photoPending.cream}
     </div>
     <div class="space-y-4 md:order-2">
       <h3 class="font-display text-2xl text-cream">{dict.about.creamHeading}</h3>

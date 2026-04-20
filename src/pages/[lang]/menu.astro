@@ -1,0 +1,8 @@
+---
+import MenuPage from '~/components/pages/MenuPage.astro';
+import { localeStaticPaths, resolveLocale } from '~/utils/i18n';
+
+export const getStaticPaths = localeStaticPaths;
+const locale = resolveLocale(Astro.params);
+---
+<MenuPage locale={locale} />

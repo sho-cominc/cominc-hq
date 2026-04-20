@@ -1,6 +1,6 @@
 ---
 import type { Locale } from '~/utils/i18n';
-import { t, SOCIAL } from '~/utils/i18n';
+import { t, basePath, SOCIAL } from '~/utils/i18n';
 import Base from '~/layouts/Base.astro';
 import SectionHeading from '~/components/SectionHeading.astro';
 import NextEventBanner from '~/components/NextEventBanner.astro';
@@ -13,7 +13,7 @@ interface Props {
 }
 const { locale } = Astro.props;
 const dict = t(locale);
-const base = `/${locale}`;
+const base = basePath(locale);
 const highlights = menu.slice(0, 3);
 ---
 
