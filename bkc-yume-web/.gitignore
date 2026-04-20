@@ -22,3 +22,6 @@ pnpm-debug.log*
 # editor
 .vscode/
 .idea/
+
+# local screenshot previews (generated via scripts/screenshot.mjs)
+preview/
