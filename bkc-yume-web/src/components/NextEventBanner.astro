@@ -16,12 +16,16 @@ const address = locale === 'ja' ? nextEvent.address_ja : nextEvent.address_en;
 const note = locale === 'ja' ? nextEvent.note_ja : nextEvent.note_en;
 
 const dateFormatted = hasEvent
-  ? new Date(nextEvent.date).toLocaleDateString(locale === 'ja' ? 'ja-JP' : 'en-GB', {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-      weekday: 'short',
-    })
+  ? new Date(`${nextEvent.date}T00:00:00+09:00`).toLocaleDateString(
+      locale === 'ja' ? 'ja-JP' : 'en-GB',
+      {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+        weekday: 'short',
+        timeZone: 'Asia/Tokyo',
+      }
+    )
   : '';
 
 const wrapperClass =

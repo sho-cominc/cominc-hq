@@ -39,3 +39,19 @@ export const SOCIAL = {
   threadsUrl: 'https://www.threads.net/@bkc_yu____me',
   email: 'contact@example.com',
 } as const;
+
+/** Root path for a locale, e.g. `basePath('ja')` → `/ja` */
+export function basePath(locale: Locale): string {
+  return `/${locale}`;
+}
+
+/** Shared getStaticPaths body for `[lang]/*` routes. */
+export function localeStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+
+/** Read and validate the `lang` param from Astro.params. */
+export function resolveLocale(params: Record<string, string | undefined>): Locale {
+  const lang = params.lang;
+  return isLocale(lang) ? lang : defaultLocale;
+}

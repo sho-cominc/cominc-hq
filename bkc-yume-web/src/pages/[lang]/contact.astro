@@ -1,0 +1,8 @@
+---
+import ContactPage from '~/components/pages/ContactPage.astro';
+import { localeStaticPaths, resolveLocale } from '~/utils/i18n';
+
+export const getStaticPaths = localeStaticPaths;
+const locale = resolveLocale(Astro.params);
+---
+<ContactPage locale={locale} />

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B0B0C"/>
+      <stop offset="1" stop-color="#1F1F22"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.25" cy="0.75" r="0.7">
+      <stop offset="0" stop-color="#FF6F8E" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#FF6F8E" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <text x="80" y="170" font-family="'Bagel Fat One', system-ui" font-size="42" fill="#FFF8EE" letter-spacing="6">BLACK KITCHEN CAR</text>
+  <text x="80" y="330" font-family="'Bagel Fat One', system-ui" font-size="180" fill="#FF6F8E">ゆめ</text>
+  <text x="80" y="440" font-family="system-ui" font-size="34" fill="#FFF8EE">見て楽しんで、食べて楽しんで。</text>
+  <text x="80" y="540" font-family="system-ui" font-size="22" fill="#8A8A8D">上越・妙高のパフェキッチンカー</text>
+  <text x="80" y="580" font-family="system-ui" font-size="22" fill="#D8A15A">@bkc_yu____me</text>
+</svg>

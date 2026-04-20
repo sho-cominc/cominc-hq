@@ -1,13 +1,13 @@
 ---
 import type { Locale } from '~/utils/i18n';
-import { t, SOCIAL } from '~/utils/i18n';
+import { t, basePath, SOCIAL } from '~/utils/i18n';
 
 interface Props {
   locale: Locale;
 }
 const { locale } = Astro.props;
 const dict = t(locale);
-const base = `/${locale}`;
+const base = basePath(locale);
 const year = new Date().getFullYear();
 ---
 

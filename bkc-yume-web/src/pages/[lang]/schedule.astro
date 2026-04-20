@@ -1,0 +1,8 @@
+---
+import SchedulePage from '~/components/pages/SchedulePage.astro';
+import { localeStaticPaths, resolveLocale } from '~/utils/i18n';
+
+export const getStaticPaths = localeStaticPaths;
+const locale = resolveLocale(Astro.params);
+---
+<SchedulePage locale={locale} />

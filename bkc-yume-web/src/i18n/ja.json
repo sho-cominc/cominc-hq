@@ -67,6 +67,15 @@
     "copyright": "© BLACK KITCHEN CAR ゆめ",
     "builtWith": "上越・妙高エリアで活動中"
   },
+  "a11y": {
+    "skipToMain": "メインコンテンツへ",
+    "openMenu": "メニューを開く"
+  },
+  "photoPending": {
+    "owner": "写真（準備中）",
+    "cream": "生クリームの写真（準備中）"
+  },
+  "instagramFallbackNote": "※ Instagram の自動表示は Behold.so 接続後に有効化されます。",
   "meta": {
     "home": {
       "title": "BLACK KITCHEN CAR ゆめ｜上越・妙高のパフェキッチンカー",

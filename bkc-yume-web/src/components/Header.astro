@@ -1,6 +1,6 @@
 ---
 import type { Locale } from '~/utils/i18n';
-import { t } from '~/utils/i18n';
+import { t, basePath } from '~/utils/i18n';
 import LangSwitch from './LangSwitch.astro';
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 }
 const { locale } = Astro.props;
 const dict = t(locale);
-const base = `/${locale}`;
+const base = basePath(locale);
 
 const nav = [
   { href: `${base}/`, label: dict.nav.home },
@@ -58,7 +58,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '');
         class="md:hidden rounded-full border border-cream/20 p-2 text-cream/80"
         aria-controls="mobile-nav"
         aria-expanded="false"
-        aria-label={locale === 'ja' ? 'メニューを開く' : 'Open menu'}
+        aria-label={dict.a11y.openMenu}
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="17" x2="20" y2="17"></line></svg>
       </button>
