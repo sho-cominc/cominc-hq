@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+  <rect width="400" height="500" fill="#0B0B0C"/>
+  <ellipse cx="200" cy="200" rx="90" ry="40" fill="#FFF8EE"/>
+  <rect x="140" y="200" width="120" height="180" rx="8" fill="#1F1F22" stroke="#FFF8EE" stroke-width="2"/>
+  <circle cx="175" cy="260" r="9" fill="#FF6F8E"/>
+  <circle cx="205" cy="280" r="8" fill="#D8A15A"/>
+  <circle cx="228" cy="255" r="7" fill="#7D9A6A"/>
+  <circle cx="190" cy="320" r="8" fill="#E8B4C0"/>
+  <text x="200" y="170" text-anchor="middle" font-size="18" fill="#FF6F8E">✨</text>
+  <text x="200" y="440" text-anchor="middle" font-family="system-ui" font-size="14" fill="#FFF8EE" opacity="0.5">MONTHLY SPECIAL</text>
+</svg>

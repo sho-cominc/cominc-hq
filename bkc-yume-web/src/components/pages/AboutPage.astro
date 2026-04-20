@@ -1,0 +1,43 @@
+---
+import type { Locale } from '~/utils/i18n';
+import { t } from '~/utils/i18n';
+import Base from '~/layouts/Base.astro';
+import SectionHeading from '~/components/SectionHeading.astro';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const dict = t(locale);
+---
+
+<Base locale={locale} title={dict.meta.about.title} description={dict.meta.about.description}>
+  <section class="mx-auto max-w-4xl px-5 pb-16 pt-16 md:pt-24">
+    <SectionHeading eyebrow="ABOUT" title={dict.about.title} />
+  </section>
+
+  <section class="mx-auto max-w-4xl px-5 pb-16 grid gap-12 md:grid-cols-2 md:items-start">
+    <div class="space-y-4">
+      <h3 class="font-display text-2xl text-cream">{dict.about.storyHeading}</h3>
+      <p class="whitespace-pre-line text-cream/80 leading-relaxed">{dict.about.storyBody}</p>
+    </div>
+    <div class="aspect-[4/5] rounded-blob bg-line/60 grid place-items-center text-cream/40 text-sm">
+      {locale === 'ja' ? '写真（準備中）' : 'Photo coming soon'}
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-4xl px-5 pb-16 grid gap-12 md:grid-cols-2 md:items-start">
+    <div class="aspect-[4/5] rounded-blob bg-line/60 grid place-items-center text-cream/40 text-sm md:order-1">
+      {locale === 'ja' ? '生クリームの写真（準備中）' : 'Cream photo coming soon'}
+    </div>
+    <div class="space-y-4 md:order-2">
+      <h3 class="font-display text-2xl text-cream">{dict.about.creamHeading}</h3>
+      <p class="text-cream/80 leading-relaxed">{dict.about.creamBody}</p>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-4xl px-5 pb-24 space-y-4">
+    <h3 class="font-display text-2xl text-cream">{dict.about.ownerHeading}</h3>
+    <p class="text-cream/80 leading-relaxed">{dict.about.ownerBody}</p>
+  </section>
+</Base>

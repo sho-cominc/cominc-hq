@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1F1F22"/>
+      <stop offset="1" stop-color="#0B0B0C"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="500" fill="url(#g1)"/>
+  <ellipse cx="200" cy="200" rx="90" ry="40" fill="#FFF8EE"/>
+  <rect x="140" y="200" width="120" height="180" rx="8" fill="#1F1F22" stroke="#FFF8EE" stroke-width="2"/>
+  <circle cx="175" cy="250" r="14" fill="#FF6F8E"/>
+  <circle cx="210" cy="280" r="12" fill="#FF6F8E"/>
+  <circle cx="230" cy="260" r="10" fill="#FF6F8E"/>
+  <text x="200" y="440" text-anchor="middle" font-family="system-ui" font-size="14" fill="#FFF8EE" opacity="0.5">STRAWBERRY CLASSIC</text>
+</svg>

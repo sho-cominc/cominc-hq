@@ -1,0 +1,46 @@
+---
+import type { Locale } from '~/utils/i18n';
+import { t, SOCIAL } from '~/utils/i18n';
+import Base from '~/layouts/Base.astro';
+import SectionHeading from '~/components/SectionHeading.astro';
+import NextEventBanner from '~/components/NextEventBanner.astro';
+import InstagramFeed from '~/components/InstagramFeed.astro';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const dict = t(locale);
+---
+
+<Base locale={locale} title={dict.meta.schedule.title} description={dict.meta.schedule.description}>
+  <section class="mx-auto max-w-6xl px-5 pt-16 md:pt-24">
+    <SectionHeading
+      eyebrow="SCHEDULE"
+      title={dict.schedule.title}
+      lede={dict.schedule.lede}
+    />
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 py-12">
+    <h2 class="mb-6 text-[11px] uppercase tracking-[0.25em] text-berry">
+      {dict.schedule.nextHeading}
+    </h2>
+    <NextEventBanner locale={locale} variant="hero" />
+  </section>
+
+  <section class="mx-auto max-w-6xl px-5 pb-20 md:pb-28">
+    <div class="mb-6 flex items-center justify-between gap-4 flex-wrap">
+      <p class="text-cream/70">{dict.schedule.followHint}</p>
+      <a
+        href={SOCIAL.instagramUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-ghost"
+      >
+        @{SOCIAL.instagramHandle} →
+      </a>
+    </div>
+    <InstagramFeed locale={locale} />
+  </section>
+</Base>

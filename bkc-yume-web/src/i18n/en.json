@@ -1,0 +1,92 @@
+{
+  "brand": {
+    "name": "BLACK KITCHEN CAR YUME",
+    "short": "BKC YUME",
+    "tagline": "First you see it. Then you fall for it.",
+    "lede": "A parfait-only kitchen car roaming Joetsu & Myoko. Cream that isn't too sweet — made for kids and grown-ups alike."
+  },
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "schedule": "Where to find us",
+    "about": "About",
+    "contact": "Contact",
+    "followInstagram": "Follow on Instagram"
+  },
+  "home": {
+    "heroCta": "See our next stop",
+    "heroSubCta": "Follow on Instagram",
+    "aboutHeading": "About YUME",
+    "aboutExcerpt": "A black kitchen car, a cream that isn't too sweet.\nA simple, slightly special parfait — the kind you fall for on your own terms.",
+    "aboutMore": "Read more",
+    "menuHeading": "Today's parfait",
+    "menuMore": "See the full menu",
+    "feedHeading": "Latest updates",
+    "feedLede": "Follow us on Instagram for next stops and new parfaits.",
+    "followCta": "Follow @bkc_yu____me"
+  },
+  "menu": {
+    "title": "Menu",
+    "lede": "¥800–¥1,000. The lineup shifts with the season and where we're parked.",
+    "seasonal": "Seasonal",
+    "allergenLabel": "May contain",
+    "note": "* Prices and lineup may vary by venue. Check Instagram for the latest."
+  },
+  "schedule": {
+    "title": "Where to find us",
+    "lede": "Our next stops are announced on Instagram as they're booked.",
+    "nextHeading": "Next stop",
+    "followHint": "Real-time updates live on Instagram."
+  },
+  "about": {
+    "title": "About YUME",
+    "storyHeading": "Why we're called YUME",
+    "storyBody": "\"A little dream-like plate, inside an ordinary day.\"\nThat's the feeling behind the name. (Full story coming soon, straight from the owner.)",
+    "creamHeading": "About our cream",
+    "creamBody": "We dial the sweetness down so the ingredients lead. Light enough for kids, satisfying down to the last bite for everyone else.",
+    "ownerHeading": "The person behind it",
+    "ownerBody": "If you spot us at a market in Joetsu or Myoko, come say hi."
+  },
+  "contact": {
+    "title": "Contact",
+    "lede": "Event bookings, press, and everything else — Instagram DM is the fastest way to reach us.",
+    "dmButton": "Message on Instagram",
+    "emailButton": "Email us",
+    "threadsButton": "See us on Threads",
+    "responseNote": "The owner usually replies within 24 hours.",
+    "eventRequestHeading": "Event bookings",
+    "eventRequestBody": "We're happy to bring the cart to markets and events. DM us with date, venue, expected footfall, and any details."
+  },
+  "nextEvent": {
+    "label": "Next stop",
+    "empty": "The next stop is being booked. Check Instagram for updates.",
+    "openInMaps": "Open in Maps",
+    "timeSeparator": "–"
+  },
+  "footer": {
+    "copyright": "© BLACK KITCHEN CAR YUME",
+    "builtWith": "Rolling around Joetsu & Myoko"
+  },
+  "meta": {
+    "home": {
+      "title": "BLACK KITCHEN CAR YUME — Parfait kitchen car in Joetsu & Myoko",
+      "description": "A parfait-only kitchen car in Joetsu and Myoko, Niigata. Cream that isn't too sweet — made for kids and grown-ups alike."
+    },
+    "menu": {
+      "title": "Menu — BLACK KITCHEN CAR YUME",
+      "description": "Signature and seasonal parfaits, ¥800–¥1,000."
+    },
+    "schedule": {
+      "title": "Where to find us — BLACK KITCHEN CAR YUME",
+      "description": "Next stops and the latest updates from the road."
+    },
+    "about": {
+      "title": "About — BLACK KITCHEN CAR YUME",
+      "description": "The name, the cream, and the person behind the cart."
+    },
+    "contact": {
+      "title": "Contact — BLACK KITCHEN CAR YUME",
+      "description": "Event bookings and press: reach us on Instagram DM."
+    }
+  }
+}

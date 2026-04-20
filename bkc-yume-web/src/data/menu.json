@@ -1,0 +1,74 @@
+[
+  {
+    "id": "strawberry-classic",
+    "name_ja": "いちご クラシック",
+    "name_en": "Strawberry Classic",
+    "description_ja": "旬のいちごと、甘さ控えめの生クリーム。ゆめの定番。",
+    "description_en": "Seasonal strawberries with our not-too-sweet cream. Our signature.",
+    "price": 1000,
+    "allergens_ja": ["乳", "小麦", "卵"],
+    "allergens_en": ["milk", "wheat", "egg"],
+    "image": "/images/parfait-sample-1.svg",
+    "seasonal": false
+  },
+  {
+    "id": "caramel-nuts",
+    "name_ja": "キャラメル ナッツ",
+    "name_en": "Caramel Nuts",
+    "description_ja": "自家製キャラメルソースと香ばしいナッツ。大人にも人気。",
+    "description_en": "House-made caramel with roasted nuts. A grown-up favourite.",
+    "price": 950,
+    "allergens_ja": ["乳", "小麦", "ナッツ"],
+    "allergens_en": ["milk", "wheat", "nuts"],
+    "image": "/images/parfait-sample-2.svg",
+    "seasonal": false
+  },
+  {
+    "id": "matcha-mochi",
+    "name_ja": "抹茶 もち",
+    "name_en": "Matcha Mochi",
+    "description_ja": "抹茶とやわらかいお餅を重ねた、和のパフェ。",
+    "description_en": "Matcha layered with soft mochi — a Japanese take on the parfait.",
+    "price": 980,
+    "allergens_ja": ["乳", "小麦"],
+    "allergens_en": ["milk", "wheat"],
+    "image": "/images/parfait-sample-3.svg",
+    "seasonal": false
+  },
+  {
+    "id": "seasonal-sakura",
+    "name_ja": "桜パフェ（春限定）",
+    "name_en": "Sakura Parfait (Spring only)",
+    "description_ja": "春の数週間だけ登場する、桜あんの季節限定。",
+    "description_en": "Sakura bean paste — only for a few weeks each spring.",
+    "price": 1000,
+    "allergens_ja": ["乳", "小麦"],
+    "allergens_en": ["milk", "wheat"],
+    "image": "/images/parfait-sample-4.svg",
+    "seasonal": true
+  },
+  {
+    "id": "kids-mini",
+    "name_ja": "キッズ ミニ",
+    "name_en": "Kids Mini",
+    "description_ja": "小さな手にもちょうどいい、子ども向けサイズ。",
+    "description_en": "A smaller size, just right for little hands.",
+    "price": 800,
+    "allergens_ja": ["乳", "小麦"],
+    "allergens_en": ["milk", "wheat"],
+    "image": "/images/parfait-sample-5.svg",
+    "seasonal": false
+  },
+  {
+    "id": "monthly-special",
+    "name_ja": "今月のスペシャル",
+    "name_en": "This Month's Special",
+    "description_ja": "月替わりの限定パフェ。詳細は Instagram で。",
+    "description_en": "A new special each month. Details on Instagram.",
+    "price": 1000,
+    "allergens_ja": ["乳", "小麦"],
+    "allergens_en": ["milk", "wheat"],
+    "image": "/images/parfait-sample-6.svg",
+    "seasonal": true
+  }
+]

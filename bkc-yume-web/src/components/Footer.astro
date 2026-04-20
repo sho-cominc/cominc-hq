@@ -1,0 +1,40 @@
+---
+import type { Locale } from '~/utils/i18n';
+import { t, SOCIAL } from '~/utils/i18n';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const dict = t(locale);
+const base = `/${locale}`;
+const year = new Date().getFullYear();
+---
+
+<footer class="mt-24 border-t border-line bg-ink text-cream/70">
+  <div class="mx-auto max-w-6xl px-5 py-10 flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+    <div class="space-y-3">
+      <p class="font-display text-2xl text-cream">BLACK KITCHEN CAR ゆめ</p>
+      <p class="text-sm text-cream/60 max-w-sm">{dict.brand.lede}</p>
+    </div>
+
+    <nav aria-label="Footer" class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+      <a href={`${base}/menu`} class="hover:text-cream">{dict.nav.menu}</a>
+      <a href={`${base}/schedule`} class="hover:text-cream">{dict.nav.schedule}</a>
+      <a href={`${base}/about`} class="hover:text-cream">{dict.nav.about}</a>
+      <a href={`${base}/contact`} class="hover:text-cream">{dict.nav.contact}</a>
+    </nav>
+
+    <div class="flex flex-col gap-2 text-sm">
+      <a href={SOCIAL.instagramUrl} target="_blank" rel="noopener noreferrer" class="hover:text-berry">Instagram @{SOCIAL.instagramHandle}</a>
+      <a href={SOCIAL.threadsUrl} target="_blank" rel="noopener noreferrer" class="hover:text-berry">Threads</a>
+    </div>
+  </div>
+
+  <div class="border-t border-line/70">
+    <div class="mx-auto max-w-6xl px-5 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2 text-xs text-cream/50">
+      <span>{year} {dict.footer.copyright}</span>
+      <span>{dict.footer.builtWith}</span>
+    </div>
+  </div>
+</footer>
