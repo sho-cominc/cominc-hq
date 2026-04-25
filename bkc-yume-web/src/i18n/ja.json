@@ -11,6 +11,7 @@
     "schedule": "出店予定",
     "about": "ゆめのこと",
     "contact": "お問い合わせ",
+    "faq": "よくある質問",
     "followInstagram": "Instagramをフォロー"
   },
   "home": {
@@ -96,6 +97,14 @@
     "contact": {
       "title": "お問い合わせ｜BLACK KITCHEN CAR ゆめ",
       "description": "出店依頼・取材のご相談は Instagram DM へ。"
+    },
+    "faq": {
+      "title": "よくある質問｜BLACK KITCHEN CAR ゆめ",
+      "description": "BKC ゆめのパフェ・出店場所・アレルゲン・出店依頼に関するよくある質問。"
     }
+  },
+  "faq": {
+    "title": "よくある質問",
+    "lede": "ゆめについてよくいただくご質問をまとめました。"
   }
 }

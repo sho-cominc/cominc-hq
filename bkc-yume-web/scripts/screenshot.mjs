@@ -13,6 +13,7 @@ const pages = [
   { url: 'http://localhost:3000/ja/schedule', name: '04-schedule-ja' },
   { url: 'http://localhost:3000/ja/about', name: '05-about-ja' },
   { url: 'http://localhost:3000/ja/contact', name: '06-contact-ja' },
+  { url: 'http://localhost:3000/ja/faq', name: '07-faq-ja' },
 ];
 
 const browser = await chromium.launch({

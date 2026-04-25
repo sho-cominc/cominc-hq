@@ -35,8 +35,8 @@ const priceLabel = `¥${item.price.toLocaleString()}`;
       alt={name}
       loading="lazy"
       decoding="async"
+      data-menu-img
       class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-      onerror="this.style.opacity='0.25'"
     />
     {item.seasonal && (
       <span class="absolute left-3 top-3 rounded-full bg-berry px-3 py-1 text-[11px] font-bold text-ink">
@@ -57,3 +57,11 @@ const priceLabel = `¥${item.price.toLocaleString()}`;
     )}
   </div>
 </article>
+
+<script>
+  document.querySelectorAll<HTMLImageElement>('img[data-menu-img]').forEach((img) => {
+    img.addEventListener('error', () => {
+      img.style.opacity = '0.25';
+    });
+  });
+</script>
