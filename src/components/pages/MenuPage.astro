@@ -1,9 +1,11 @@
 ---
 import type { Locale } from '~/utils/i18n';
 import { t } from '~/utils/i18n';
+import { menuSchema } from '~/utils/schema';
 import Base from '~/layouts/Base.astro';
 import SectionHeading from '~/components/SectionHeading.astro';
 import MenuCard from '~/components/MenuCard.astro';
+import JsonLd from '~/components/JsonLd.astro';
 import menu from '~/data/menu.json';
 
 interface Props {
@@ -25,4 +27,6 @@ const dict = t(locale);
 
     <p class="mt-10 max-w-2xl text-sm text-cream/50">{dict.menu.note}</p>
   </section>
+
+  <JsonLd data={menuSchema(locale)} />
 </Base>

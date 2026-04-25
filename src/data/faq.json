@@ -1,0 +1,50 @@
+[
+  {
+    "q_ja": "ゆめのパフェはいくらですか？",
+    "q_en": "How much are YUME's parfaits?",
+    "a_ja": "¥800〜¥1,000です。サイズや内容によって変わります。価格は出店先によって変動する場合があります。",
+    "a_en": "Between ¥800 and ¥1,000, depending on size and ingredients. Prices may vary slightly by venue."
+  },
+  {
+    "q_ja": "出店場所はどこで確認できますか？",
+    "q_en": "Where can I check your next stop?",
+    "a_ja": "サイトの「出店予定」ページに次回の出店情報を載せています。リアルタイムの更新は Instagram (@bkc_yu____me) でお知らせしています。",
+    "a_en": "We post the next stop on our Schedule page. For real-time updates, follow us on Instagram (@bkc_yu____me)."
+  },
+  {
+    "q_ja": "アレルギー対応はありますか？",
+    "q_en": "Do you accommodate allergies?",
+    "a_ja": "メニュー各品に主なアレルゲンを表記しています（乳・小麦・卵・ナッツなど）。詳細は当日スタッフにお声がけください。",
+    "a_en": "We list common allergens (milk, wheat, egg, nuts) on each menu item. Ask staff on-site for further details."
+  },
+  {
+    "q_ja": "出店依頼はどこからできますか？",
+    "q_en": "How do I book YUME for an event?",
+    "a_ja": "Instagram DM が一番早いです。日時・会場・想定来場者数・予算などを添えてご連絡ください。通常24時間以内に本人が返信します。",
+    "a_en": "Instagram DM is the fastest. Send us the date, venue, expected footfall, and budget. The owner usually replies within 24 hours."
+  },
+  {
+    "q_ja": "子供でも食べやすいですか？",
+    "q_en": "Are the parfaits kid-friendly?",
+    "a_ja": "はい。甘さを控えめにした生クリームを使っているので、お子さまから大人まで楽しめます。「キッズ ミニ」サイズもあります。",
+    "a_en": "Yes. Our cream is dialled down on sweetness so kids and adults both enjoy it. We also offer a smaller \"Kids Mini\" size."
+  },
+  {
+    "q_ja": "予約はできますか？",
+    "q_en": "Can I reserve a parfait?",
+    "a_ja": "出店イベントによっては事前予約を受け付ける場合があります。詳しくは Instagram DM でお問い合わせください。",
+    "a_en": "We accept advance orders for some events. Reach out via Instagram DM to ask about a specific date."
+  },
+  {
+    "q_ja": "支払い方法は？",
+    "q_en": "What payment methods do you accept?",
+    "a_ja": "現金のほか、各種キャッシュレス決済に対応しています（出店先によって変わる場合があります）。",
+    "a_en": "Cash and major cashless payments. Accepted methods may vary by venue."
+  },
+  {
+    "q_ja": "メニューはいつ変わりますか？",
+    "q_en": "When does the menu change?",
+    "a_ja": "定番に加え、月替わりスペシャルと季節限定パフェがあります。最新メニューは Instagram で告知します。",
+    "a_en": "Alongside our signatures, we run a monthly special and seasonal parfaits. Latest menu announcements live on Instagram."
+  }
+]

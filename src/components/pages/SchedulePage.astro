@@ -1,10 +1,12 @@
 ---
 import type { Locale } from '~/utils/i18n';
 import { t, SOCIAL } from '~/utils/i18n';
+import { nextEventSchema } from '~/utils/schema';
 import Base from '~/layouts/Base.astro';
 import SectionHeading from '~/components/SectionHeading.astro';
 import NextEventBanner from '~/components/NextEventBanner.astro';
 import InstagramFeed from '~/components/InstagramFeed.astro';
+import JsonLd from '~/components/JsonLd.astro';
 
 interface Props {
   locale: Locale;
@@ -43,4 +45,6 @@ const dict = t(locale);
     </div>
     <InstagramFeed locale={locale} />
   </section>
+
+  <JsonLd data={nextEventSchema(locale)} />
 </Base>
