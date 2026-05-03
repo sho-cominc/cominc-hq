@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>myokojoetsu.com — Snow country, quietly.</title>
+  <meta name="description" content="An editorial guide to Myoko and Joetsu in Niigata, Japan. Snow country's best kept secret.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --cream:        #EDE8DF;
+      --cream-light:  #F5F1EB;
+      --cream-deep:   #E2DCCF;
+      --white:        #FAFAF7;
+      --ink:          #2A3A2A;
+      --ink-light:    #5A6A5A;
+      --ink-faint:    #8A9A8A;
+      --blue:         #B8D4E3;
+      --blue-deep:    #8FB5C9;
+      --brown:        #8B7355;
+      --green:        #4A6A4A;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', 'Noto Sans JP', sans-serif;
+      font-weight: 300;
+      background: var(--cream);
+      color: var(--ink);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    .serif {
+      font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .jp { font-family: 'Noto Sans JP', sans-serif; }
+
+    a { color: inherit; text-decoration: none; }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-d1 { transition-delay: 0.1s; }
+    .reveal-d2 { transition-delay: 0.2s; }
+    .reveal-d3 { transition-delay: 0.3s; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(24px, 5vw, 64px);
+    }
+
+    /* ═══ NAV ═══ */
+    .topnav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px clamp(24px, 5vw, 64px);
+      background: rgba(237, 232, 223, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(42, 58, 42, 0.06);
+    }
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.15rem;
+      color: var(--ink);
+      letter-spacing: 0.01em;
+    }
+    .topnav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5em;
+    }
+    .topnav-links {
+      display: flex;
+      gap: 1.8em;
+      list-style: none;
+    }
+    .topnav-links a {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      transition: color 0.3s;
+    }
+    .topnav-links a:hover { color: var(--ink); }
+    .sns {
+      display: flex;
+      gap: 14px;
+    }
+    .sns a {
+      width: 18px; height: 18px;
+      color: var(--ink-light);
+      transition: color 0.3s;
+    }
+    .sns a:hover { color: var(--ink); }
+    .sns svg { width: 100%; height: 100%; }
+    @media (max-width: 768px) {
+      .topnav-links { display: none; }
+    }
+
+    /* ═══ HERO ═══ */
+    .hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      padding: 120px clamp(24px, 5vw, 64px) 80px;
+      text-align: center;
+      position: relative;
+    }
+    .hero-eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      margin-bottom: 32px;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(3rem, 9vw, 7rem);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 40px;
+    }
+    .hero h1 .slash {
+      display: inline-block;
+      margin: 0 0.15em;
+      color: var(--blue-deep);
+      font-style: normal;
+    }
+    .hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      color: var(--ink-light);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .scroll-cue {
+      position: absolute;
+      bottom: 40px; left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      writing-mode: vertical-rl;
+    }
+    .scroll-cue::after {
+      content: '';
+      display: block;
+      width: 1px; height: 32px;
+      background: var(--ink-faint);
+      margin: 14px auto 0;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(0.6); transform-origin: top; }
+      50% { opacity: 1; transform: scaleY(1); }
+    }
+
+    /* ═══ INTRO ═══ */
+    .intro {
+      padding: clamp(80px, 12vh, 160px) 0;
+      background: var(--cream-light);
+    }
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: clamp(40px, 8vw, 120px);
+      align-items: start;
+    }
+    .intro-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--brown);
+    }
+    .intro-body {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+      line-height: 1.5;
+      color: var(--ink);
+    }
+    .intro-body em {
+      color: var(--green);
+    }
+    @media (max-width: 768px) {
+      .intro-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ═══ CATEGORIES ═══ */
+    .categories {
+      padding: clamp(80px, 14vh, 180px) 0;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: clamp(60px, 10vh, 120px);
+    }
+    .section-eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--brown);
+      margin-bottom: 24px;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      line-height: 1.1;
+      color: var(--ink);
+    }
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: clamp(20px, 3vw, 40px);
+    }
+    .cat-card {
+      cursor: pointer;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .cat-card:hover { transform: translateY(-6px); }
+    .cat-image {
+      aspect-ratio: 3/4;
+      background: var(--cream-deep);
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cat-image::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, transparent 30%, rgba(184, 212, 227, 0.12) 100%);
+      pointer-events: none;
+    }
+    .cat-image-shop    { background: linear-gradient(160deg, #D4C9B5 0%, #B8A88E 100%); }
+    .cat-image-eat     { background: linear-gradient(160deg, #C9B8A0 0%, #8B7355 100%); }
+    .cat-image-see     { background: linear-gradient(160deg, #C5D4C9 0%, #4A6A4A 100%); }
+    .cat-image-stay    { background: linear-gradient(160deg, #B8D4E3 0%, #5A7A8A 100%); }
+    .cat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--ink-faint);
+      margin-bottom: 6px;
+    }
+    .cat-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.6rem;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .cat-jp {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      color: var(--ink-faint);
+      margin-bottom: 12px;
+    }
+    .cat-desc {
+      font-size: 0.88rem;
+      color: var(--ink-light);
+      line-height: 1.65;
+    }
+    @media (max-width: 1024px) {
+      .cat-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    }
+    @media (max-width: 560px) {
+      .cat-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ═══ SEASONS ═══ */
+    .seasons {
+      padding: clamp(80px, 14vh, 180px) 0;
+      background: var(--cream-light);
+    }
+    .season-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--cream-deep);
+      border: 1px solid var(--cream-deep);
+    }
+    .season-card {
+      background: var(--cream-light);
+      padding: clamp(32px, 4vw, 56px) clamp(24px, 3vw, 40px);
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: background 0.5s;
+    }
+    .season-card:hover { background: var(--cream); }
+    .season-kanji {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      color: var(--ink);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .season-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.4rem;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .season-months {
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 24px;
+    }
+    .season-desc {
+      font-size: 0.88rem;
+      color: var(--ink-light);
+      line-height: 1.65;
+    }
+    .season-winter .season-kanji  { color: #5A7A8A; }
+    .season-spring .season-kanji  { color: #B89A9A; }
+    .season-summer .season-kanji  { color: #4A6A4A; }
+    .season-autumn .season-kanji  { color: #8B7355; }
+    @media (max-width: 1024px) {
+      .season-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .season-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ═══ SHOP TEASER ═══ */
+    .shop {
+      padding: clamp(80px, 14vh, 180px) 0;
+    }
+    .shop-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 6vw, 80px);
+      align-items: center;
+    }
+    .shop-visual {
+      aspect-ratio: 4/5;
+      background: linear-gradient(160deg, #E2DCCF 0%, #B8A88E 60%, #8B7355 100%);
+      position: relative;
+    }
+    .shop-visual::before {
+      content: '';
+      position: absolute;
+      top: 8%; left: 10%;
+      width: 60%; height: 70%;
+      background: var(--cream);
+      mix-blend-mode: overlay;
+      opacity: 0.4;
+    }
+    .shop-text h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 24px;
+    }
+    .shop-text p {
+      font-size: 0.95rem;
+      color: var(--ink-light);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+    .shop-cta {
+      display: inline-block;
+      margin-top: 24px;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--green);
+      border-bottom: 1px solid var(--green);
+      padding-bottom: 4px;
+      transition: color 0.3s, border-color 0.3s;
+    }
+    .shop-cta:hover { color: var(--ink); border-color: var(--ink); }
+    .shop-note {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-top: 16px;
+    }
+    @media (max-width: 768px) {
+      .shop-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ═══ ACCESS ═══ */
+    .access {
+      padding: clamp(80px, 14vh, 180px) 0;
+      background: var(--cream-light);
+    }
+    .access-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(40px, 6vw, 80px);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .access-route {
+      border-top: 1px solid var(--cream-deep);
+      padding-top: 24px;
+    }
+    .access-from {
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--brown);
+      margin-bottom: 12px;
+    }
+    .access-via {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.4rem;
+      color: var(--ink);
+      margin-bottom: 6px;
+      line-height: 1.4;
+    }
+    .access-time {
+      font-size: 0.85rem;
+      color: var(--ink-light);
+    }
+    @media (max-width: 768px) {
+      .access-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ═══ FOOTER ═══ */
+    footer {
+      padding: 60px clamp(24px, 5vw, 64px) 40px;
+      border-top: 1px solid var(--cream-deep);
+      background: var(--cream);
+    }
+    .foot {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .foot-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--ink);
+    }
+    .foot-meta {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════ NAV ══════ -->
+  <nav class="topnav">
+    <a href="#" class="logo">myokojoetsu.com</a>
+    <div class="topnav-right">
+      <ul class="topnav-links">
+        <li><a href="#categories">Discover</a></li>
+        <li><a href="#seasons">Seasons</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#access">Access</a></li>
+      </ul>
+      <div class="sns">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="X">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════ HERO ══════ -->
+  <section class="hero">
+    <div class="hero-eyebrow reveal">Niigata · Japan</div>
+    <h1 class="reveal reveal-d1">
+      Myoko<span class="slash">/</span>Joetsu
+    </h1>
+    <p class="hero-sub reveal reveal-d2">
+      Snow country, quietly.<br>
+      An editorial guide to a corner of Japan few have written about.
+    </p>
+    <div class="scroll-cue">Scroll</div>
+  </section>
+
+  <!-- ══════ INTRO ══════ -->
+  <section class="intro">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-label reveal">About this place</div>
+        <div class="intro-body reveal reveal-d1">
+          Two hours from Tokyo by bullet train, where the Japan Sea meets a 2,400-meter volcano.
+          A castle town with <em>thirteen meters of annual snowfall</em>, a thousand-year history,
+          and food that rarely leaves the prefecture.
+          <br><br>
+          We write about what's actually here.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ CATEGORIES ══════ -->
+  <section class="categories" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow reveal">Discover</div>
+        <h2 class="section-title reveal reveal-d1">Where to begin.</h2>
+      </div>
+      <div class="cat-grid">
+        <a href="#" class="cat-card reveal">
+          <div class="cat-image cat-image-shop"></div>
+          <div class="cat-num">— 01</div>
+          <h3 class="cat-title">Shop</h3>
+          <div class="cat-jp">買 / kau</div>
+          <p class="cat-desc">
+            Pottery from the kilns of Joetsu, hand-forged blades, paper, textiles.
+            The covered arcades of Takada — gangi — are a living museum.
+          </p>
+        </a>
+        <a href="#" class="cat-card reveal reveal-d1">
+          <div class="cat-image cat-image-eat"></div>
+          <div class="cat-num">— 02</div>
+          <h3 class="cat-title">Eat</h3>
+          <div class="cat-jp">食 / taberu</div>
+          <p class="cat-desc">
+            Hand-rolled hegi soba, sake from breweries founded in the 1800s,
+            and sea fish that still tastes of the morning catch.
+          </p>
+        </a>
+        <a href="#" class="cat-card reveal reveal-d2">
+          <div class="cat-image cat-image-see"></div>
+          <div class="cat-num">— 03</div>
+          <h3 class="cat-title">See</h3>
+          <div class="cat-jp">観 / miru</div>
+          <p class="cat-desc">
+            One of Japan's three great night sakura at Takada Castle.
+            Mt. Myoko, a sacred mountain since the 8th century. Powder you have to ski to believe.
+          </p>
+        </a>
+        <a href="#" class="cat-card reveal reveal-d3">
+          <div class="cat-image cat-image-stay"></div>
+          <div class="cat-num">— 04</div>
+          <h3 class="cat-title">Stay</h3>
+          <div class="cat-jp">泊 / tomaru</div>
+          <p class="cat-desc">
+            Hot-spring inns where the water has flowed for centuries,
+            mountain lodges, and quiet farmhouses in the rice fields.
+          </p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ SEASONS ══════ -->
+  <section class="seasons" id="seasons">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow reveal">A year here</div>
+        <h2 class="section-title reveal reveal-d1">Four very different places.</h2>
+      </div>
+      <div class="season-grid">
+        <div class="season-card season-winter reveal">
+          <div>
+            <div class="season-kanji">冬</div>
+            <div class="season-name">Winter</div>
+            <div class="season-months">Dec — Mar</div>
+          </div>
+          <p class="season-desc">
+            Thirteen to sixteen meters of snow. Steam rising from outdoor onsen.
+            New sake pressed in the breweries. The quietest season.
+          </p>
+        </div>
+        <div class="season-card season-spring reveal reveal-d1">
+          <div>
+            <div class="season-kanji">春</div>
+            <div class="season-name">Spring</div>
+            <div class="season-months">Apr — May</div>
+          </div>
+          <p class="season-desc">
+            Four thousand cherry trees light up around Takada Castle.
+            Snowmelt fills the rivers. The rice paddies turn to mirrors.
+          </p>
+        </div>
+        <div class="season-card season-summer reveal reveal-d2">
+          <div>
+            <div class="season-kanji">夏</div>
+            <div class="season-name">Summer</div>
+            <div class="season-months">Jun — Aug</div>
+          </div>
+          <p class="season-desc">
+            Mountain hiking above the clouds. Lotus blooms on the castle moat.
+            Festival lanterns through the gangi at night.
+          </p>
+        </div>
+        <div class="season-card season-autumn reveal reveal-d3">
+          <div>
+            <div class="season-kanji">秋</div>
+            <div class="season-name">Autumn</div>
+            <div class="season-months">Sep — Nov</div>
+          </div>
+          <p class="season-desc">
+            Rice harvest. New-crop sake. Foliage from the peaks down to the sea.
+            The clearest skies of the year.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ SHOP TEASER ══════ -->
+  <section class="shop" id="shop">
+    <div class="container">
+      <div class="shop-grid">
+        <div class="shop-visual reveal"></div>
+        <div class="shop-text">
+          <div class="section-eyebrow reveal">Coming soon</div>
+          <h2 class="reveal reveal-d1">Things worth carrying home.</h2>
+          <p class="reveal reveal-d2">
+            A small, slowly-built selection of what actually comes from this region.
+            Kanzuri — chili paste fermented for three years on snow.
+            Sake from breweries that draw from springs that never freeze.
+            Tea blended from the lotus that bloom on Takada's castle moat.
+          </p>
+          <p class="reveal reveal-d2">
+            One product, one story. Nothing else.
+          </p>
+          <a href="#" class="shop-cta reveal reveal-d3">Notify me when it opens →</a>
+          <div class="shop-note reveal reveal-d3">— Launching summer 2026</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ ACCESS ══════ -->
+  <section class="access" id="access">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow reveal">Access</div>
+        <h2 class="section-title reveal reveal-d1">Closer than you'd think.</h2>
+      </div>
+      <div class="access-grid">
+        <div class="access-route reveal">
+          <div class="access-from">From Tokyo</div>
+          <div class="access-via">Hokuriku Shinkansen<br>→ Joetsumyoko Station</div>
+          <div class="access-time">Approximately 2 hours direct</div>
+        </div>
+        <div class="access-route reveal reveal-d1">
+          <div class="access-from">From Narita / Haneda</div>
+          <div class="access-via">Train via Tokyo Station<br>→ Joetsumyoko Station</div>
+          <div class="access-time">Approximately 3.5 hours total</div>
+        </div>
+        <div class="access-route reveal reveal-d2">
+          <div class="access-from">From Kanazawa</div>
+          <div class="access-via">Hokuriku Shinkansen<br>→ Joetsumyoko Station</div>
+          <div class="access-time">Approximately 1 hour</div>
+        </div>
+        <div class="access-route reveal reveal-d3">
+          <div class="access-from">By car</div>
+          <div class="access-via">Joshin-etsu Expressway<br>→ Joetsu IC / Myoko-kogen IC</div>
+          <div class="access-time">Approximately 3 hours from Tokyo</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ FOOTER ══════ -->
+  <footer>
+    <div class="foot">
+      <div class="foot-logo">myokojoetsu.com</div>
+      <div class="foot-meta">© 2026 — An editorial guide to Niigata snow country.</div>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

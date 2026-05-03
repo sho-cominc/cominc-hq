@@ -7,3 +7,5 @@
 - [Agent convention](feedback_agent_convention.md) — @Name で指名呼び出し、@Webteam で全体指示
 - [Subsidy application](project_subsidy_application.md) — 持続化補助金（創業型）200万申請、締切4/30、様式2・3完成済み
 - [Indian Curry Restaurant](project_indian_curry_restaurant.md) — 近隣レストランのWeb制作案件、Clare/Hana/Cat/Webteam使用
+- [myokojoetsu.com](project_myokojoetsu_website.md) — 妙高・高田の地域メディアサイト。ComInc.とは完全切り離し。beige+serif italicのeditorialデザイン
+- [myokojoetsu.com EC](project_myokojoetsu_ec.md) — お土産物販。メディア×コマース×ツーリズムの三位一体。STORES→Shopify。全チームリサーチ済み
