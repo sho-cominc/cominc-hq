@@ -84,7 +84,8 @@ All plans live in **ComInc. HQ** on Notion:
 ---
 
 ## Important context
-- Kawano-san (4/1 meeting) = local hotel owner x4, potential key partner — handle with care
+- **Timezone: Always use JST (Asia/Tokyo).** Sho is based in Japan. All dates, times, and "today" references must be in JST.
+- Kawano-san = architect, introduced to John by Sho. John = hotel owner x4.
 - Sho's git identity is set: `Shotaro Shimizu <sho@myokojoetsu.com>`
 - Python is installed at `C:/Users/reservation_agent03/AppData/Local/Programs/Python/Python312/`
 - joetsuexplorer.com appears to be offline — check before any web tasks involving it
