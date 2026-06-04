@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  PAGE-SPECIFIC: Update title and meta for each page     ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <title>Shop — myokojoetsu.com</title>
+  <meta name="description" content="Pottery, hand-forged blades, textiles, and fermented goods from Joetsu and Myoko. Things worth carrying home from Niigata snow country.">
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  SHARED: Fonts — identical across all pages             ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ╔══════════════════════════════════════════════════════════╗
+       ║  SHARED CSS — Identical across all pages                ║
+       ║  Copy this entire block without changes.                ║
+       ╚══════════════════════════════════════════════════════════╝ */
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --cream:        #EDE8DF;
+      --cream-light:  #F5F1EB;
+      --cream-deep:   #E2DCCF;
+      --white:        #FAFAF7;
+      --ink:          #2A3A2A;
+      --ink-light:    #5A6A5A;
+      --ink-faint:    #8A9A8A;
+      --blue:         #B8D4E3;
+      --blue-deep:    #8FB5C9;
+      --brown:        #8B7355;
+      --green:        #4A6A4A;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', 'Noto Sans JP', sans-serif;
+      font-weight: 300;
+      background: var(--cream);
+      color: var(--ink);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+
+    .serif {
+      font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .jp { font-family: 'Noto Sans JP', sans-serif; }
+
+    a { color: inherit; text-decoration: none; }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-d1 { transition-delay: 0.1s; }
+    .reveal-d2 { transition-delay: 0.2s; }
+    .reveal-d3 { transition-delay: 0.3s; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 clamp(24px, 5vw, 64px);
+    }
+
+    /* ═══ SHARED: NAV ═══ */
+    .topnav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 20px clamp(24px, 5vw, 64px);
+      background: rgba(237, 232, 223, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(42, 58, 42, 0.06);
+    }
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: 1.15rem;
+      color: var(--ink);
+      letter-spacing: 0.01em;
+    }
+    .topnav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5em;
+    }
+    .topnav-links {
+      display: flex;
+      gap: 1.8em;
+      list-style: none;
+    }
+    .topnav-links > li {
+      position: relative;
+    }
+    .topnav-links > li > a {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      transition: color 0.3s;
+    }
+    .topnav-links > li > a:hover { color: var(--ink); }
+
+    /* Nav: Active page indicator */
+    .topnav-links > li > a.active {
+      color: var(--ink);
+      border-bottom: 1px solid var(--ink);
+      padding-bottom: 2px;
+    }
+
+    /* Nav: Dropdown */
+    .nav-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      padding-top: 14px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    .topnav-links > li:hover .nav-dropdown {
+      opacity: 1;
+      visibility: visible;
+    }
+    .nav-dropdown-inner {
+      background: var(--white);
+      border: 1px solid var(--cream-deep);
+      padding: 16px 24px;
+      min-width: 160px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      box-shadow: 0 8px 32px rgba(42, 58, 42, 0.06);
+    }
+    .nav-dropdown a {
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      transition: color 0.3s;
+      white-space: nowrap;
+    }
+    .nav-dropdown a:hover { color: var(--ink); }
+    .nav-dropdown .nav-jp {
+      font-size: 0.68rem;
+      color: var(--ink-faint);
+      letter-spacing: 0.2em;
+      margin-left: 6px;
+    }
+
+    .sns {
+      display: flex;
+      gap: 14px;
+    }
+    .sns a {
+      width: 18px; height: 18px;
+      color: var(--ink-light);
+      transition: color 0.3s;
+    }
+    .sns a:hover { color: var(--ink); }
+    .sns svg { width: 100%; height: 100%; }
+
+    /* Nav: Mobile hamburger */
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      color: var(--ink-light);
+    }
+    .nav-toggle svg { width: 22px; height: 22px; }
+
+    @media (max-width: 768px) {
+      .topnav-links { display: none; }
+      .nav-toggle { display: block; }
+      .topnav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--white);
+        border-bottom: 1px solid var(--cream-deep);
+        padding: 24px clamp(24px, 5vw, 64px);
+        gap: 16px;
+      }
+      .topnav-links.open .nav-dropdown {
+        position: static;
+        transform: none;
+        opacity: 1;
+        visibility: visible;
+        padding-top: 8px;
+      }
+      .topnav-links.open .nav-dropdown-inner {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0 0 0 16px;
+      }
+    }
+
+    /* ═══ SHARED: SECTION HEADER ═══ */
+    .section-header {
+      text-align: center;
+      margin-bottom: clamp(60px, 10vh, 120px);
+    }
+    .section-eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--brown);
+      margin-bottom: 24px;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      line-height: 1.1;
+      color: var(--ink);
+    }
+
+    /* ═══ SHARED: FOOTER ═══ */
+    footer {
+      padding: 60px clamp(24px, 5vw, 64px) 40px;
+      border-top: 1px solid var(--cream-deep);
+      background: var(--cream);
+    }
+    .foot {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+    .foot-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--ink);
+    }
+    .foot-meta {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+
+    /* ╔══════════════════════════════════════════════════════════╗
+       ║  PAGE-SPECIFIC CSS — Styles unique to sub-pages         ║
+       ║  Edit or extend per page as needed.                     ║
+       ╚══════════════════════════════════════════════════════════╝ */
+
+    /* ═══ PAGE HERO (sub-pages: shorter than homepage) ═══ */
+    .page-hero {
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 140px clamp(24px, 5vw, 64px) 80px;
+      text-align: center;
+      position: relative;
+    }
+    .page-hero-eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--brown);
+      margin-bottom: 20px;
+    }
+    .page-hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin-bottom: 16px;
+    }
+    .page-hero-jp {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      color: var(--ink-faint);
+      letter-spacing: 0.15em;
+      margin-bottom: 28px;
+    }
+    .page-hero-desc {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: var(--ink-light);
+      max-width: 560px;
+      margin: 0 auto;
+      line-height: 1.5;
+    }
+
+    /* ═══ EDITORIAL INTRO ═══ */
+    .editorial-intro {
+      padding: clamp(80px, 12vh, 160px) 0;
+      background: var(--cream-light);
+    }
+    .editorial-intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: clamp(40px, 8vw, 120px);
+      align-items: start;
+    }
+    .editorial-intro-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--brown);
+    }
+    .editorial-intro-body {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.4rem, 2.4vw, 1.9rem);
+      line-height: 1.5;
+      color: var(--ink);
+    }
+    .editorial-intro-body em {
+      color: var(--green);
+      font-style: italic;
+    }
+    @media (max-width: 768px) {
+      .editorial-intro-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ═══ FEATURE GRID ═══ */
+    .features {
+      padding: clamp(80px, 14vh, 180px) 0;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(20px, 3vw, 40px);
+    }
+    .feature-card {
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .feature-card:hover { transform: translateY(-6px); }
+    .feature-image {
+      aspect-ratio: 4/3;
+      background: var(--cream-deep);
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-image::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, transparent 30%, rgba(184, 212, 227, 0.12) 100%);
+      pointer-events: none;
+    }
+    .feature-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 0.9rem;
+      color: var(--ink-faint);
+      margin-bottom: 6px;
+    }
+    .feature-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.5rem;
+      color: var(--ink);
+      margin-bottom: 8px;
+    }
+    .feature-jp {
+      font-size: 0.72rem;
+      letter-spacing: 0.25em;
+      color: var(--ink-faint);
+      margin-bottom: 12px;
+    }
+    .feature-desc {
+      font-size: 0.88rem;
+      color: var(--ink-light);
+      line-height: 1.65;
+    }
+    .feature-link {
+      display: inline-block;
+      margin-top: 16px;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--green);
+      border-bottom: 1px solid var(--green);
+      padding-bottom: 2px;
+      transition: color 0.3s, border-color 0.3s;
+    }
+    .feature-link:hover { color: var(--ink); border-color: var(--ink); }
+    @media (max-width: 1024px) {
+      .feature-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+    }
+    @media (max-width: 560px) {
+      .feature-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ═══ FULL-WIDTH CALLOUT / QUOTE ═══ */
+    .callout {
+      padding: clamp(80px, 14vh, 160px) 0;
+      background: var(--cream-light);
+    }
+    .callout-inner {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .callout-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+      line-height: 1.35;
+      color: var(--ink);
+      margin-bottom: 32px;
+    }
+    .callout-attr {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    .callout-rule {
+      width: 40px;
+      height: 1px;
+      background: var(--cream-deep);
+      margin: 0 auto 24px;
+    }
+
+    /* ═══ RELATED PAGES (Continue exploring) ═══ */
+    .related {
+      padding: clamp(80px, 14vh, 180px) 0;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: var(--cream-deep);
+      border: 1px solid var(--cream-deep);
+    }
+    .related-card {
+      background: var(--cream);
+      padding: clamp(32px, 4vw, 56px) clamp(24px, 3vw, 40px);
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: background 0.5s;
+    }
+    .related-card:hover { background: var(--cream-light); }
+    .related-category {
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--brown);
+      margin-bottom: 12px;
+    }
+    .related-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 1.4rem;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .related-jp {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      color: var(--ink-faint);
+      margin-bottom: 16px;
+    }
+    .related-desc {
+      font-size: 0.85rem;
+      color: var(--ink-light);
+      line-height: 1.6;
+    }
+    .related-arrow {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      color: var(--green);
+      margin-top: 20px;
+      transition: color 0.3s;
+    }
+    .related-card:hover .related-arrow { color: var(--ink); }
+    @media (max-width: 1024px) {
+      .related-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .related-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════
+       SHARED: NAV — Identical across all pages.
+       Update .active class on the current page's link.
+       ══════════════════════════════════════════════════════════ -->
+  <nav class="topnav">
+    <a href="/" class="logo">myokojoetsu.com</a>
+    <div class="topnav-right">
+      <ul class="topnav-links" id="navLinks">
+        <li>
+          <a href="#" class="active">Discover</a>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-inner">
+              <a href="/shop.html">Shop <span class="nav-jp">買</span></a>
+              <a href="/eat.html">Eat <span class="nav-jp">食</span></a>
+              <a href="/see.html">See <span class="nav-jp">観</span></a>
+              <a href="/stay.html">Stay <span class="nav-jp">泊</span></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#">Seasons</a>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-inner">
+              <a href="/winter.html">Winter <span class="nav-jp">冬</span></a>
+              <a href="/spring.html">Spring <span class="nav-jp">春</span></a>
+              <a href="/summer.html">Summer <span class="nav-jp">夏</span></a>
+              <a href="/autumn.html">Autumn <span class="nav-jp">秋</span></a>
+            </div>
+          </div>
+        </li>
+        <li><a href="/shop.html">Shop</a></li>
+        <li><a href="/#access">Access</a></li>
+      </ul>
+      <div class="sns">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="X">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════════
+       PAGE-SPECIFIC: PAGE HERO
+       Update: eyebrow, h1, .page-hero-jp, .page-hero-desc
+       ══════════════════════════════════════════════════════════ -->
+  <section class="page-hero">
+    <div class="page-hero-eyebrow reveal">Discover</div>
+    <h1 class="reveal reveal-d1">Shop</h1>
+    <div class="page-hero-jp reveal reveal-d2">買 / kau</div>
+    <p class="page-hero-desc reveal reveal-d3">
+      Things worth carrying home from snow country.
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       PAGE-SPECIFIC: EDITORIAL INTRO
+       Update: label text, body text
+       ══════════════════════════════════════════════════════════ -->
+  <section class="editorial-intro">
+    <div class="container">
+      <div class="editorial-intro-grid">
+        <div class="editorial-intro-label reveal">What we mean by shop</div>
+        <div class="editorial-intro-body reveal reveal-d1">
+          This isn't a souvenir list. It's a small, slowly-built guide
+          to <em>things that actually come from this region</em> —
+          made by people who still live and work here, with materials
+          that belong to these mountains and this coast.
+          <br><br>
+          We write about the maker, the method, and where to find it.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       PAGE-SPECIFIC: FEATURE GRID
+       Update: section header, individual cards
+       Add/remove cards as needed. Maintain reveal-dN stagger.
+       ══════════════════════════════════════════════════════════ -->
+  <section class="features">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow reveal">Featured</div>
+        <h2 class="section-title reveal reveal-d1">From the workshops.</h2>
+      </div>
+      <div class="feature-grid">
+
+        <div class="feature-card reveal">
+          <div class="feature-image" style="background: linear-gradient(160deg, #D4C9B5 0%, #B8A88E 100%);"></div>
+          <div class="feature-num">— 01</div>
+          <h3 class="feature-title">Kanzuri</h3>
+          <div class="feature-jp">かんずり</div>
+          <p class="feature-desc">
+            Chili paste fermented for three years on snow. Made in Myoko
+            since the Edo period — one family, one recipe, no shortcuts.
+          </p>
+          <a href="#" class="feature-link">Read the story</a>
+        </div>
+
+        <div class="feature-card reveal reveal-d1">
+          <div class="feature-image" style="background: linear-gradient(160deg, #C9B8A0 0%, #8B7355 100%);"></div>
+          <div class="feature-num">— 02</div>
+          <h3 class="feature-title">Takada Knives</h3>
+          <div class="feature-jp">高田打刃物</div>
+          <p class="feature-desc">
+            Hand-forged blades from a 400-year tradition. Blacksmiths
+            in Takada still hammer each knife individually over charcoal.
+          </p>
+          <a href="#" class="feature-link">Read the story</a>
+        </div>
+
+        <div class="feature-card reveal reveal-d2">
+          <div class="feature-image" style="background: linear-gradient(160deg, #C5D4C9 0%, #4A6A4A 100%);"></div>
+          <div class="feature-num">— 03</div>
+          <h3 class="feature-title">Joetsu Sake</h3>
+          <div class="feature-jp">上越の酒</div>
+          <p class="feature-desc">
+            From breweries that draw from springs that never freeze.
+            The snow country water makes a sake you won't find in Tokyo.
+          </p>
+          <a href="#" class="feature-link">Read the story</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       PAGE-SPECIFIC: CALLOUT / QUOTE
+       Update: quote text, attribution
+       ══════════════════════════════════════════════════════════ -->
+  <section class="callout">
+    <div class="container">
+      <div class="callout-inner">
+        <blockquote class="callout-quote reveal">
+          "The things worth buying are the things that teach you
+          something about a place. They carry the weather,
+          the water, the hands that shaped them."
+        </blockquote>
+        <div class="callout-rule reveal reveal-d1"></div>
+        <div class="callout-attr reveal reveal-d1">— From the editors</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       PAGE-SPECIFIC: RELATED PAGES (Continue exploring)
+       Update: links, titles, descriptions for each page.
+       Show 4 cards linking to other relevant pages.
+       ══════════════════════════════════════════════════════════ -->
+  <section class="related">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow reveal">Continue exploring</div>
+        <h2 class="section-title reveal reveal-d1">More to discover.</h2>
+      </div>
+      <div class="related-grid">
+
+        <a href="/eat.html" class="related-card reveal">
+          <div>
+            <div class="related-category">Discover</div>
+            <div class="related-title">Eat</div>
+            <div class="related-jp">食 / taberu</div>
+          </div>
+          <div>
+            <p class="related-desc">
+              Hegi soba, sake from the 1800s, and sea fish that still tastes of morning.
+            </p>
+            <div class="related-arrow">Read more →</div>
+          </div>
+        </a>
+
+        <a href="/see.html" class="related-card reveal reveal-d1">
+          <div>
+            <div class="related-category">Discover</div>
+            <div class="related-title">See</div>
+            <div class="related-jp">観 / miru</div>
+          </div>
+          <div>
+            <p class="related-desc">
+              Night sakura, sacred mountains, and powder snow you have to ski to believe.
+            </p>
+            <div class="related-arrow">Read more →</div>
+          </div>
+        </a>
+
+        <a href="/winter.html" class="related-card reveal reveal-d2">
+          <div>
+            <div class="related-category">Seasons</div>
+            <div class="related-title">Winter</div>
+            <div class="related-jp">冬 / fuyu</div>
+          </div>
+          <div>
+            <p class="related-desc">
+              Thirteen meters of snow. Steam from outdoor onsen. The quietest season.
+            </p>
+            <div class="related-arrow">Read more →</div>
+          </div>
+        </a>
+
+        <a href="/stay.html" class="related-card reveal reveal-d3">
+          <div>
+            <div class="related-category">Discover</div>
+            <div class="related-title">Stay</div>
+            <div class="related-jp">泊 / tomaru</div>
+          </div>
+          <div>
+            <p class="related-desc">
+              Hot-spring inns, mountain lodges, and quiet farmhouses in the rice fields.
+            </p>
+            <div class="related-arrow">Read more →</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       SHARED: FOOTER — Identical across all pages.
+       ══════════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="foot">
+      <a href="/" class="foot-logo">myokojoetsu.com</a>
+      <div class="foot-meta">© 2026 — An editorial guide to Niigata snow country.</div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════════════
+       SHARED: SCROLL REVEAL — Identical across all pages.
+       ══════════════════════════════════════════════════════════ -->
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
