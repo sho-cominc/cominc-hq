@@ -9,3 +9,4 @@
 - [Indian Curry Restaurant](project_indian_curry_restaurant.md) — 近隣レストランのWeb制作案件、Clare/Hana/Cat/Webteam使用
 - [myokojoetsu.com](project_myokojoetsu_website.md) — 妙高・高田の地域メディアサイト。ComInc.とは完全切り離し。beige+serif italicのeditorialデザイン
 - [myokojoetsu.com EC](project_myokojoetsu_ec.md) — お土産物販。メディア×コマース×ツーリズムの三位一体。STORES→Shopify。全チームリサーチ済み
+- [myokojoetsu.com Session Prompt](SESSION_PROMPT_MYOKOJOETSU.md) — セッション開始時に貼り付けるプロンプト。リポ構成・デザインルール・ページ一覧・デプロイ手順
