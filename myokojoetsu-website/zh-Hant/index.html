@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>myokojoetsu.com — Snow country, quietly.</title>
-  <meta name="description" content="An editorial guide to Myoko and Joetsu in Niigata, Japan. Snow country's best kept secret.">
+  <title>myokojoetsu.com — 雪國，靜謐之地。</title>
+  <meta name="description" content="新潟妙高與上越的編輯指南。雪國最深藏的秘境。">
 
   <!-- OGP -->
-  <meta property="og:title" content="myokojoetsu.com — Snow country, quietly.">
-  <meta property="og:description" content="An editorial guide to Myoko and Joetsu in Niigata, Japan. Snow country's best kept secret.">
+  <meta property="og:title" content="myokojoetsu.com — 雪國，靜謐之地。">
+  <meta property="og:description" content="新潟妙高與上越的編輯指南。雪國最深藏的秘境。">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://myokojoetsu.com/">
+  <meta property="og:url" content="https://myokojoetsu.com/zh-Hant/">
   <meta property="og:site_name" content="myokojoetsu.com">
-  <meta property="og:locale" content="en_US">
+  <meta property="og:locale" content="zh_TW">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="myokojoetsu.com — Snow country, quietly.">
-  <meta name="twitter:description" content="An editorial guide to Myoko and Joetsu in Niigata, Japan. Snow country's best kept secret.">
+  <meta name="twitter:title" content="myokojoetsu.com — 雪國，靜謐之地。">
+  <meta name="twitter:description" content="新潟妙高與上越的編輯指南。雪國最深藏的秘境。">
 
   <link rel="alternate" hreflang="en" href="https://myokojoetsu.com/">
   <link rel="alternate" hreflang="zh-Hant" href="https://myokojoetsu.com/zh-Hant/">
@@ -23,7 +23,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Sans+TC:wght@300;400;500&family=Noto+Serif+TC:wght@400;500&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -44,7 +44,7 @@
     html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Inter', 'Noto Sans JP', sans-serif;
+      font-family: 'Inter', 'Noto Sans JP', 'Noto Sans TC', sans-serif;
       font-weight: 300;
       background: var(--cream);
       color: var(--ink);
@@ -54,12 +54,12 @@
     }
 
     .serif {
-      font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif JP', 'Noto Serif TC', serif;
       font-style: italic;
       font-weight: 400;
     }
 
-    .jp { font-family: 'Noto Sans JP', sans-serif; }
+    .jp { font-family: 'Noto Sans JP', 'Noto Sans TC', sans-serif; }
 
     a { color: inherit; text-decoration: none; }
 
@@ -127,6 +127,8 @@
     }
     .sns a:hover { color: var(--ink); }
     .sns svg { width: 100%; height: 100%; }
+
+    /* Nav: Mobile hamburger */
     .nav-toggle {
       display: none;
       background: none;
@@ -136,6 +138,7 @@
       color: var(--ink-light);
     }
     .nav-toggle svg { width: 22px; height: 22px; }
+
     @media (max-width: 768px) {
       .topnav-links { display: none; }
       .nav-toggle { display: block; }
@@ -186,7 +189,7 @@
       font-style: normal;
     }
     .hero-sub {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
       font-style: italic;
       font-weight: 300;
       font-size: clamp(1.1rem, 2vw, 1.5rem);
@@ -235,7 +238,7 @@
       color: var(--brown);
     }
     .intro-body {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
       font-style: italic;
       font-weight: 300;
       font-size: clamp(1.4rem, 2.4vw, 1.9rem);
@@ -265,7 +268,7 @@
       margin-bottom: 24px;
     }
     .section-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
       font-style: italic;
       font-weight: 300;
       font-size: clamp(2.4rem, 5vw, 4rem);
@@ -307,7 +310,7 @@
       margin-bottom: 6px;
     }
     .cat-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
       font-style: italic;
       font-weight: 400;
       font-size: 1.6rem;
@@ -355,14 +358,14 @@
     }
     .season-card:hover { background: var(--cream); }
     .season-kanji {
-      font-family: 'Noto Serif JP', serif;
+      font-family: 'Noto Serif JP', 'Noto Serif TC', serif;
       font-size: clamp(2.5rem, 5vw, 3.5rem);
       color: var(--ink);
       line-height: 1;
       margin-bottom: 16px;
     }
     .season-name {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
       font-style: italic;
       font-weight: 400;
       font-size: 1.4rem;
@@ -417,7 +420,7 @@
       opacity: 0.4;
     }
     .shop-text h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
       font-style: italic;
       font-weight: 300;
       font-size: clamp(2rem, 4vw, 3rem);
@@ -434,7 +437,7 @@
     .shop-cta {
       display: inline-block;
       margin-top: 24px;
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
       font-style: italic;
       font-size: 1.05rem;
       color: var(--green);
@@ -478,7 +481,7 @@
       margin-bottom: 12px;
     }
     .access-via {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
       font-style: italic;
       font-size: 1.4rem;
       color: var(--ink);
@@ -541,7 +544,7 @@
       margin-bottom: 24px;
     }
     .wip h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
       font-style: italic;
       font-weight: 300;
       font-size: clamp(1.8rem, 3.5vw, 2.6rem);
@@ -566,7 +569,7 @@
       margin-top: 28px;
       padding: 14px 32px;
       border: 1px solid rgba(184, 212, 227, 0.3);
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif TC', serif;
       font-style: italic;
       font-size: 1.05rem;
       color: var(--blue);
@@ -585,16 +588,16 @@
 
   <!-- ══════ NAV ══════ -->
   <nav class="topnav">
-    <a href="/" class="logo">myokojoetsu.com</a>
+    <a href="/zh-Hant/" class="logo">myokojoetsu.com</a>
     <div class="topnav-right">
       <ul class="topnav-links" id="navLinks">
-        <li><a href="#categories">Discover</a></li>
-        <li><a href="#seasons">Seasons</a></li>
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#access">Access</a></li>
+        <li><a href="#categories">探索</a></li>
+        <li><a href="#seasons">四季</a></li>
+        <li><a href="#shop">選物</a></li>
+        <li><a href="#access">交通</a></li>
       </ul>
       <div class="sns">
-        <a href="/zh-Hant/" style="font-size:0.72rem;letter-spacing:0.1em;color:var(--ink-light);width:auto;height:auto;">中文</a>
+        <a href="/" style="font-size:0.72rem;letter-spacing:0.1em;color:var(--ink-light);width:auto;height:auto;">EN</a>
         <a href="/ja/" style="font-size:0.72rem;letter-spacing:0.1em;color:var(--ink-light);width:auto;height:auto;">日本語</a>
         <a href="https://instagram.com/shoxkiwi" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -604,7 +607,7 @@
           </svg>
         </a>
       </div>
-      <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <button class="nav-toggle" aria-label="選單" onclick="document.getElementById('navLinks').classList.toggle('open')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
         </svg>
@@ -614,28 +617,28 @@
 
   <!-- ══════ HERO ══════ -->
   <section class="hero">
-    <div class="hero-eyebrow reveal">Niigata · Japan</div>
+    <div class="hero-eyebrow reveal">新潟 · 日本</div>
     <h1 class="reveal reveal-d1">
       Myoko<span class="slash">/</span>Joetsu
     </h1>
     <p class="hero-sub reveal reveal-d2">
-      Snow country, quietly.<br>
-      An editorial guide to a corner of Japan few have written about.
+      雪國，靜謐之地。<br>
+      一本關於日本鮮少被書寫的角落的編輯指南。
     </p>
-    <div class="scroll-cue">Scroll</div>
+    <div class="scroll-cue">探索</div>
   </section>
 
   <!-- ══════ INTRO ══════ -->
   <section class="intro">
     <div class="container">
       <div class="intro-grid">
-        <div class="intro-label reveal">About this place</div>
+        <div class="intro-label reveal">關於此地</div>
         <div class="intro-body reveal reveal-d1">
-          Two hours from Tokyo by bullet train, where the Japan Sea meets a 2,400-meter volcano.
-          A castle town with <em>thirteen meters of annual snowfall</em>, a thousand-year history,
-          and food that rarely leaves the prefecture.
+          從東京搭乘新幹線兩小時，日本海與一座海拔 2,400 公尺的火山在此交會。
+          一座擁有<em>年均十三公尺降雪量</em>、千年歷史的城下町，
+          以及幾乎不曾離開縣境的食材。
           <br><br>
-          We write about what's actually here.
+          我們書寫的，是真正在這裡的事物。
         </div>
       </div>
     </div>
@@ -645,48 +648,48 @@
   <section class="categories" id="categories">
     <div class="container">
       <div class="section-header">
-        <div class="section-eyebrow reveal">Discover</div>
-        <h2 class="section-title reveal reveal-d1">Where to begin.</h2>
+        <div class="section-eyebrow reveal">探索</div>
+        <h2 class="section-title reveal reveal-d1">從這裡開始。</h2>
       </div>
       <div class="cat-grid">
-        <a href="/shop.html" class="cat-card reveal">
+        <a href="/zh-Hant/shop.html" class="cat-card reveal">
           <div class="cat-image cat-image-shop"></div>
           <div class="cat-num">— 01</div>
-          <h3 class="cat-title">Shop</h3>
+          <h3 class="cat-title">選物</h3>
           <div class="cat-jp">買 / kau</div>
           <p class="cat-desc">
-            Pottery from the kilns of Joetsu, hand-forged blades, paper, textiles.
-            The covered arcades of Takada — gangi — are a living museum.
+            上越窯場的陶器、手工鍛造刃物、和紙、織物。
+            高田的雁木拱廊，本身就是一座活的博物館。
           </p>
         </a>
-        <a href="/eat.html" class="cat-card reveal reveal-d1">
+        <a href="/zh-Hant/eat.html" class="cat-card reveal reveal-d1">
           <div class="cat-image cat-image-eat"></div>
           <div class="cat-num">— 02</div>
-          <h3 class="cat-title">Eat</h3>
+          <h3 class="cat-title">美食</h3>
           <div class="cat-jp">食 / taberu</div>
           <p class="cat-desc">
-            Hand-rolled hegi soba, sake from breweries founded in the 1800s,
-            and sea fish that still tastes of the morning catch.
+            手搓的片木蕎麥、創業於 1800 年代的酒藏釀造的地酒，
+            以及仍帶著清晨氣息的日本海鮮魚。
           </p>
         </a>
-        <a href="/see.html" class="cat-card reveal reveal-d2">
+        <a href="/zh-Hant/see.html" class="cat-card reveal reveal-d2">
           <div class="cat-image cat-image-see"></div>
           <div class="cat-num">— 03</div>
-          <h3 class="cat-title">See</h3>
-          <div class="cat-jp">観 / miru</div>
+          <h3 class="cat-title">景點</h3>
+          <div class="cat-jp">觀 / miru</div>
           <p class="cat-desc">
-            One of Japan's three great night sakura at Takada Castle.
-            Mt. Myoko, a sacred mountain since the 8th century. Powder you have to ski to believe.
+            高田城址公園——日本三大夜櫻名所之一。
+            自八世紀起便被視為靈山的妙高山。以及唯有親身滑過才能相信的粉雪。
           </p>
         </a>
-        <a href="/stay.html" class="cat-card reveal reveal-d3">
+        <a href="/zh-Hant/stay.html" class="cat-card reveal reveal-d3">
           <div class="cat-image cat-image-stay"></div>
           <div class="cat-num">— 04</div>
-          <h3 class="cat-title">Stay</h3>
+          <h3 class="cat-title">住宿</h3>
           <div class="cat-jp">泊 / tomaru</div>
           <p class="cat-desc">
-            Hot-spring inns where the water has flowed for centuries,
-            mountain lodges, and quiet farmhouses in the rice fields.
+            溫泉水流淌了數百年的旅館，
+            山中小屋，以及稻田間寧靜的古民家。
           </p>
         </a>
       </div>
@@ -697,52 +700,52 @@
   <section class="seasons" id="seasons">
     <div class="container">
       <div class="section-header">
-        <div class="section-eyebrow reveal">A year here</div>
-        <h2 class="section-title reveal reveal-d1">Four very different places.</h2>
+        <div class="section-eyebrow reveal">一年四季</div>
+        <h2 class="section-title reveal reveal-d1">四個截然不同的面貌。</h2>
       </div>
       <div class="season-grid">
         <div class="season-card season-winter reveal">
           <div>
             <div class="season-kanji">冬</div>
-            <div class="season-name">Winter</div>
-            <div class="season-months">Dec — Mar</div>
+            <div class="season-name">冬季</div>
+            <div class="season-months">12月 — 3月</div>
           </div>
           <p class="season-desc">
-            Thirteen to sixteen meters of snow. Steam rising from outdoor onsen.
-            New sake pressed in the breweries. The quietest season.
+            十三至十六公尺的積雪。露天溫泉升起的白霧。
+            酒藏裡新搾的清酒。最寂靜的季節。
           </p>
         </div>
         <div class="season-card season-spring reveal reveal-d1">
           <div>
             <div class="season-kanji">春</div>
-            <div class="season-name">Spring</div>
-            <div class="season-months">Apr — May</div>
+            <div class="season-name">春季</div>
+            <div class="season-months">4月 — 5月</div>
           </div>
           <p class="season-desc">
-            Four thousand cherry trees light up around Takada Castle.
-            Snowmelt fills the rivers. The rice paddies turn to mirrors.
+            四千株櫻花在高田城周圍綻放，光映夜空。
+            雪融注入河川。水田化為一面面鏡子。
           </p>
         </div>
         <div class="season-card season-summer reveal reveal-d2">
           <div>
             <div class="season-kanji">夏</div>
-            <div class="season-name">Summer</div>
-            <div class="season-months">Jun — Aug</div>
+            <div class="season-name">夏季</div>
+            <div class="season-months">6月 — 8月</div>
           </div>
           <p class="season-desc">
-            Mountain hiking above the clouds. Lotus blooms on the castle moat.
-            Festival lanterns through the gangi at night.
+            雲上的登山步道。城濠上盛開的蓮花。
+            夜晚穿過雁木拱廊的祭典燈籠。
           </p>
         </div>
         <div class="season-card season-autumn reveal reveal-d3">
           <div>
             <div class="season-kanji">秋</div>
-            <div class="season-name">Autumn</div>
-            <div class="season-months">Sep — Nov</div>
+            <div class="season-name">秋季</div>
+            <div class="season-months">9月 — 11月</div>
           </div>
           <p class="season-desc">
-            Rice harvest. New-crop sake. Foliage from the peaks down to the sea.
-            The clearest skies of the year.
+            稻米收穫。新米釀成的清酒。紅葉從山頂渲染至海岸。
+            一年中最澄澈的天空。
           </p>
         </div>
       </div>
@@ -755,19 +758,19 @@
       <div class="shop-grid">
         <div class="shop-visual reveal"></div>
         <div class="shop-text">
-          <div class="section-eyebrow reveal">Coming soon</div>
-          <h2 class="reveal reveal-d1">Things worth carrying home.</h2>
+          <div class="section-eyebrow reveal">即將上線</div>
+          <h2 class="reveal reveal-d1">值得帶回家的物件。</h2>
           <p class="reveal reveal-d2">
-            A small, slowly-built selection of what actually comes from this region.
-            Kanzuri — chili paste fermented for three years on snow.
-            Sake from breweries that draw from springs that never freeze.
-            Tea blended from the lotus that bloom on Takada's castle moat.
+            一份緩慢累積、精心挑選的在地物產。
+            寒造里——在雪地上經三年發酵的辣椒醬。
+            取自永不結冰的湧泉所釀造的地酒。
+            以高田城濠上盛開的蓮花調配而成的茶。
           </p>
           <p class="reveal reveal-d2">
-            One product, one story. Nothing else.
+            一件物產，一則故事。僅此而已。
           </p>
-          <a href="#" class="shop-cta reveal reveal-d3">Notify me when it opens →</a>
-          <div class="shop-note reveal reveal-d3">— Launching summer 2026</div>
+          <a href="#" class="shop-cta reveal reveal-d3">開店時通知我 →</a>
+          <div class="shop-note reveal reveal-d3">— 2026 年夏季上線</div>
         </div>
       </div>
     </div>
@@ -777,29 +780,29 @@
   <section class="access" id="access">
     <div class="container">
       <div class="section-header">
-        <div class="section-eyebrow reveal">Access</div>
-        <h2 class="section-title reveal reveal-d1">Closer than you'd think.</h2>
+        <div class="section-eyebrow reveal">交通</div>
+        <h2 class="section-title reveal reveal-d1">比你想像的更近。</h2>
       </div>
       <div class="access-grid">
         <div class="access-route reveal">
-          <div class="access-from">From Tokyo</div>
-          <div class="access-via">Hokuriku Shinkansen<br>→ Joetsumyoko Station</div>
-          <div class="access-time">Approximately 2 hours direct</div>
+          <div class="access-from">從東京出發</div>
+          <div class="access-via">北陸新幹線<br>→ 上越妙高站</div>
+          <div class="access-time">直達約 2 小時</div>
         </div>
         <div class="access-route reveal reveal-d1">
-          <div class="access-from">From Narita / Haneda</div>
-          <div class="access-via">Train via Tokyo Station<br>→ Joetsumyoko Station</div>
-          <div class="access-time">Approximately 3.5 hours total</div>
+          <div class="access-from">從成田 / 羽田機場</div>
+          <div class="access-via">經東京站轉乘<br>→ 上越妙高站</div>
+          <div class="access-time">全程約 3.5 小時</div>
         </div>
         <div class="access-route reveal reveal-d2">
-          <div class="access-from">From Kanazawa</div>
-          <div class="access-via">Hokuriku Shinkansen<br>→ Joetsumyoko Station</div>
-          <div class="access-time">Approximately 1 hour</div>
+          <div class="access-from">從金澤出發</div>
+          <div class="access-via">北陸新幹線<br>→ 上越妙高站</div>
+          <div class="access-time">約 1 小時</div>
         </div>
         <div class="access-route reveal reveal-d3">
-          <div class="access-from">By car</div>
-          <div class="access-via">Joshin-etsu Expressway<br>→ Joetsu IC / Myoko-kogen IC</div>
-          <div class="access-time">Approximately 3 hours from Tokyo</div>
+          <div class="access-from">自駕</div>
+          <div class="access-via">上信越自動車道<br>→ 上越IC / 妙高高原IC</div>
+          <div class="access-time">從東京約 3 小時</div>
         </div>
       </div>
     </div>
@@ -808,15 +811,15 @@
   <!-- ══════ UNDER CONSTRUCTION ══════ -->
   <section class="wip">
     <div class="wip-inner">
-      <div class="wip-label reveal">Under construction</div>
-      <h2 class="reveal reveal-d1">This site is being built by Sho,<br>one page at a time.</h2>
+      <div class="wip-label reveal">建設中</div>
+      <h2 class="reveal reveal-d1">這個網站由 Sho 親手打造，<br>一頁一頁慢慢成形。</h2>
       <p class="reveal reveal-d2">
-        A local guide in Joetsu, building an editorial guide to the place he calls home —
-        with a little help from <em>AI</em>.
+        一位住在上越的在地嚮導，正以編輯的視角記錄他稱之為家的地方——
+        借助一點<em>AI</em>的力量。
       </p>
       <p class="reveal reveal-d2">
-        Pages for each season, where to eat, what to see, and where to stay
-        are on their way. In the meantime:
+        四季專頁、美食指南、景點推薦、住宿情報，
+        都在持續製作中。在那之前：
       </p>
       <a href="https://instagram.com/shoxkiwi" target="_blank" rel="noopener" class="wip-ig reveal reveal-d3">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -824,7 +827,7 @@
           <circle cx="12" cy="12" r="4"/>
           <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
         </svg>
-        Follow @shoxkiwi on Instagram →
+        追蹤 @shoxkiwi 的 Instagram →
       </a>
     </div>
   </section>
@@ -832,8 +835,8 @@
   <!-- ══════ FOOTER ══════ -->
   <footer>
     <div class="foot">
-      <a href="/" class="foot-logo">myokojoetsu.com</a>
-      <div class="foot-meta">© 2026 — An editorial guide to Niigata snow country.</div>
+      <a href="/zh-Hant/" class="foot-logo">myokojoetsu.com</a>
+      <div class="foot-meta">© 2026 — 新潟雪國編輯指南。</div>
     </div>
   </footer>
 

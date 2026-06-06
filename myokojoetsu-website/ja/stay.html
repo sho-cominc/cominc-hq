@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Spring — myokojoetsu.com</title>
-  <meta name="description" content="April and May in Myoko and Joetsu. Four thousand cherry trees reflected in a castle moat, rice terraces that become mirrors, and Japan's oldest vineyard.">
+  <title>宿 — myokojoetsu.com</title>
+  <meta name="description" content="妙高・上越の宿。七つの温泉に七つの泉質、城下町の古民家、雲の上の山小屋、そしてソニー創業家の息子が建てたリゾートの再生。">
 
-  <meta property="og:title" content="Spring — myokojoetsu.com">
-  <meta property="og:description" content="April and May in Myoko and Joetsu. Four thousand cherry trees reflected in a castle moat, rice terraces that become mirrors, and Japan's oldest vineyard.">
+  <meta property="og:title" content="宿 — myokojoetsu.com">
+  <meta property="og:description" content="妙高・上越の宿。七つの温泉に七つの泉質、城下町の古民家、雲の上の山小屋、そしてソニー創業家の息子が建てたリゾートの再生。">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://myokojoetsu.com/spring.html">
+  <meta property="og:url" content="https://myokojoetsu.com/ja/stay.html">
   <meta property="og:site_name" content="myokojoetsu.com">
-  <meta property="og:locale" content="en_US">
+  <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Spring — myokojoetsu.com">
-  <meta name="twitter:description" content="April and May in Myoko and Joetsu. Four thousand cherry trees reflected in a castle moat, rice terraces that become mirrors, and Japan's oldest vineyard.">
+  <meta name="twitter:title" content="宿 — myokojoetsu.com">
+  <meta name="twitter:description" content="妙高・上越の宿。七つの温泉に七つの泉質、城下町の古民家、雲の上の山小屋、そしてソニー創業家の息子が建てたリゾートの再生。">
 
-  <link rel="alternate" hreflang="en" href="https://myokojoetsu.com/spring.html">
-  <link rel="alternate" hreflang="zh-Hant" href="https://myokojoetsu.com/zh-Hant/spring.html">
-  <link rel="alternate" hreflang="ja" href="https://myokojoetsu.com/ja/spring.html">
+  <link rel="alternate" hreflang="en" href="https://myokojoetsu.com/stay.html">
+  <link rel="alternate" hreflang="ja" href="https://myokojoetsu.com/ja/stay.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://myokojoetsu.com/zh-Hant/stay.html">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -282,7 +282,7 @@
     }
 
     /* ╔══════════════════════════════════════════════════════════╗
-       ║  PAGE-SPECIFIC CSS — Spring page                        ║
+       ║  PAGE-SPECIFIC CSS — Stay page                          ║
        ╚══════════════════════════════════════════════════════════╝ */
 
     /* ═══ PAGE HERO (sub-pages: shorter than homepage) ═══ */
@@ -296,12 +296,12 @@
       text-align: center;
       position: relative;
     }
-    /* Spring color accent — subtle soft green tint on the hero background */
+    /* Stay color accent — warm wood tone tint on the hero background */
     .page-hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(168, 196, 160, 0.08) 0%, transparent 70%);
+      background: linear-gradient(180deg, rgba(138, 122, 106, 0.06) 0%, transparent 70%);
       pointer-events: none;
     }
     .page-hero-eyebrow {
@@ -395,7 +395,7 @@
     .feature-image::after {
       content: '';
       position: absolute; inset: 0;
-      background: linear-gradient(135deg, transparent 30%, rgba(168, 196, 160, 0.12) 100%);
+      background: linear-gradient(135deg, transparent 30%, rgba(184, 212, 227, 0.12) 100%);
       pointer-events: none;
     }
     .feature-num {
@@ -604,37 +604,37 @@
        SHARED: NAV
        ══════════════════════════════════════════════════════════ -->
   <nav class="topnav">
-    <a href="/" class="logo">myokojoetsu.com</a>
+    <a href="/ja/" class="logo">myokojoetsu.com</a>
     <div class="topnav-right">
       <ul class="topnav-links" id="navLinks">
         <li>
-          <a href="#">Discover</a>
+          <a href="#" class="active">見どころ</a>
           <div class="nav-dropdown">
             <div class="nav-dropdown-inner">
-              <a href="/shop.html">Shop <span class="nav-jp">買</span></a>
-              <a href="/eat.html">Eat <span class="nav-jp">食</span></a>
-              <a href="/see.html">See <span class="nav-jp">観</span></a>
-              <a href="/stay.html">Stay <span class="nav-jp">泊</span></a>
+              <a href="/ja/shop.html">買物 <span class="nav-jp">買</span></a>
+              <a href="/ja/eat.html">食 <span class="nav-jp">食</span></a>
+              <a href="/ja/see.html">景色 <span class="nav-jp">観</span></a>
+              <a href="/ja/stay.html" class="nav-current">宿 <span class="nav-jp">泊</span></a>
             </div>
           </div>
         </li>
         <li>
-          <a href="#" class="active">Seasons</a>
+          <a href="#">四季</a>
           <div class="nav-dropdown">
             <div class="nav-dropdown-inner">
-              <a href="/winter.html">Winter <span class="nav-jp">冬</span></a>
-              <a href="/spring.html" class="nav-current">Spring <span class="nav-jp">春</span></a>
-              <a href="/summer.html">Summer <span class="nav-jp">夏</span></a>
-              <a href="/autumn.html">Autumn <span class="nav-jp">秋</span></a>
+              <a href="/ja/winter.html">冬 <span class="nav-jp">冬</span></a>
+              <a href="/ja/spring.html">春 <span class="nav-jp">春</span></a>
+              <a href="/ja/summer.html">夏 <span class="nav-jp">夏</span></a>
+              <a href="/ja/autumn.html">秋 <span class="nav-jp">秋</span></a>
             </div>
           </div>
         </li>
-        <li><a href="/shop.html">Shop</a></li>
-        <li><a href="/#access">Access</a></li>
+        <li><a href="/ja/shop.html">買物</a></li>
+        <li><a href="/ja/#access">アクセス</a></li>
       </ul>
       <div class="sns">
-        <a href="/zh-Hant/spring.html" style="font-size:0.72rem;letter-spacing:0.1em;color:var(--ink-light);width:auto;height:auto;">中文</a>
-        <a href="/ja/spring.html" style="font-size:0.72rem;letter-spacing:0.1em;color:var(--ink-light);width:auto;height:auto;">日本語</a>
+        <a href="/stay.html" style="font-size:0.72rem;letter-spacing:0.1em;color:var(--ink-light);width:auto;height:auto;">EN</a>
+        <a href="/zh-Hant/stay.html" style="font-size:0.72rem;letter-spacing:0.1em;color:var(--ink-light);width:auto;height:auto;">中文</a>
         <a href="https://instagram.com/shoxkiwi" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <rect x="2" y="2" width="20" height="20" rx="5"/>
@@ -643,7 +643,7 @@
           </svg>
         </a>
       </div>
-      <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <button class="nav-toggle" aria-label="メニュー" onclick="document.getElementById('navLinks').classList.toggle('open')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
         </svg>
@@ -652,14 +652,14 @@
   </nav>
 
   <!-- ══════════════════════════════════════════════════════════
-       PAGE HERO — Spring
+       PAGE HERO — Stay
        ══════════════════════════════════════════════════════════ -->
   <section class="page-hero">
-    <div class="page-hero-eyebrow reveal">Seasons</div>
-    <h1 class="reveal reveal-d1">Spring</h1>
-    <div class="page-hero-jp reveal reveal-d2">春 / haru</div>
+    <div class="page-hero-eyebrow reveal">見どころ</div>
+    <h1 class="reveal reveal-d1">宿</h1>
+    <div class="page-hero-jp reveal reveal-d2">泊 / tomaru</div>
     <p class="page-hero-desc reveal reveal-d3">
-      Four thousand trees light up at once.
+      温泉、古い木の匂い、雪が降る音。
     </p>
   </section>
 
@@ -669,72 +669,82 @@
   <section class="editorial-intro">
     <div class="container">
       <div class="editorial-intro-grid">
-        <div class="editorial-intro-label reveal">April — May</div>
+        <div class="editorial-intro-label reveal">この地の宿</div>
         <div class="editorial-intro-body reveal reveal-d1">
-          The snow pulls back in April, and what it leaves behind is extraordinary. Four thousand cherry trees along a castle moat, three thousand paper lanterns, and the reflection of both in still water. Higher up, the rice terraces fill and become mirrors. And at Japan's oldest vineyard, the man who crossbred ten thousand grape varieties left behind a stone cellar that still keeps its wine cold with snow.
+          この地域の宿は、そのまま地形の写しである。火山の斜面に湧く温泉旅館は、谷ごとに泉質が変わり、湯の色すら異なる。城下町には腕より太い梁を持つ築百年超の木造家屋が残り、妙高と火打の稜線をつなぐ登山者のために山小屋がある。そしてひとつ、ソニー創業者の息子が建て、閉鎖され、税滞納で市に差し押さえられ、韓国企業に買われて日本最高のスキーリゾートとして再生した場所がある。ここでは、泊まる場所そのものが物語の一部である。
         </div>
       </div>
     </div>
   </section>
 
   <!-- ══════════════════════════════════════════════════════════
-       FEATURE GRID — Spring experiences
+       FEATURE GRID — Stay options
        ══════════════════════════════════════════════════════════ -->
   <section class="features">
     <div class="container">
       <div class="section-header">
-        <div class="section-eyebrow reveal">Spring</div>
-        <h2 class="section-title reveal reveal-d1">What the thaw reveals.</h2>
+        <div class="section-eyebrow reveal">宿</div>
+        <h2 class="section-title reveal reveal-d1">物語の続きがある場所。</h2>
       </div>
       <div class="feature-grid">
 
         <div class="feature-card reveal">
-          <div class="feature-image" style="background: linear-gradient(160deg, #D4A8B0 0%, #B07080 100%);"></div>
+          <div class="feature-image" style="background: linear-gradient(160deg, #8AA8C4 0%, #506A80 100%);"></div>
           <div class="feature-num">— 01</div>
-          <h3 class="feature-title">Takada Castle cherry blossoms</h3>
-          <div class="feature-jp">高田城の桜 / Takada-jō no sakura</div>
+          <h3 class="feature-title">妙高七湯</h3>
+          <div class="feature-jp">妙高七湯 / Myōkō nana-yu</div>
           <p class="feature-desc">
-            Four thousand Somei Yoshino trees and three thousand bonbori lanterns line the moats of Takada Castle, built in 1614 for Tokugawa Ieyasu's sixth son. CNN named it one of the world's five best flower-viewing festivals. The 300-metre Sakura Road, reflected in the moat water, is the centrepiece. The trees were first planted in 1909 by a veterans' association — the festival began in 1926 and celebrated its hundredth anniversary in 2025.
+            七つの温泉に、七つの泉質。赤倉のカルシウム二重泉は「美肌の湯」と呼ばれる。関温泉の赤茶けた鉄泉は妙高最古、享保十四年（1729年）開湯。入浴後、数時間にわたって身体の芯が冷めない。燕温泉の乳白色の硫黄泉は妙高山登山口にあり、空に向かって開いている。池の平には珍しい黒い鉱泉が湧く。これほど狭い範囲にこれほど多様な泉質が集まる場所は、他にない。
           </p>
         </div>
 
         <div class="feature-card reveal reveal-d1">
-          <div class="feature-image" style="background: linear-gradient(160deg, #A8C4A0 0%, #6A8A60 100%);"></div>
+          <div class="feature-image" style="background: linear-gradient(160deg, #B8A080 0%, #806840 100%);"></div>
           <div class="feature-num">— 02</div>
-          <h3 class="feature-title">Hoshitoge Rice Terraces</h3>
-          <div class="feature-jp">星峠の棚田 / Hoshitōge no tanada</div>
+          <h3 class="feature-title">古民家</h3>
+          <div class="feature-jp">古民家 / kominka</div>
           <p class="feature-desc">
-            Two hundred terraced paddies near Tokamachi, fifty minutes south. In late April, the paddies fill with snowmelt and become mizu-kagami — water mirrors. At sunrise, mist rises from the valley floor, creating a sea of clouds beneath rows of mirrored sky. Photographers arrive before dawn. The rest of the year, they're just rice fields.
+            この地域の城下町や山間の集落には、木造の古い家屋がまだ残っている。太い梁、囲炉裏、畳敷きの部屋——築百年を超える構造体。その一部が宿に転じ、布団と畳、障子の向こうに庭や山を望む簡素な設えで旅人を迎える。高田城下町の中心部では、城まで徒歩五分、雁木のパブ通りまで十分、スキー場まで二十五分という立地。妙高側では、登山口と雪にさらに近い。
           </p>
         </div>
 
         <div class="feature-card reveal reveal-d2">
-          <div class="feature-image" style="background: linear-gradient(160deg, #C4A8D4 0%, #8A60A0 100%);"></div>
+          <div class="feature-image" style="background: linear-gradient(160deg, #A8A8C4 0%, #606080 100%);"></div>
           <div class="feature-num">— 03</div>
-          <h3 class="feature-title">Iwanohara Vineyard</h3>
-          <div class="feature-jp">岩の原葡萄園 / Iwanohara budōen</div>
+          <h3 class="feature-title">赤倉観光ホテル</h3>
+          <div class="feature-jp">赤倉観光ホテル / Akakura Kankō Hoteru</div>
           <p class="feature-desc">
-            Japan's oldest winery, founded in 1890 by Zenbei Kawakami — the 'father of Japanese wine.' He crossbred 10,311 grape varieties to develop twenty-two suited to snowy Niigata, including Muscat Bailey A, still one of Japan's signature grapes. The No. 1 Ishikura stone cellar is a registered Tangible Cultural Property. The No. 2 cellar uses yukimuro — a snow-based natural refrigerator.
+            1937年、大倉財閥により妙高の斜面、標高一千メートルに開業。白いアルプス様式の建築から野尻湖を見下ろし、晴れた日には佐渡島まで見渡せる。冬はスキーイン・スキーアウト。2009年にSPA &amp; SUITE棟、2016年にプレミアム棟が加わった。妙高で最も格のある宿——自分より長くここに在り、自分が去った後もここに在り続けると、建物そのものが静かに告げている。
           </p>
         </div>
 
         <div class="feature-card reveal">
-          <div class="feature-image" style="background: linear-gradient(160deg, #A8B8C4 0%, #607080 100%);"></div>
+          <div class="feature-image" style="background: linear-gradient(160deg, #C4D4E0 0%, #8AA0B0 100%);"></div>
           <div class="feature-num">— 04</div>
-          <h3 class="feature-title">Naena Falls in snowmelt</h3>
-          <div class="feature-jp">苗名滝 / Naena-daki</div>
+          <h3 class="feature-title">燕温泉の野天風呂</h3>
+          <div class="feature-jp">燕温泉の野天風呂 / Tsubame Onsen no noten-buro</div>
           <p class="feature-desc">
-            The 55-metre waterfall on the Sekigawa River is one of Japan's hundred most famous. In spring, snowmelt from the mountains amplifies its power dramatically. The locals call it 'Earthquake Falls' — jishin-daki — for the sound it makes. A flat fifteen-minute walk from the car park.
+            妙高山登山口に無料の露天風呂が二つ。黄金の湯は男女別。河原の湯は崖の縁、川のすぐそばにある——混浴、壁なし、乳白色の湯、自分と山の間に何もない。開放期間はおおむね六月から十二月、積雪次第。河原の湯に脱衣所はない。虚飾もない。山の湯に、人間が招かれているだけである。
           </p>
         </div>
 
         <div class="feature-card reveal reveal-d1">
-          <div class="feature-image" style="background: linear-gradient(160deg, #C4D4A8 0%, #8AA060 100%);"></div>
+          <div class="feature-image" style="background: linear-gradient(160deg, #A0B8A0 0%, #607860 100%);"></div>
           <div class="feature-num">— 05</div>
-          <h3 class="feature-title">Mizubasho at Imori Pond</h3>
-          <div class="feature-jp">いもり池の水芭蕉 / Imori-ike no mizubasho</div>
+          <h3 class="feature-title">ロッテアライリゾート</h3>
+          <div class="feature-jp">ロッテアライリゾート / Lotte Arai Rizōto</div>
           <p class="feature-desc">
-            A hundred thousand wild Asian skunk cabbage bloom around this small pond at the foot of Mt. Myoko from mid-April to early May. A boardwalk circles the 500-metre circumference. On a windless morning, the pond holds a perfect mirror of the volcano above. It is one of those places that looks exactly the way Japan is supposed to look.
+            1993年、ソニー共同創業者・盛田昭夫の息子、盛田英夫により開業。2006年に閉鎖、滞納税により市に差し押さえられ、2016年にロッテが18億円で取得。2017年12月に再オープンし、千ヘクタールの滑走可能エリアを擁する。2020年ワールドスキーアワードで日本最優秀スキーリゾートを受賞。東京から新幹線で一時間四十六分。オフシーズンの宿泊料金は一泊約七千円から。
+          </p>
+        </div>
+
+        <div class="feature-card reveal reveal-d2">
+          <div class="feature-image" style="background: linear-gradient(160deg, #8AC4A8 0%, #508060 100%);"></div>
+          <div class="feature-num">— 06</div>
+          <h3 class="feature-title">山小屋</h3>
+          <div class="feature-jp">山小屋 / yamagoya</div>
+          <p class="feature-desc">
+            妙高山と火打山を結ぶ縦走路上に、二つの山小屋がある。高谷池ヒュッテは二峰の間、湿原の池のほとりに建つ——収容百人、一泊六千円、テント泊は九百円。黒沢池ヒュッテは高山帯に立つ青いドーム型の小屋で、予約制、妙高山頂から四時間。いずれも簡素。いずれも、人が何度でも戻ってくる理由そのものである。
           </p>
         </div>
 
@@ -749,10 +759,10 @@
     <div class="container">
       <div class="callout-inner">
         <blockquote class="callout-quote reveal">
-          "Four thousand lanterns, four thousand cherry trees, and a castle moat that holds the reflection of both — Takada in April is Japan at its most unguarded."
+          「七つの温泉、七つの泉質。享保十四年開湯の赤い鉄泉。崖の縁の乳白色の湯、自分と山の間に何もない。ここの宿は、眠る場所ではない——物語の続きがある場所である。」
         </blockquote>
         <div class="callout-rule reveal reveal-d1"></div>
-        <div class="callout-attr reveal reveal-d1">— From the editors</div>
+        <div class="callout-attr reveal reveal-d1">— 編集部より</div>
       </div>
     </div>
   </section>
@@ -763,64 +773,64 @@
   <section class="related">
     <div class="container">
       <div class="section-header">
-        <div class="section-eyebrow reveal">Continue exploring</div>
-        <h2 class="section-title reveal reveal-d1">More to discover.</h2>
+        <div class="section-eyebrow reveal">さらに読む</div>
+        <h2 class="section-title reveal reveal-d1">まだ続きがある。</h2>
       </div>
       <div class="related-grid">
 
-        <a href="/winter.html" class="related-card reveal">
+        <a href="/ja/see.html" class="related-card reveal">
           <div>
-            <div class="related-category">Seasons</div>
-            <div class="related-title">Winter</div>
-            <div class="related-jp">冬 / fuyu</div>
-          </div>
-          <div>
-            <p class="related-desc">
-              The quietest season. Thirteen metres of snow, seven hot springs, sake pressed in the cold.
-            </p>
-            <div class="related-arrow">Read more →</div>
-          </div>
-        </a>
-
-        <a href="/summer.html" class="related-card reveal reveal-d1">
-          <div>
-            <div class="related-category">Seasons</div>
-            <div class="related-title">Summer</div>
-            <div class="related-jp">夏 / natsu</div>
-          </div>
-          <div>
-            <p class="related-desc">
-              Above the clouds. Lotus blooms, mountain trails, and festivals by the sea.
-            </p>
-            <div class="related-arrow">Read more →</div>
-          </div>
-        </a>
-
-        <a href="/see.html" class="related-card reveal reveal-d2">
-          <div>
-            <div class="related-category">Discover</div>
-            <div class="related-title">See</div>
+            <div class="related-category">見どころ</div>
+            <div class="related-title">景色</div>
             <div class="related-jp">観 / miru</div>
           </div>
           <div>
             <p class="related-desc">
-              A sacred mountain, a castle in bloom, and the longest covered arcades in Japan.
+              霊山、桜に埋もれる城、日本最長の雁木通り。
             </p>
-            <div class="related-arrow">Read more →</div>
+            <div class="related-arrow">続きを読む →</div>
           </div>
         </a>
 
-        <a href="/shop.html" class="related-card reveal reveal-d3">
+        <a href="/ja/eat.html" class="related-card reveal reveal-d1">
           <div>
-            <div class="related-category">Discover</div>
-            <div class="related-title">Shop</div>
-            <div class="related-jp">買 / kau</div>
+            <div class="related-category">見どころ</div>
+            <div class="related-title">食</div>
+            <div class="related-jp">食 / taberu</div>
           </div>
           <div>
             <p class="related-desc">
-              Things worth carrying home. Snow-fermented chili paste, castle-moat lotus tea, and small-batch sake.
+              県外にほとんど出ない食。へぎそば、酒粕ラーメン、日本海の魚介。
             </p>
-            <div class="related-arrow">Read more →</div>
+            <div class="related-arrow">続きを読む →</div>
+          </div>
+        </a>
+
+        <a href="/ja/winter.html" class="related-card reveal reveal-d2">
+          <div>
+            <div class="related-category">四季</div>
+            <div class="related-title">冬</div>
+            <div class="related-jp">冬 / fuyu</div>
+          </div>
+          <div>
+            <p class="related-desc">
+              最も静かな季節。十三メートルの積雪、七つの温泉、寒仕込みの酒。
+            </p>
+            <div class="related-arrow">続きを読む →</div>
+          </div>
+        </a>
+
+        <a href="/ja/spring.html" class="related-card reveal reveal-d3">
+          <div>
+            <div class="related-category">四季</div>
+            <div class="related-title">春</div>
+            <div class="related-jp">春 / haru</div>
+          </div>
+          <div>
+            <p class="related-desc">
+              四千本が一斉に咲く。桜、水鏡の田、日本最古のぶどう園。
+            </p>
+            <div class="related-arrow">続きを読む →</div>
           </div>
         </a>
 
@@ -833,15 +843,13 @@
        ══════════════════════════════════════════════════════════ -->
   <section class="wip">
     <div class="wip-inner">
-      <div class="wip-label reveal">Under construction</div>
-      <h2 class="reveal reveal-d1">This site is being built by Sho,<br>one page at a time.</h2>
+      <div class="wip-label reveal">制作中</div>
+      <h2 class="reveal reveal-d1">このサイトはShoが<br>一ページずつ作っている。</h2>
       <p class="reveal reveal-d2">
-        A local guide in Joetsu, building an editorial guide to the place he calls home —
-        with a little help from <em>AI</em>.
+        上越に暮らすローカルガイドが、自分の住む土地の編集ガイドを——<em>AI</em>の力を少し借りながら。
       </p>
       <p class="reveal reveal-d2">
-        Pages for each season, where to eat, what to see, and where to stay
-        are on their way. In the meantime:
+        四季のページ、食、景色、宿——順次公開予定。それまでの間:
       </p>
       <a href="https://instagram.com/shoxkiwi" target="_blank" rel="noopener" class="wip-ig reveal reveal-d3">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -849,7 +857,7 @@
           <circle cx="12" cy="12" r="4"/>
           <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
         </svg>
-        Follow @shoxkiwi on Instagram →
+        @shoxkiwi をInstagramでフォロー →
       </a>
     </div>
   </section>
@@ -859,8 +867,8 @@
        ══════════════════════════════════════════════════════════ -->
   <footer>
     <div class="foot">
-      <a href="/" class="foot-logo">myokojoetsu.com</a>
-      <div class="foot-meta">© 2026 — An editorial guide to Niigata snow country.</div>
+      <a href="/ja/" class="foot-logo">myokojoetsu.com</a>
+      <div class="foot-meta">© 2026 — 新潟雪国の編集ガイド。</div>
     </div>
   </footer>
 
@@ -868,7 +876,7 @@
        SHARED: SCROLL REVEAL
        ══════════════════════════════════════════════════════════ -->
   <script>
-    // Scroll reveal
+    // スクロール
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {

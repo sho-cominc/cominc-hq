@@ -54,16 +54,13 @@ ComInc.（cominc.co）とは完全に切り離し。第三者視点。Sho の個
 - ComInc. / Sho のブランディングなし（WIP セクションのみ例外）
 - 比較しない（"better than Niseko" などNG）
 
-■ 現在のページ構成（2026-06-04 時点、全ページ完成済み）
-  index.html   — ランディングページ + WIP notice (@shoxkiwi Instagram)
-  winter.html  — 冬: パウダー、温泉、新酒、かんずり、静寂
-  spring.html  — 春: 高田城桜、星峠棚田、岩の原葡萄園、苗名滝、水芭蕉
-  summer.html  — 夏: 火打山、蓮、祇園祭、妙高山、海、雁木
-  autumn.html  — 秋: 紅葉、新米、ひやおろし、寒ブリ、いもり池
-  see.html     — 観: 高田城、妙高山、火打山、苗名滝、春日山城、雁木
-  shop.html    — 買: かんずり、地酒、蓮茶、和菓子、ビール、雁木商店街
-  eat.html     — 食: へぎそば、雪むろ酒かすラーメン、海鮮、酒文化、山菜、コシヒカリ
-  stay.html    — 泊: 妙高七湯、古民家（カテゴリ）、赤倉観光ホテル、燕温泉野天風呂、ロッテアライ、山小屋
+■ 現在のページ構成（2026-06-07 時点、全ページ完成済み × 3言語）
+  /            — EN ランディングページ + WIP notice
+  /winter.html — 冬  /spring.html — 春  /summer.html — 夏  /autumn.html — 秋
+  /see.html    — 観  /shop.html   — 買  /eat.html    — 食  /stay.html   — 泊
+  /zh-Hant/    — 繁体字中国語版（全9ページ、台湾・香港向け）
+  /ja/         — 日本語版（全9ページ）
+  ※ 全27ページに OGP + hreflang + 3言語切替ナビ実装済み
 
 ■ 重要な注意点
 - 古民家は「中央高田の城下町」にある（田舎の農家ではない）。城まで徒歩5分、雁木パブ通り10分、スキー場25分
@@ -113,9 +110,12 @@ git add . && git commit -m "Update pages" && git push
 ---
 
 ## 📌 次にやること（TODO）
-- [ ] 写真素材の追加（gradient placeholder → 実写）
-- [ ] ナビのリンクを各ページに接続（現在 Shop/Eat/See/Stay は # リンク）
+- [ ] 写真素材の追加（gradient placeholder → 実写） — ストック素材不足、Sho 自撮りが主軸。Wikimedia の高田城桜・妙高山は暫定利用可
+- [x] ナビのリンクを各ページに接続 ✅ 2026-06-07
 - [ ] EC ショップ連携（STORES or Shopify、summer 2026 予定）
-- [ ] 日本語版の検討（/ja/ サブパス）
-- [ ] Google Analytics / Search Console 設定
-- [ ] OGP 画像・Twitter Card の追加
+- [x] 日本語版 /ja/ 全9ページ完成 ✅ 2026-06-07
+- [x] 繁体字中国語版 /zh-Hant/ 全9ページ完成 ✅ 2026-06-07
+- [x] 3言語間 hreflang + 言語切替ナビ ✅ 2026-06-07
+- [ ] Google Analytics / Search Console 設定 — トラッキング ID 待ち
+- [x] OGP + Twitter Card メタタグ追加（全27ページ） ✅ 2026-06-07
+- [ ] OGP 画像（og:image）— 実写写真待ち

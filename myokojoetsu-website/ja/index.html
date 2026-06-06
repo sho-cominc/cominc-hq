@@ -1,25 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>myokojoetsu.com — Snow country, quietly.</title>
-  <meta name="description" content="An editorial guide to Myoko and Joetsu in Niigata, Japan. Snow country's best kept secret.">
+  <title>myokojoetsu.com — 雪国、静かに。</title>
+  <meta name="description" content="新潟・妙高と上越への編集ガイド。雪国の、まだ誰も書いていない一角。">
 
   <!-- OGP -->
-  <meta property="og:title" content="myokojoetsu.com — Snow country, quietly.">
-  <meta property="og:description" content="An editorial guide to Myoko and Joetsu in Niigata, Japan. Snow country's best kept secret.">
+  <meta property="og:title" content="myokojoetsu.com — 雪国、静かに。">
+  <meta property="og:description" content="新潟・妙高と上越への編集ガイド。雪国の、まだ誰も書いていない一角。">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://myokojoetsu.com/">
+  <meta property="og:url" content="https://myokojoetsu.com/ja/">
   <meta property="og:site_name" content="myokojoetsu.com">
-  <meta property="og:locale" content="en_US">
+  <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="myokojoetsu.com — Snow country, quietly.">
-  <meta name="twitter:description" content="An editorial guide to Myoko and Joetsu in Niigata, Japan. Snow country's best kept secret.">
+  <meta name="twitter:title" content="myokojoetsu.com — 雪国、静かに。">
+  <meta name="twitter:description" content="新潟・妙高と上越への編集ガイド。雪国の、まだ誰も書いていない一角。">
 
+  <!-- hreflang -->
   <link rel="alternate" hreflang="en" href="https://myokojoetsu.com/">
-  <link rel="alternate" hreflang="zh-Hant" href="https://myokojoetsu.com/zh-Hant/">
   <link rel="alternate" hreflang="ja" href="https://myokojoetsu.com/ja/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://myokojoetsu.com/zh-Hant/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -127,6 +128,8 @@
     }
     .sns a:hover { color: var(--ink); }
     .sns svg { width: 100%; height: 100%; }
+
+    /* Nav: Mobile hamburger */
     .nav-toggle {
       display: none;
       background: none;
@@ -136,6 +139,7 @@
       color: var(--ink-light);
     }
     .nav-toggle svg { width: 22px; height: 22px; }
+
     @media (max-width: 768px) {
       .topnav-links { display: none; }
       .nav-toggle { display: block; }
@@ -186,7 +190,7 @@
       font-style: normal;
     }
     .hero-sub {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
       font-style: italic;
       font-weight: 300;
       font-size: clamp(1.1rem, 2vw, 1.5rem);
@@ -235,7 +239,7 @@
       color: var(--brown);
     }
     .intro-body {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
       font-style: italic;
       font-weight: 300;
       font-size: clamp(1.4rem, 2.4vw, 1.9rem);
@@ -265,7 +269,7 @@
       margin-bottom: 24px;
     }
     .section-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
       font-style: italic;
       font-weight: 300;
       font-size: clamp(2.4rem, 5vw, 4rem);
@@ -307,7 +311,7 @@
       margin-bottom: 6px;
     }
     .cat-title {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
       font-style: italic;
       font-weight: 400;
       font-size: 1.6rem;
@@ -362,7 +366,7 @@
       margin-bottom: 16px;
     }
     .season-name {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
       font-style: italic;
       font-weight: 400;
       font-size: 1.4rem;
@@ -417,7 +421,7 @@
       opacity: 0.4;
     }
     .shop-text h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
       font-style: italic;
       font-weight: 300;
       font-size: clamp(2rem, 4vw, 3rem);
@@ -434,7 +438,7 @@
     .shop-cta {
       display: inline-block;
       margin-top: 24px;
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
       font-style: italic;
       font-size: 1.05rem;
       color: var(--green);
@@ -478,7 +482,7 @@
       margin-bottom: 12px;
     }
     .access-via {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
       font-style: italic;
       font-size: 1.4rem;
       color: var(--ink);
@@ -541,7 +545,7 @@
       margin-bottom: 24px;
     }
     .wip h2 {
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
       font-style: italic;
       font-weight: 300;
       font-size: clamp(1.8rem, 3.5vw, 2.6rem);
@@ -566,7 +570,7 @@
       margin-top: 28px;
       padding: 14px 32px;
       border: 1px solid rgba(184, 212, 227, 0.3);
-      font-family: 'Cormorant Garamond', serif;
+      font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
       font-style: italic;
       font-size: 1.05rem;
       color: var(--blue);
@@ -585,17 +589,17 @@
 
   <!-- ══════ NAV ══════ -->
   <nav class="topnav">
-    <a href="/" class="logo">myokojoetsu.com</a>
+    <a href="/ja/" class="logo">myokojoetsu.com</a>
     <div class="topnav-right">
       <ul class="topnav-links" id="navLinks">
-        <li><a href="#categories">Discover</a></li>
-        <li><a href="#seasons">Seasons</a></li>
-        <li><a href="#shop">Shop</a></li>
-        <li><a href="#access">Access</a></li>
+        <li><a href="#categories">見どころ</a></li>
+        <li><a href="#seasons">四季</a></li>
+        <li><a href="#shop">ショップ</a></li>
+        <li><a href="#access">アクセス</a></li>
       </ul>
       <div class="sns">
+        <a href="/" style="font-size:0.72rem;letter-spacing:0.1em;color:var(--ink-light);width:auto;height:auto;">EN</a>
         <a href="/zh-Hant/" style="font-size:0.72rem;letter-spacing:0.1em;color:var(--ink-light);width:auto;height:auto;">中文</a>
-        <a href="/ja/" style="font-size:0.72rem;letter-spacing:0.1em;color:var(--ink-light);width:auto;height:auto;">日本語</a>
         <a href="https://instagram.com/shoxkiwi" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <rect x="2" y="2" width="20" height="20" rx="5"/>
@@ -604,7 +608,7 @@
           </svg>
         </a>
       </div>
-      <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+      <button class="nav-toggle" aria-label="メニュー" onclick="document.getElementById('navLinks').classList.toggle('open')">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
         </svg>
@@ -614,28 +618,29 @@
 
   <!-- ══════ HERO ══════ -->
   <section class="hero">
-    <div class="hero-eyebrow reveal">Niigata · Japan</div>
+    <div class="hero-eyebrow reveal">新潟 · 日本</div>
     <h1 class="reveal reveal-d1">
       Myoko<span class="slash">/</span>Joetsu
     </h1>
     <p class="hero-sub reveal reveal-d2">
-      Snow country, quietly.<br>
-      An editorial guide to a corner of Japan few have written about.
+      妙高／上越<br>
+      雪国、静かに。<br>
+      まだ誰も書いていない、日本の一角への編集ガイド。
     </p>
-    <div class="scroll-cue">Scroll</div>
+    <div class="scroll-cue">スクロール</div>
   </section>
 
   <!-- ══════ INTRO ══════ -->
   <section class="intro">
     <div class="container">
       <div class="intro-grid">
-        <div class="intro-label reveal">About this place</div>
+        <div class="intro-label reveal">この場所について</div>
         <div class="intro-body reveal reveal-d1">
-          Two hours from Tokyo by bullet train, where the Japan Sea meets a 2,400-meter volcano.
-          A castle town with <em>thirteen meters of annual snowfall</em>, a thousand-year history,
-          and food that rarely leaves the prefecture.
+          東京から新幹線で二時間。日本海と標高2,400mの火山が出会う場所。
+          <em>年間積雪13メートル</em>の城下町に、千年の歴史と、
+          県外にはほとんど出回らない食がある。
           <br><br>
-          We write about what's actually here.
+          ここに実際にあるものを、書く。
         </div>
       </div>
     </div>
@@ -645,48 +650,48 @@
   <section class="categories" id="categories">
     <div class="container">
       <div class="section-header">
-        <div class="section-eyebrow reveal">Discover</div>
-        <h2 class="section-title reveal reveal-d1">Where to begin.</h2>
+        <div class="section-eyebrow reveal">見どころ</div>
+        <h2 class="section-title reveal reveal-d1">はじまりの場所。</h2>
       </div>
       <div class="cat-grid">
-        <a href="/shop.html" class="cat-card reveal">
+        <a href="/ja/shop.html" class="cat-card reveal">
           <div class="cat-image cat-image-shop"></div>
           <div class="cat-num">— 01</div>
           <h3 class="cat-title">Shop</h3>
           <div class="cat-jp">買 / kau</div>
           <p class="cat-desc">
-            Pottery from the kilns of Joetsu, hand-forged blades, paper, textiles.
-            The covered arcades of Takada — gangi — are a living museum.
+            上越の窯から生まれる陶器、鍛造の刃物、和紙、織物。
+            高田の雁木通り――屋根付きのアーケードが、そのまま生きた博物館である。
           </p>
         </a>
-        <a href="/eat.html" class="cat-card reveal reveal-d1">
+        <a href="/ja/eat.html" class="cat-card reveal reveal-d1">
           <div class="cat-image cat-image-eat"></div>
           <div class="cat-num">— 02</div>
           <h3 class="cat-title">Eat</h3>
           <div class="cat-jp">食 / taberu</div>
           <p class="cat-desc">
-            Hand-rolled hegi soba, sake from breweries founded in the 1800s,
-            and sea fish that still tastes of the morning catch.
+            手繰りのへぎそば、1800年代創業の蔵元の酒、
+            朝の匂いがまだ残る日本海の魚。
           </p>
         </a>
-        <a href="/see.html" class="cat-card reveal reveal-d2">
+        <a href="/ja/see.html" class="cat-card reveal reveal-d2">
           <div class="cat-image cat-image-see"></div>
           <div class="cat-num">— 03</div>
           <h3 class="cat-title">See</h3>
           <div class="cat-jp">観 / miru</div>
           <p class="cat-desc">
-            One of Japan's three great night sakura at Takada Castle.
-            Mt. Myoko, a sacred mountain since the 8th century. Powder you have to ski to believe.
+            日本三大夜桜のひとつ、高田城址公園。
+            八世紀から霊山として仰がれる妙高山。信じがたいほどの深雪。
           </p>
         </a>
-        <a href="/stay.html" class="cat-card reveal reveal-d3">
+        <a href="/ja/stay.html" class="cat-card reveal reveal-d3">
           <div class="cat-image cat-image-stay"></div>
           <div class="cat-num">— 04</div>
           <h3 class="cat-title">Stay</h3>
           <div class="cat-jp">泊 / tomaru</div>
           <p class="cat-desc">
-            Hot-spring inns where the water has flowed for centuries,
-            mountain lodges, and quiet farmhouses in the rice fields.
+            何百年と湯が流れ続ける温泉宿、山の上のロッジ、
+            田んぼに囲まれた静かな古民家。
           </p>
         </a>
       </div>
@@ -697,8 +702,8 @@
   <section class="seasons" id="seasons">
     <div class="container">
       <div class="section-header">
-        <div class="section-eyebrow reveal">A year here</div>
-        <h2 class="section-title reveal reveal-d1">Four very different places.</h2>
+        <div class="section-eyebrow reveal">ここの一年</div>
+        <h2 class="section-title reveal reveal-d1">四つの、まったく違う場所。</h2>
       </div>
       <div class="season-grid">
         <div class="season-card season-winter reveal">
@@ -708,8 +713,8 @@
             <div class="season-months">Dec — Mar</div>
           </div>
           <p class="season-desc">
-            Thirteen to sixteen meters of snow. Steam rising from outdoor onsen.
-            New sake pressed in the breweries. The quietest season.
+            積雪13メートルから16メートル。露天風呂から立ち上る湯気。
+            蔵では新酒が搾られる。一年でもっとも静かな季節。
           </p>
         </div>
         <div class="season-card season-spring reveal reveal-d1">
@@ -719,8 +724,8 @@
             <div class="season-months">Apr — May</div>
           </div>
           <p class="season-desc">
-            Four thousand cherry trees light up around Takada Castle.
-            Snowmelt fills the rivers. The rice paddies turn to mirrors.
+            四千本の桜が高田城を照らす。
+            雪解け水が川を満たし、田んぼは鏡になる。
           </p>
         </div>
         <div class="season-card season-summer reveal reveal-d2">
@@ -730,8 +735,8 @@
             <div class="season-months">Jun — Aug</div>
           </div>
           <p class="season-desc">
-            Mountain hiking above the clouds. Lotus blooms on the castle moat.
-            Festival lanterns through the gangi at night.
+            雲の上の登山道。城の堀に蓮の花が咲く。
+            夜、雁木を提灯の灯りが通り抜ける。
           </p>
         </div>
         <div class="season-card season-autumn reveal reveal-d3">
@@ -741,8 +746,8 @@
             <div class="season-months">Sep — Nov</div>
           </div>
           <p class="season-desc">
-            Rice harvest. New-crop sake. Foliage from the peaks down to the sea.
-            The clearest skies of the year.
+            稲刈り。新米の酒。山頂から海岸まで紅葉が降りてくる。
+            一年でもっとも空が澄む季節。
           </p>
         </div>
       </div>
@@ -755,19 +760,19 @@
       <div class="shop-grid">
         <div class="shop-visual reveal"></div>
         <div class="shop-text">
-          <div class="section-eyebrow reveal">Coming soon</div>
-          <h2 class="reveal reveal-d1">Things worth carrying home.</h2>
+          <div class="section-eyebrow reveal">近日公開</div>
+          <h2 class="reveal reveal-d1">持ち帰る価値のあるもの。</h2>
           <p class="reveal reveal-d2">
-            A small, slowly-built selection of what actually comes from this region.
-            Kanzuri — chili paste fermented for three years on snow.
-            Sake from breweries that draw from springs that never freeze.
-            Tea blended from the lotus that bloom on Takada's castle moat.
+            この土地から実際に生まれたものだけを、少しずつ集めた選品。
+            かんずり――唐辛子を三年、雪の上で発酵させた辛味調味料。
+            凍らない湧水で仕込む蔵元の酒。
+            高田城の堀に咲く蓮の葉で仕立てた茶。
           </p>
           <p class="reveal reveal-d2">
-            One product, one story. Nothing else.
+            一つの品に、一つの物語。それだけ。
           </p>
-          <a href="#" class="shop-cta reveal reveal-d3">Notify me when it opens →</a>
-          <div class="shop-note reveal reveal-d3">— Launching summer 2026</div>
+          <a href="#" class="shop-cta reveal reveal-d3">オープン時に通知を受け取る →</a>
+          <div class="shop-note reveal reveal-d3">— 2026年夏オープン予定</div>
         </div>
       </div>
     </div>
@@ -777,29 +782,29 @@
   <section class="access" id="access">
     <div class="container">
       <div class="section-header">
-        <div class="section-eyebrow reveal">Access</div>
-        <h2 class="section-title reveal reveal-d1">Closer than you'd think.</h2>
+        <div class="section-eyebrow reveal">アクセス</div>
+        <h2 class="section-title reveal reveal-d1">思ったより、近い。</h2>
       </div>
       <div class="access-grid">
         <div class="access-route reveal">
-          <div class="access-from">From Tokyo</div>
-          <div class="access-via">Hokuriku Shinkansen<br>→ Joetsumyoko Station</div>
-          <div class="access-time">Approximately 2 hours direct</div>
+          <div class="access-from">東京から</div>
+          <div class="access-via">北陸新幹線<br>→ 上越妙高駅</div>
+          <div class="access-time">直通 約2時間</div>
         </div>
         <div class="access-route reveal reveal-d1">
-          <div class="access-from">From Narita / Haneda</div>
-          <div class="access-via">Train via Tokyo Station<br>→ Joetsumyoko Station</div>
-          <div class="access-time">Approximately 3.5 hours total</div>
+          <div class="access-from">成田 / 羽田から</div>
+          <div class="access-via">東京駅経由の鉄道<br>→ 上越妙高駅</div>
+          <div class="access-time">合計 約3.5時間</div>
         </div>
         <div class="access-route reveal reveal-d2">
-          <div class="access-from">From Kanazawa</div>
-          <div class="access-via">Hokuriku Shinkansen<br>→ Joetsumyoko Station</div>
-          <div class="access-time">Approximately 1 hour</div>
+          <div class="access-from">金沢から</div>
+          <div class="access-via">北陸新幹線<br>→ 上越妙高駅</div>
+          <div class="access-time">約1時間</div>
         </div>
         <div class="access-route reveal reveal-d3">
-          <div class="access-from">By car</div>
-          <div class="access-via">Joshin-etsu Expressway<br>→ Joetsu IC / Myoko-kogen IC</div>
-          <div class="access-time">Approximately 3 hours from Tokyo</div>
+          <div class="access-from">車で</div>
+          <div class="access-via">上信越自動車道<br>→ 上越IC / 妙高高原IC</div>
+          <div class="access-time">東京から約3時間</div>
         </div>
       </div>
     </div>
@@ -808,15 +813,15 @@
   <!-- ══════ UNDER CONSTRUCTION ══════ -->
   <section class="wip">
     <div class="wip-inner">
-      <div class="wip-label reveal">Under construction</div>
-      <h2 class="reveal reveal-d1">This site is being built by Sho,<br>one page at a time.</h2>
+      <div class="wip-label reveal">制作中</div>
+      <h2 class="reveal reveal-d1">Shoがひとりで、<br>一ページずつ作っている。</h2>
       <p class="reveal reveal-d2">
-        A local guide in Joetsu, building an editorial guide to the place he calls home —
-        with a little help from <em>AI</em>.
+        上越に暮らすローカルガイドが、自分の住む場所への編集ガイドを――
+        <em>AI</em>の力も少し借りながら、書いている。
       </p>
       <p class="reveal reveal-d2">
-        Pages for each season, where to eat, what to see, and where to stay
-        are on their way. In the meantime:
+        四季のページ、食べる場所、見るべきもの、泊まる場所。
+        順に公開予定。それまでは:
       </p>
       <a href="https://instagram.com/shoxkiwi" target="_blank" rel="noopener" class="wip-ig reveal reveal-d3">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -824,7 +829,7 @@
           <circle cx="12" cy="12" r="4"/>
           <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
         </svg>
-        Follow @shoxkiwi on Instagram →
+        @shoxkiwi をInstagramでフォロー →
       </a>
     </div>
   </section>
@@ -832,8 +837,8 @@
   <!-- ══════ FOOTER ══════ -->
   <footer>
     <div class="foot">
-      <a href="/" class="foot-logo">myokojoetsu.com</a>
-      <div class="foot-meta">© 2026 — An editorial guide to Niigata snow country.</div>
+      <a href="/ja/" class="foot-logo">myokojoetsu.com</a>
+      <div class="foot-meta">© 2026 — 新潟雪国の編集ガイド。</div>
     </div>
   </footer>
 
