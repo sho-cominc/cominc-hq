@@ -87,7 +87,7 @@
 
     /* ═══ SHARED: NAV ═══ */
     .topnav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed; top: 34px; left: 0; right: 0; z-index: 100;
       display: flex; justify-content: space-between; align-items: center;
       padding: 20px clamp(24px, 5vw, 64px);
       background: rgba(237, 232, 223, 0.85);
@@ -608,9 +608,36 @@
     .wip-ig svg {
       width: 18px; height: 18px;
     }
+
+    /* ═══ SITE NOTICE BANNER ═══ */
+    .site-notice {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 101;
+      background: var(--cream-deep);
+      text-align: center;
+      padding: 8px clamp(24px, 5vw, 64px);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      color: var(--ink-light);
+      line-height: 1.6;
+    }
+    .site-notice a {
+      color: var(--ink);
+      border-bottom: 1px solid var(--ink-faint);
+      padding-bottom: 1px;
+      transition: border-color 0.3s;
+    }
+    .site-notice a:hover {
+      border-color: var(--ink);
+    }
   </style>
 </head>
 <body>
+
+<div class="site-notice">這本指南仍在撰寫中——由 AI 執筆，在地人監修。追蹤最新進展請見 <a href="https://instagram.com/shoxkiwi" target="_blank" rel="noopener">Instagram</a> →</div>
 
   <!-- ══════════════════════════════════════════════════════════
        SHARED: NAV

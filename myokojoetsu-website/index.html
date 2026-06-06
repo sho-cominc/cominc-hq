@@ -82,7 +82,7 @@
 
     /* ═══ NAV ═══ */
     .topnav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed; top: 34px; left: 0; right: 0; z-index: 100;
       display: flex; justify-content: space-between; align-items: center;
       padding: 20px clamp(24px, 5vw, 64px);
       background: rgba(237, 232, 223, 0.85);
@@ -579,9 +579,36 @@
     .wip-ig svg {
       width: 18px; height: 18px;
     }
+
+    /* ═══ SITE NOTICE BANNER ═══ */
+    .site-notice {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 101;
+      background: var(--cream-deep);
+      text-align: center;
+      padding: 8px clamp(24px, 5vw, 64px);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      color: var(--ink-light);
+      line-height: 1.6;
+    }
+    .site-notice a {
+      color: var(--ink);
+      border-bottom: 1px solid var(--ink-faint);
+      padding-bottom: 1px;
+      transition: border-color 0.3s;
+    }
+    .site-notice a:hover {
+      border-color: var(--ink);
+    }
   </style>
 </head>
 <body>
+
+<div class="site-notice">This guide is still being written — by AI, directed by a local. Follow the progress on <a href="https://instagram.com/shoxkiwi" target="_blank" rel="noopener">Instagram</a> →</div>
 
   <!-- ══════ NAV ══════ -->
   <nav class="topnav">
@@ -808,15 +835,17 @@
   <!-- ══════ UNDER CONSTRUCTION ══════ -->
   <section class="wip">
     <div class="wip-inner">
-      <div class="wip-label reveal">Under construction</div>
-      <h2 class="reveal reveal-d1">This site is being built by Sho,<br>one page at a time.</h2>
+      <div class="wip-label reveal">How this site is made</div>
+      <h2 class="reveal reveal-d1">Written by AI.<br>Directed by someone who lives here.</h2>
       <p class="reveal reveal-d2">
-        A local guide in Joetsu, building an editorial guide to the place he calls home —
-        with a little help from <em>AI</em>.
+        This guide is built with Claude, an AI, under the creative direction of Sho — a local
+        who spent two decades abroad and came back to a 130-year-old farmhouse in snow country.
+        The AI writes. Sho decides what matters, what's true, and what you'd actually want to know.
+        Neither could make this alone.
       </p>
       <p class="reveal reveal-d2">
-        Pages for each season, where to eat, what to see, and where to stay
-        are on their way. In the meantime:
+        The site is an ongoing project. Pages arrive as they're ready. If you want the unfiltered
+        version — the village, the snow, the life behind this — that's on Instagram.
       </p>
       <a href="https://instagram.com/shoxkiwi" target="_blank" rel="noopener" class="wip-ig reveal reveal-d3">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -824,7 +853,7 @@
           <circle cx="12" cy="12" r="4"/>
           <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
         </svg>
-        Follow @shoxkiwi on Instagram →
+        Follow @shoxkiwi for the real thing →
       </a>
     </div>
   </section>

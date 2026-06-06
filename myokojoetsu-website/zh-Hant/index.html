@@ -82,7 +82,7 @@
 
     /* ═══ NAV ═══ */
     .topnav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed; top: 34px; left: 0; right: 0; z-index: 100;
       display: flex; justify-content: space-between; align-items: center;
       padding: 20px clamp(24px, 5vw, 64px);
       background: rgba(237, 232, 223, 0.85);
@@ -582,9 +582,36 @@
     .wip-ig svg {
       width: 18px; height: 18px;
     }
+
+    /* ═══ SITE NOTICE BANNER ═══ */
+    .site-notice {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 101;
+      background: var(--cream-deep);
+      text-align: center;
+      padding: 8px clamp(24px, 5vw, 64px);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      color: var(--ink-light);
+      line-height: 1.6;
+    }
+    .site-notice a {
+      color: var(--ink);
+      border-bottom: 1px solid var(--ink-faint);
+      padding-bottom: 1px;
+      transition: border-color 0.3s;
+    }
+    .site-notice a:hover {
+      border-color: var(--ink);
+    }
   </style>
 </head>
 <body>
+
+<div class="site-notice">這本指南仍在撰寫中——由 AI 執筆，在地人監修。追蹤最新進展請見 <a href="https://instagram.com/shoxkiwi" target="_blank" rel="noopener">Instagram</a> →</div>
 
   <!-- ══════ NAV ══════ -->
   <nav class="topnav">
@@ -811,15 +838,16 @@
   <!-- ══════ UNDER CONSTRUCTION ══════ -->
   <section class="wip">
     <div class="wip-inner">
-      <div class="wip-label reveal">建設中</div>
-      <h2 class="reveal reveal-d1">這個網站由 Sho 親手打造，<br>一頁一頁慢慢成形。</h2>
+      <div class="wip-label reveal">這個網站是怎麼做的</div>
+      <h2 class="reveal reveal-d1">AI 撰寫。<br>由住在這裡的人指導。</h2>
       <p class="reveal reveal-d2">
-        一位住在上越的在地嚮導，正以編輯的視角記錄他稱之為家的地方——
-        借助一點<em>AI</em>的力量。
+        這本指南由 AI（Claude）撰寫，在 Sho 的創意指導下完成。Sho 是在地人，在海外生活了二十年後，
+        回到雪國一棟擁有 130 年歷史的古民家。AI 負責書寫，Sho 決定什麼重要、什麼是真的、
+        什麼是你真正想知道的。兩者缺一不可。
       </p>
       <p class="reveal reveal-d2">
-        四季專頁、美食指南、景點推薦、住宿情報，
-        都在持續製作中。在那之前：
+        這個網站是一個持續進行的計畫，頁面會陸續上線。如果你想看沒有濾鏡的版本——
+        村莊、大雪、這一切背後的生活——請到 Instagram。
       </p>
       <a href="https://instagram.com/shoxkiwi" target="_blank" rel="noopener" class="wip-ig reveal reveal-d3">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -827,7 +855,7 @@
           <circle cx="12" cy="12" r="4"/>
           <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
         </svg>
-        追蹤 @shoxkiwi 的 Instagram →
+        追蹤 @shoxkiwi，看真實的那一面 →
       </a>
     </div>
   </section>

@@ -83,7 +83,7 @@
 
     /* ═══ NAV ═══ */
     .topnav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      position: fixed; top: 34px; left: 0; right: 0; z-index: 100;
       display: flex; justify-content: space-between; align-items: center;
       padding: 20px clamp(24px, 5vw, 64px);
       background: rgba(237, 232, 223, 0.85);
@@ -583,9 +583,36 @@
     .wip-ig svg {
       width: 18px; height: 18px;
     }
+
+    /* ═══ SITE NOTICE BANNER ═══ */
+    .site-notice {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 101;
+      background: var(--cream-deep);
+      text-align: center;
+      padding: 8px clamp(24px, 5vw, 64px);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      color: var(--ink-light);
+      line-height: 1.6;
+    }
+    .site-notice a {
+      color: var(--ink);
+      border-bottom: 1px solid var(--ink-faint);
+      padding-bottom: 1px;
+      transition: border-color 0.3s;
+    }
+    .site-notice a:hover {
+      border-color: var(--ink);
+    }
   </style>
 </head>
 <body>
+
+<div class="site-notice">このガイドはまだ書いている途中——AIが書き、土地の人間が監修する。進捗は <a href="https://instagram.com/shoxkiwi" target="_blank" rel="noopener">Instagram</a> にて →</div>
 
   <!-- ══════ NAV ══════ -->
   <nav class="topnav">
@@ -813,15 +840,16 @@
   <!-- ══════ UNDER CONSTRUCTION ══════ -->
   <section class="wip">
     <div class="wip-inner">
-      <div class="wip-label reveal">制作中</div>
-      <h2 class="reveal reveal-d1">Shoがひとりで、<br>一ページずつ作っている。</h2>
+      <div class="wip-label reveal">このサイトの作り方</div>
+      <h2 class="reveal reveal-d1">AIが書く。<br>ここに住む人間が方向を決める。</h2>
       <p class="reveal reveal-d2">
-        上越に暮らすローカルガイドが、自分の住む場所への編集ガイドを――
-        <em>AI</em>の力も少し借りながら、書いている。
+        このガイドはAI（Claude）が執筆し、Shoが創作の方向を決めている。Shoは20年の海外生活を経て、
+        雪国の築130年の古民家に戻ってきた人間だ。AIが書く。何が大事で、何が本当で、
+        何を知る価値があるかはShoが判断する。どちらか一方では、このサイトは成り立たない。
       </p>
       <p class="reveal reveal-d2">
-        四季のページ、食べる場所、見るべきもの、泊まる場所。
-        順に公開予定。それまでは:
+        サイトは今も作り続けている。ページは準備ができ次第、増えていく。
+        フィルターなしの日常——集落のこと、雪のこと、この暮らしの裏側——はInstagramで。
       </p>
       <a href="https://instagram.com/shoxkiwi" target="_blank" rel="noopener" class="wip-ig reveal reveal-d3">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -829,7 +857,7 @@
           <circle cx="12" cy="12" r="4"/>
           <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
         </svg>
-        @shoxkiwi をInstagramでフォロー →
+        @shoxkiwi のInstagramで、加工なしの現実を →
       </a>
     </div>
   </section>
