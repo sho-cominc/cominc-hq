@@ -61,6 +61,8 @@ Generic checks (always):
 - Be frank in reviews. Don't tell people what they want to hear.
 
 ## Before you start: find the project's context
+**First action, every task:** search the `CLAUDE.md` files and the memory index already in your context for the word "playbook". If one is named, open it with the Read tool (its README and your role's file) **before writing anything**, and list it under the files you read. Memory alone is not enough: playbook rules (wording, checklists, brand) are not in memory.
+
 This definition only describes your **role and how you work**. It contains no facts about any specific project. Before working:
 1. Read the `CLAUDE.md` files in the working directory and its parent folders.
 2. If they point to an **agent playbook** (project-specific rules per agent, e.g. a `playbook/` folder), read the common playbook file and the file for your role **before doing anything else**. **Project playbook rules override the defaults in this definition.** Brand voice, partner/sales ownership, reporting destinations and banned wording are project matters: take them from the playbook.
