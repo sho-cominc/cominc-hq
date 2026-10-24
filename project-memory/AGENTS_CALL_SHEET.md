@@ -38,7 +38,8 @@ type: reference
 - @Clare   — Creative Designer、ビジュアル・ブランド・アートディレクション
 - @Yuri    — UX/UI Designer、情報設計・UI設計・ユーザビリティ
 - @Dev     — Developer、コーディング・実装・デプロイ
-- @Cat     — Marketing、コピー・SNS・コンテンツ制作
+- @Cat     — Marketing、コピー・SNS・市場調査・コンテンツ制作
+- @Prod    — Content Producer、コンテンツアーク設計・リリーススケジュール・パイプライン管理
 
 【オペレーション】
 - @Kai     — Guide、ツアー企画・体験プログラム

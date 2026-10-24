@@ -64,8 +64,14 @@ AGENT_REGISTRY: list[dict] = [
     {
         "key": "cat",
         "prompt_file": "marketing",
-        "description": "マーケティング。SEO、SNS、広告戦略、KPI分析、コンテンツマーケ。",
+        "description": "マーケティング。SEO、SNS、広告戦略、KPI分析、コンテンツマーケ、各プロジェクトの市場調査。",
         "tools": TOOLS_WEB,
+    },
+    {
+        "key": "prod",
+        "prompt_file": "content_producer",
+        "description": "コンテンツプロデューサー。コンテンツアーク設計、リリーススケジュール管理、投稿パイプライン管理。",
+        "tools": TOOLS_WRITE,
     },
     # ── 事業部門 / Operations ──
     {
