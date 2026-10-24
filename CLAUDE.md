@@ -19,29 +19,17 @@ Here's the static context that doesn't change often:
 
 ## Who & What
 
-- **Project**: ComInc. (cominc.co) — Inbound tourism business based in Joetsu, Niigata, Japan
-- **Founder**: Shotaro Shimizu (Sho) — bilingual EN/JP, based in a 130-year-old kominka farmhouse
-- **Core offer**: Guided tours + kominka Airbnb stay + experiences (ski, cherry blossoms, sake, hiking)
+- **Project**: ComInc. (cominc.co) — Sho Shimizu の個人事業。上越市高田の城下町が拠点
+- **Founder**: Shotaro Shimizu (Sho) — bilingual EN/JP。高田の城下町中心部の古民家に住む（farmhouse・田舎ではない）
+- **事業**: Cominca-stay.（家主居住型の民泊）、Walk & Blend（宿泊者向けセルフガイド街歩き）、日本企業向け BtoB（海外展開支援・JPサイト）
 - **Tagline**: "What you need is somebody who understands you."
 
----
+## 最新の状況・日付・料金はここに書かない
 
-## Current Status (as of 2026-03-30)
-
-- Sho is **still working full-time** — available days in April: 1, 6, 12, 24, 28 only
-- **Minpaku (民泊) registration**: application in progress, awaiting permit number
-- **Airbnb listing**: fully drafted in Notion, ready to publish the moment permit number arrives
-- **cominc.co**: under construction (Astro 4.x + Cloudflare Pages)
-- **joetsuexplorer.com**: existing sub-brand, running in parallel
-- **NZ bank funds**: pending documents → will be transferred to business account on arrival
-- **Subsidy meeting**: booked for 4/6 at 14:00
-
-## Key upcoming dates (April)
-- **4/1** — Kominka photo shoot (Airbnb) + strategic meeting with Kawano-san (hotel owner x4) & former boss
-- **4/6** — Subsidy consultation meeting 14:00 + Instagram first post
-- **4/12** — City hall (minpaku permit) + Airbnb listing go-live
-- **4/24** — Chamber of Commerce + 小規模事業者持続化補助金 application
-- **4/28** — Subsidy docs final submission + IT導入補助金 consultation
+進捗・予定・料金・申請状況は動く情報なので、このファイルには置かない（置くと必ず古くなる）。次を見ること:
+- Claude Code のメモリ `C:\Users\shota\.claude\projects\C--Users-shota-Arai-Supabase\memory\MEMORY.md` と本文（事実の正。数字は本文から取る）
+- Notion の Sho's Notes（最終更新日を確認。古ければメモリを優先）
+- エージェント定義の正は `~/.claude/agents/*.md`（このリポの `agents/` はバックアップ。`agents/README.md` 参照）
 
 ---
 
@@ -64,7 +52,7 @@ python run.py --agent fin "your task"
 ```
 
 ### Available agents
-`hana` (secretary) · `fin` (finance) · `law` (legal) · `webber` (web director) · `dev` (developer) · `cat` (marketing) · `kai` (guide) · `min` (minpaku) · `yuri` (UX) · `clare` (creative)
+`ottar` (orchestrator) · `hana` (secretary) · `fin` (finance) · `law` (legal) · `webber` (web director) · `dev` (developer) · `clare` (creative) · `yuri` (UX) · `cat` (marketing) · `prod` (content producer) · `kai` (guide) · `min` (minpaku)
 
 ### Dev servers (.claude/launch.json)
 - `cominc-agents` → port 3000 (Python agent system)
@@ -76,14 +64,13 @@ python run.py --agent fin "your task"
 All plans live in **ComInc. HQ** on Notion:
 - 💰 Monetization Plan (EN)
 - 📑 事業計画書・財務予測 2026 (JP) — ready for subsidy applications
-- 🏠 Airbnb 出品パッケージ — listing copy in EN/JP, pricing, house rules, check-in guide
+- 🏠 Airbnb 出品パッケージ — 掲載文・ハウスルール（料金・チェックインは最新版の子ページとメモリで確認）
 - 📣 Marketing Sprint Week 1 — Instagram content calendar
 - 🌐 全体俯瞰レポート — Hana's overview of everything
 
 ---
 
 ## Important context
-- Kawano-san (4/1 meeting) = local hotel owner x4, potential key partner — handle with care
 - Sho's git identity is set: `Shotaro Shimizu <sho@myokojoetsu.com>`
 - Python is installed at `C:/Users/reservation_agent03/AppData/Local/Programs/Python/Python312/`
 - joetsuexplorer.com appears to be offline — check before any web tasks involving it
@@ -102,7 +89,7 @@ Sho は複数のデバイスから Claude Code を使う（PC A / PC B / Mobile 
 
 **運用ルール**：
 - 新しい作業を始めるときは、どの PC からでも **ブラウザで `claude.ai/code` を開く**（ローカル CLI は使わない）
-- 重要な決定や次回引き継ぎ事項は、Sho の判断で `project-memory/` に手動でマークダウンとして残す（`AGENTS_CALL_SHEET.md` / `MEMORY.md` の延長）
+- エージェントの成果物（試算・下書き・振り返り）は `project-memory/` に日付つきで残す。確定した事実はメモリに書く（`project-memory/README.md` 参照）
 - 日々の会話ログを自動で commit するような仕掛けは入れていない（Notion の「Sho's Notes」と役割が重複するため）
 
 ---
