@@ -1,60 +1,58 @@
-# ComInc. Agent Definitions (backup)
+# Agent Definitions (backup)
 
-This folder is a **git backup** of the Claude Code subagent definitions for ComInc.'s 12-member AI team.
+This folder is a **git backup** of the 12 Claude Code subagent definitions (`~/.claude/agents/*.md`).
 
-## どれが正か
+The definitions are **generic**: they work on any project. ComInc.-specific rules live in **`../playbook/`**. Generic agents find it through the root `CLAUDE.md` of the Arai Supabase folder.
 
-| 場所 | 役割 |
+## What is the source of truth
+
+| Location | Role |
 |---|---|
-| `~/.claude/agents/*.md`（`C:\Users\shota\.claude\agents\`） | **正。** Claude Code が実際に読むのはここだけ。編集はここで行う |
-| `cominc-agents/agents/*.md`（このフォルダ） | 上のバックアップ（git で履歴を残す・新しい PC に戻すため）。**直接編集しない** |
-| `cominc-agents/src/prompts/*.md` | 別物。Python のエージェントシステム（`run.py`）が読むプロンプト |
+| `~/.claude/agents/*.md` (`C:\Users\shota\.claude\agents\`) | **Source of truth.** The only copy Claude Code reads. Edit here. |
+| `cominc-agents/agents/*.md` (this folder) | Backup of the above (git history, restore on a new PC). **Don't edit here.** |
+| `cominc-agents/playbook/*.md` | ComInc.-specific rules per role (premises, banned wording, checklists, brand, where facts live). |
+| `cominc-agents/src/prompts/*.md` | Something else: the prompts the Python agent system (`run.py`) reads. |
 
-定義ファイルには**役割と進め方だけ**を書く。料金・申請状況・日付・スタックなどの動く情報はメモリ（`~/.claude/projects/C--Users-shota-Arai-Supabase/memory/`）か Notion に書き、定義からはそこを読ませる。各ファイルの後半（「作業前に必ず読むもの」「事実の扱い」「報告の書式」「協働ルール」）は12名共通で、変えるときは全員を同じ内容にする。定義の見直しは Hana の振り返り手順で行う（`hana.md` 参照）。
+Neither the definitions nor the playbook hold moving facts (prices, status, dates, stack versions). Those live in Claude Code memory or Notion.
+
+The second half of each definition is shared by all 12 files: "Before you start", "Handling facts", "Report format" and "Team & collaboration rules". Keep it identical across all 12.
+
+Changes go through Hana's retrospective procedure (`hana.md`):
+- general ways of working → the definitions
+- ComInc.-specific rules → the playbook
+- facts → memory
 
 ## Agents (12)
+- `ottar` orchestrator
+- `hana` secretary, fact-check, retrospectives
+- `fin` finance
+- `law` legal
+- `webber` web director
+- `clare` creative
+- `yuri` UX/UI
+- `dev` developer
+- `cat` marketing
+- `prod` content producer
+- `kai` local guide
+- `min` lodging operations
 
-### CEO Orchestration
-- `ottar.md` — CEO Orchestrator, routes multi-specialist tasks
-
-### Admin
-- `hana.md` — Secretary, Notion, fact-check & review, retrospectives
-- `fin.md` — Finance, P&L, pricing break-even, tax, subsidies & loan
-- `law.md` — Legal & compliance, 民泊法, 旅行業法, 景表法, contracts
-
-### Web Production
-- `webber.md` — Web Director, architecture, technical review
-- `clare.md` — Creative Designer, brand visuals, photos
-- `yuri.md` — UX/UI Designer, IA
-- `dev.md` — Web Developer, Astro + Cloudflare
-
-### Marketing
-- `cat.md` — Marketing, copy/SEO/SNS writing
-- `prod.md` — Content Producer, pipeline & arc design
-
-### Operations
-- `kai.md` — Guide, Walk & Blend self-guided routes, local knowledge
-- `min.md` — Minpaku, Cominca-stay. operations & Airbnb
-
-## Sync: local → GitHub（`~/.claude/agents` を編集したあと）
+## Sync: local → GitHub (after editing `~/.claude/agents`)
 
 ```bash
 cd "C:/Users/shota/Arai Supabase/cominc-agents"
 cp /c/Users/shota/.claude/agents/*.md agents/
-# 一致確認（何も出なければOK）
+# backup matches (no output = OK)
 for f in agents/*.md; do b=$(basename "$f"); [ "$b" = README.md ] || cmp -s "$f" "/c/Users/shota/.claude/agents/$b" || echo "DIFF $b"; done
-# 共通ブロックが12名で同じか（1行だけ出ればOK）
-for f in /c/Users/shota/.claude/agents/*.md; do sed -n '/^## 作業前に必ず読むもの/,$p' "$f" | md5sum; done | sort -u
-git add agents/
+# shared block identical across all 12 (exactly one line = OK; also check it is not the empty-string hash d41d8cd9...)
+for f in /c/Users/shota/.claude/agents/*.md; do sed -n '/^## Before you start/,$p' "$f" | md5sum; done | sort -u
+git add agents/ playbook/
 git commit -m "agents: <what changed>"
-# push は Sho の了承後
+# push only after Sho agrees
 ```
 
 ## Restore to a new machine
 
 ```bash
 git clone https://github.com/sho-cominc/cominc-hq.git
-cd cominc-hq
-cp agents/*.md ~/.claude/agents/
-rm ~/.claude/agents/README.md
+cp cominc-hq/agents/*.md ~/.claude/agents/ && rm ~/.claude/agents/README.md
 ```

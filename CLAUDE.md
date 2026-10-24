@@ -29,7 +29,8 @@ Here's the static context that doesn't change often:
 進捗・予定・料金・申請状況は動く情報なので、このファイルには置かない（置くと必ず古くなる）。次を見ること:
 - Claude Code のメモリ `C:\Users\shota\.claude\projects\C--Users-shota-Arai-Supabase\memory\MEMORY.md` と本文（事実の正。数字は本文から取る）
 - Notion の Sho's Notes（最終更新日を確認。古ければメモリを優先）
-- エージェント定義の正は `~/.claude/agents/*.md`（このリポの `agents/` はバックアップ。`agents/README.md` 参照）
+- エージェント定義の正は `~/.claude/agents/*.md`（どのプロジェクトでも使える汎用版。このリポの `agents/` はそのバックアップで、`agents/README.md` を参照）
+- **ComInc. 固有のエージェント向けルールは `playbook/`**（`playbook/README.md` と、各役割のファイル）
 
 ---
 
