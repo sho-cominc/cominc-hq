@@ -24,23 +24,26 @@
   .panel .en { font-size:19px; font-weight:500; line-height:1.35; margin-top:4px; }
 
   /* Proposed: taller canvas (Sho, 3rd round); extra height spent on legibility. */
-  .sign { height:800px; }
-  .panel .jp { font-size:64px; letter-spacing:0.03em; }
+  .sign { height:800px; justify-content:space-between; } /* any spare height is shared between blocks, not dumped at the bottom */
+  .panel, .notice { margin-top:0 !important; }
+  .sign > * + * { margin-top:20px; }
+  .panel .jp { font-size:84px; letter-spacing:0.03em; }
   .panel .sub { font-size:25px; margin-top:8px; }
   /* Panel English promoted to an equal message (Sho, 2nd round). */
-  .panel { padding:22px 28px 24px; }
+  .panel { padding:40px 28px 40px; }
   .panel .en { font-size:30px; font-weight:700; line-height:1.25; margin-top:6px; text-wrap:balance; }
   /* NOTICE: two equal columns; grid rows keep each JP bullet level with its EN counterpart. */
   .notice { margin-top:24px; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
-  .notice > * { padding:0 26px; }
-  .notice > .jp { padding-left:0; padding-right:18px; }
+  .notice > * { padding:0 20px; }
+  .notice > .jp { padding-left:0; padding-right:12px; }
   .notice > .en { padding-right:0; border-left:2px solid var(--rule); }
-  .notice h2 { font-size:24px; font-weight:700; line-height:1.3; padding-bottom:8px; }
+  .notice h2 { font-size:24px; font-weight:700; line-height:1.3; padding-bottom:12px; }
   .notice h2.en { letter-spacing:0.12em; }
-  .notice p { font-size:21px; font-weight:500; line-height:1.45; padding-bottom:12px; }
-  .notice p.jp { padding-left:1em; text-indent:-1em; word-break:auto-phrase; }
+  .notice p { font-size:21px; font-weight:500; line-height:1.55; padding-bottom:22px; }
+  .notice p.jp { padding-left:1em; text-indent:-1em; word-break:auto-phrase; font-feature-settings:"palt"; } /* proportional kana: tighter, still natural */
+  .notice p.jp::before { content:"・"; display:inline-block; width:1em; text-indent:0; font-feature-settings:normal; }
   .notice p.jp.fixed { white-space:nowrap; } /* explicit phrase breaks */
-  .notice p.en { text-indent:-0.85em; padding-left:calc(26px + 0.85em); text-wrap:pretty; }
+  .notice p.en { text-indent:-0.85em; padding-left:calc(20px + 0.85em); text-wrap:pretty; }
   .notice p.en::before { content:"•"; display:inline-block; width:0.85em; text-indent:0; }
 </style>
 </head>
@@ -66,13 +69,13 @@
     <h2 class="jp" lang="ja">注意事項</h2>
     <h2 class="en" lang="en">NOTICE</h2>
 
-    <p class="jp fixed" lang="ja">・日帰りのお客様は<br>日帰り駐車場P1をご利用ください</p>
+    <p class="jp fixed" lang="ja">日帰りのお客様は<br>日帰り駐車場P1をご利用ください</p>
     <p class="en" lang="en">Day visitors, please use Day Visitor Parking P1.</p>
 
-    <p class="jp fixed" lang="ja">・無断駐車により生じた損害（駐車料金相当額等）を<br>請求する場合があります</p>
+    <p class="jp fixed" lang="ja">無断駐車により生じた損害（駐車料金相当額等）を<br>請求する場合があります</p>
     <p class="en" lang="en">We may charge for any damages caused by unauthorized parking.</p>
 
-    <p class="jp fixed" lang="ja">・繰り返し無断駐車をされた場合、リフト券の<br>利用停止や施設のご利用をお断りすることがあります</p>
+    <p class="jp fixed" lang="ja">繰り返し無断駐車をされた場合、リフト券の<br>利用停止や施設のご利用をお断りすることがあります</p>
     <p class="en" lang="en">Repeat violators may be refused lift and facility&nbsp;use.</p>
   </section>
 </div>
