@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Staff Parking Sign — Current</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #3b322d;
+    --fg: #ffffff;
+    --yellow: #f5c400;
+    --ink: #2a2420;
+    --grey: #b9b1aa;
+    --rule: rgba(255,255,255,0.35);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #888; }
+  body { font-family: "Noto Sans JP", "IPAPGothic", "IPAGothic", "WenQuanYi Zen Hei", sans-serif; }
+  .sign {
+    width: 1130px; height: 670px;
+    background: var(--bg); color: var(--fg);
+    padding: 34px 44px 30px;
+    display: flex; flex-direction: column;
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  header { display: flex; justify-content: space-between; align-items: flex-start; }
+  .title-jp { font-size: 64px; font-weight: 900; line-height: 1.05; letter-spacing: 0.04em; }
+  .title-en { font-size: 24px; font-weight: 700; letter-spacing: 0.14em; margin-top: 8px; }
+  .badge {
+    background: var(--yellow); color: var(--ink);
+    border-radius: 18px; padding: 14px 24px; text-align: center;
+  }
+  .badge .jp { font-size: 28px; font-weight: 900; line-height: 1.2; }
+  .badge .en { font-size: 17px; font-weight: 700; margin-top: 2px; }
+  .panel {
+    background: #fff; color: var(--ink);
+    border-radius: 10px; margin-top: 22px;
+    padding: 16px 20px 14px; text-align: center;
+  }
+  .panel .jp { font-size: 76px; font-weight: 900; line-height: 1.1; letter-spacing: 0.06em; }
+  .panel .en { font-size: 22px; font-weight: 500; margin-top: 4px; }
+  .notice { margin-top: 26px; }
+  .notice h2 { font-size: 24px; font-weight: 700; padding-bottom: 6px; border-bottom: 1px solid var(--rule); margin-bottom: 12px; }
+  .notice h2 span { font-size: 19px; letter-spacing: 0.12em; margin-left: 10px; }
+  .notice ul { list-style: none; }
+  .notice li { padding-left: 1.2em; text-indent: -1.2em; margin-bottom: 12px; }
+  .notice li .jp { font-size: 22px; font-weight: 500; line-height: 1.4; display: block; }
+  .notice li .en { font-size: 16px; color: var(--grey); line-height: 1.35; display: block; padding-left: 1.4em; }
+</style>
+</head>
+<body>
+<div class="sign">
+  <header>
+    <div>
+      <div class="title-jp">従業員駐車場</div>
+      <div class="title-en">STAFF PARKING ONLY</div>
+    </div>
+    <div class="badge">
+      <div class="jp">防犯カメラ作動中</div>
+      <div class="en">CCTV in operation.</div>
+    </div>
+  </header>
+
+  <div class="panel">
+    <div class="jp">従業員以外 駐車禁止</div>
+    <div class="en">Staff vehicles only. No public parking.</div>
+  </div>
+
+  <section class="notice">
+    <h2>注意事項<span>NOTICE</span></h2>
+    <ul>
+      <li><span class="jp">・日帰りのお客様は日帰り駐車場P1をご利用ください</span><span class="en">Day visitors, please use Day Visitor Parking P1.</span></li>
+      <li><span class="jp">・無断駐車により生じた損害（駐車料金相当額等）を請求する場合があります</span><span class="en">We may charge for any damages caused by unauthorized parking.</span></li>
+      <li><span class="jp">・繰り返し無断駐車をされた場合、リフト券の利用停止や施設のご利用をお断りすることがあります</span><span class="en">Repeat violators may be refused lift and facility use.</span></li>
+    </ul>
+  </section>
+</div>
+</body>
+</html>
