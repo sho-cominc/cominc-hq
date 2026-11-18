@@ -5,511 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>myokojoetsu.com — Snow country, quietly.</title>
   <meta name="description" content="An editorial guide to Myoko and Joetsu in Niigata, Japan. Snow country's best kept secret.">
+
+  <!-- OGP -->
+  <meta property="og:title" content="myokojoetsu.com — Snow country, quietly.">
+  <meta property="og:description" content="An editorial guide to Myoko and Joetsu in Niigata, Japan. Snow country's best kept secret.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://myokojoetsu.com/">
+  <meta property="og:site_name" content="myokojoetsu.com">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="myokojoetsu.com — Snow country, quietly.">
+  <meta name="twitter:description" content="An editorial guide to Myoko and Joetsu in Niigata, Japan. Snow country's best kept secret.">
+
+  <link rel="alternate" hreflang="en" href="https://myokojoetsu.com/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://myokojoetsu.com/zh-Hant/">
+  <link rel="alternate" hreflang="ja" href="https://myokojoetsu.com/ja/">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --cream:        #EDE8DF;
-      --cream-light:  #F5F1EB;
-      --cream-deep:   #E2DCCF;
-      --white:        #FAFAF7;
-      --ink:          #2A3A2A;
-      --ink-light:    #5A6A5A;
-      --ink-faint:    #8A9A8A;
-      --blue:         #B8D4E3;
-      --blue-deep:    #8FB5C9;
-      --brown:        #8B7355;
-      --green:        #4A6A4A;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Inter', 'Noto Sans JP', sans-serif;
-      font-weight: 300;
-      background: var(--cream);
-      color: var(--ink);
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-      line-height: 1.6;
-    }
-
-    .serif {
-      font-family: 'Cormorant Garamond', 'Noto Serif JP', serif;
-      font-style: italic;
-      font-weight: 400;
-    }
-
-    .jp { font-family: 'Noto Sans JP', sans-serif; }
-
-    a { color: inherit; text-decoration: none; }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1),
-                  transform 1s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-d1 { transition-delay: 0.1s; }
-    .reveal-d2 { transition-delay: 0.2s; }
-    .reveal-d3 { transition-delay: 0.3s; }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 clamp(24px, 5vw, 64px);
-    }
-
-    /* ═══ NAV ═══ */
-    .topnav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; justify-content: space-between; align-items: center;
-      padding: 20px clamp(24px, 5vw, 64px);
-      background: rgba(237, 232, 223, 0.85);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(42, 58, 42, 0.06);
-    }
-    .logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-weight: 500;
-      font-size: 1.15rem;
-      color: var(--ink);
-      letter-spacing: 0.01em;
-    }
-    .topnav-right {
-      display: flex;
-      align-items: center;
-      gap: 1.5em;
-    }
-    .topnav-links {
-      display: flex;
-      gap: 1.8em;
-      list-style: none;
-    }
-    .topnav-links a {
-      font-size: 0.78rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--ink-light);
-      transition: color 0.3s;
-    }
-    .topnav-links a:hover { color: var(--ink); }
-    .sns {
-      display: flex;
-      gap: 14px;
-    }
-    .sns a {
-      width: 18px; height: 18px;
-      color: var(--ink-light);
-      transition: color 0.3s;
-    }
-    .sns a:hover { color: var(--ink); }
-    .sns svg { width: 100%; height: 100%; }
-    @media (max-width: 768px) {
-      .topnav-links { display: none; }
-    }
-
-    /* ═══ HERO ═══ */
-    .hero {
-      min-height: 100vh;
-      display: flex; flex-direction: column;
-      justify-content: center; align-items: center;
-      padding: 120px clamp(24px, 5vw, 64px) 80px;
-      text-align: center;
-      position: relative;
-    }
-    .hero-eyebrow {
-      font-size: 0.75rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--ink-light);
-      margin-bottom: 32px;
-    }
-    .hero h1 {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: clamp(3rem, 9vw, 7rem);
-      line-height: 1.05;
-      letter-spacing: -0.01em;
-      color: var(--ink);
-      margin-bottom: 40px;
-    }
-    .hero h1 .slash {
-      display: inline-block;
-      margin: 0 0.15em;
-      color: var(--blue-deep);
-      font-style: normal;
-    }
-    .hero-sub {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: clamp(1.1rem, 2vw, 1.5rem);
-      color: var(--ink-light);
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    .scroll-cue {
-      position: absolute;
-      bottom: 40px; left: 50%;
-      transform: translateX(-50%);
-      font-size: 0.7rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-      writing-mode: vertical-rl;
-    }
-    .scroll-cue::after {
-      content: '';
-      display: block;
-      width: 1px; height: 32px;
-      background: var(--ink-faint);
-      margin: 14px auto 0;
-      animation: pulse 2s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 0.3; transform: scaleY(0.6); transform-origin: top; }
-      50% { opacity: 1; transform: scaleY(1); }
-    }
-
-    /* ═══ INTRO ═══ */
-    .intro {
-      padding: clamp(80px, 12vh, 160px) 0;
-      background: var(--cream-light);
-    }
-    .intro-grid {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: clamp(40px, 8vw, 120px);
-      align-items: start;
-    }
-    .intro-label {
-      font-size: 0.75rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--brown);
-    }
-    .intro-body {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: clamp(1.4rem, 2.4vw, 1.9rem);
-      line-height: 1.5;
-      color: var(--ink);
-    }
-    .intro-body em {
-      color: var(--green);
-    }
-    @media (max-width: 768px) {
-      .intro-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ═══ CATEGORIES ═══ */
-    .categories {
-      padding: clamp(80px, 14vh, 180px) 0;
-    }
-    .section-header {
-      text-align: center;
-      margin-bottom: clamp(60px, 10vh, 120px);
-    }
-    .section-eyebrow {
-      font-size: 0.75rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--brown);
-      margin-bottom: 24px;
-    }
-    .section-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: clamp(2.4rem, 5vw, 4rem);
-      line-height: 1.1;
-      color: var(--ink);
-    }
-    .cat-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: clamp(20px, 3vw, 40px);
-    }
-    .cat-card {
-      cursor: pointer;
-      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .cat-card:hover { transform: translateY(-6px); }
-    .cat-image {
-      aspect-ratio: 3/4;
-      background: var(--cream-deep);
-      margin-bottom: 24px;
-      position: relative;
-      overflow: hidden;
-    }
-    .cat-image::after {
-      content: '';
-      position: absolute; inset: 0;
-      background: linear-gradient(135deg, transparent 30%, rgba(184, 212, 227, 0.12) 100%);
-      pointer-events: none;
-    }
-    .cat-image-shop    { background: linear-gradient(160deg, #D4C9B5 0%, #B8A88E 100%); }
-    .cat-image-eat     { background: linear-gradient(160deg, #C9B8A0 0%, #8B7355 100%); }
-    .cat-image-see     { background: linear-gradient(160deg, #C5D4C9 0%, #4A6A4A 100%); }
-    .cat-image-stay    { background: linear-gradient(160deg, #B8D4E3 0%, #5A7A8A 100%); }
-    .cat-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 0.9rem;
-      color: var(--ink-faint);
-      margin-bottom: 6px;
-    }
-    .cat-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: 1.6rem;
-      color: var(--ink);
-      margin-bottom: 8px;
-    }
-    .cat-jp {
-      font-size: 0.75rem;
-      letter-spacing: 0.25em;
-      color: var(--ink-faint);
-      margin-bottom: 12px;
-    }
-    .cat-desc {
-      font-size: 0.88rem;
-      color: var(--ink-light);
-      line-height: 1.65;
-    }
-    @media (max-width: 1024px) {
-      .cat-grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
-    }
-    @media (max-width: 560px) {
-      .cat-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ═══ SEASONS ═══ */
-    .seasons {
-      padding: clamp(80px, 14vh, 180px) 0;
-      background: var(--cream-light);
-    }
-    .season-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1px;
-      background: var(--cream-deep);
-      border: 1px solid var(--cream-deep);
-    }
-    .season-card {
-      background: var(--cream-light);
-      padding: clamp(32px, 4vw, 56px) clamp(24px, 3vw, 40px);
-      min-height: 360px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: background 0.5s;
-    }
-    .season-card:hover { background: var(--cream); }
-    .season-kanji {
-      font-family: 'Noto Serif JP', serif;
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-      color: var(--ink);
-      line-height: 1;
-      margin-bottom: 16px;
-    }
-    .season-name {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-weight: 400;
-      font-size: 1.4rem;
-      color: var(--ink);
-      margin-bottom: 4px;
-    }
-    .season-months {
-      font-size: 0.72rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-      margin-bottom: 24px;
-    }
-    .season-desc {
-      font-size: 0.88rem;
-      color: var(--ink-light);
-      line-height: 1.65;
-    }
-    .season-winter .season-kanji  { color: #5A7A8A; }
-    .season-spring .season-kanji  { color: #B89A9A; }
-    .season-summer .season-kanji  { color: #4A6A4A; }
-    .season-autumn .season-kanji  { color: #8B7355; }
-    @media (max-width: 1024px) {
-      .season-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 560px) {
-      .season-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ═══ SHOP TEASER ═══ */
-    .shop {
-      padding: clamp(80px, 14vh, 180px) 0;
-    }
-    .shop-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(40px, 6vw, 80px);
-      align-items: center;
-    }
-    .shop-visual {
-      aspect-ratio: 4/5;
-      background: linear-gradient(160deg, #E2DCCF 0%, #B8A88E 60%, #8B7355 100%);
-      position: relative;
-    }
-    .shop-visual::before {
-      content: '';
-      position: absolute;
-      top: 8%; left: 10%;
-      width: 60%; height: 70%;
-      background: var(--cream);
-      mix-blend-mode: overlay;
-      opacity: 0.4;
-    }
-    .shop-text h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-weight: 300;
-      font-size: clamp(2rem, 4vw, 3rem);
-      line-height: 1.15;
-      color: var(--ink);
-      margin-bottom: 24px;
-    }
-    .shop-text p {
-      font-size: 0.95rem;
-      color: var(--ink-light);
-      line-height: 1.75;
-      margin-bottom: 16px;
-    }
-    .shop-cta {
-      display: inline-block;
-      margin-top: 24px;
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 1.05rem;
-      color: var(--green);
-      border-bottom: 1px solid var(--green);
-      padding-bottom: 4px;
-      transition: color 0.3s, border-color 0.3s;
-    }
-    .shop-cta:hover { color: var(--ink); border-color: var(--ink); }
-    .shop-note {
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-      margin-top: 16px;
-    }
-    @media (max-width: 768px) {
-      .shop-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ═══ ACCESS ═══ */
-    .access {
-      padding: clamp(80px, 14vh, 180px) 0;
-      background: var(--cream-light);
-    }
-    .access-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(40px, 6vw, 80px);
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .access-route {
-      border-top: 1px solid var(--cream-deep);
-      padding-top: 24px;
-    }
-    .access-from {
-      font-size: 0.72rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--brown);
-      margin-bottom: 12px;
-    }
-    .access-via {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 1.4rem;
-      color: var(--ink);
-      margin-bottom: 6px;
-      line-height: 1.4;
-    }
-    .access-time {
-      font-size: 0.85rem;
-      color: var(--ink-light);
-    }
-    @media (max-width: 768px) {
-      .access-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ═══ FOOTER ═══ */
-    footer {
-      padding: 60px clamp(24px, 5vw, 64px) 40px;
-      border-top: 1px solid var(--cream-deep);
-      background: var(--cream);
-    }
-    .foot {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 24px;
-    }
-    .foot-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-style: italic;
-      font-size: 1.05rem;
-      color: var(--ink);
-    }
-    .foot-meta {
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--ink-faint);
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
 
+<div class="site-notice">This guide is still being written — by AI, directed by a local. Follow the owner in the meantime on <a href="https://instagram.com/shoxkiwi" target="_blank" rel="noopener">Instagram</a> →</div>
+
   <!-- ══════ NAV ══════ -->
   <nav class="topnav">
-    <a href="#" class="logo">myokojoetsu.com</a>
+    <a href="/" class="logo">myokojoetsu.com</a>
     <div class="topnav-right">
-      <ul class="topnav-links">
-        <li><a href="#categories">Discover</a></li>
-        <li><a href="#seasons">Seasons</a></li>
+      <ul class="topnav-links" id="navLinks">
+        <li>
+          <a href="#categories">Discover</a>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-inner">
+              <a href="/shop.html">Shop <span class="nav-jp">買</span></a>
+              <a href="/eat.html">Eat <span class="nav-jp">食</span></a>
+              <a href="/see.html">See <span class="nav-jp">観</span></a>
+              <a href="/stay.html">Stay <span class="nav-jp">泊</span></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#seasons">Seasons</a>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-inner">
+              <a href="/winter.html">Winter <span class="nav-jp">冬</span></a>
+              <a href="/spring.html">Spring <span class="nav-jp">春</span></a>
+              <a href="/summer.html">Summer <span class="nav-jp">夏</span></a>
+              <a href="/autumn.html">Autumn <span class="nav-jp">秋</span></a>
+            </div>
+          </div>
+        </li>
         <li><a href="#shop">Shop</a></li>
         <li><a href="#access">Access</a></li>
       </ul>
       <div class="sns">
-        <a href="#" aria-label="Instagram">
+        <a href="/zh-Hant/" class="lang">中文</a>
+        <a href="/ja/" class="lang">日本語</a>
+        <a href="https://instagram.com/shoxkiwi" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <rect x="2" y="2" width="20" height="20" rx="5"/>
             <circle cx="12" cy="12" r="4"/>
             <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
           </svg>
         </a>
-        <a href="#" aria-label="X">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-          </svg>
-        </a>
       </div>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
     </div>
   </nav>
 
@@ -550,7 +116,7 @@
         <h2 class="section-title reveal reveal-d1">Where to begin.</h2>
       </div>
       <div class="cat-grid">
-        <a href="#" class="cat-card reveal">
+        <a href="/shop.html" class="cat-card reveal">
           <div class="cat-image cat-image-shop"></div>
           <div class="cat-num">— 01</div>
           <h3 class="cat-title">Shop</h3>
@@ -560,7 +126,7 @@
             The covered arcades of Takada — gangi — are a living museum.
           </p>
         </a>
-        <a href="#" class="cat-card reveal reveal-d1">
+        <a href="/eat.html" class="cat-card reveal reveal-d1">
           <div class="cat-image cat-image-eat"></div>
           <div class="cat-num">— 02</div>
           <h3 class="cat-title">Eat</h3>
@@ -570,7 +136,7 @@
             and sea fish that still tastes of the morning catch.
           </p>
         </a>
-        <a href="#" class="cat-card reveal reveal-d2">
+        <a href="/see.html" class="cat-card reveal reveal-d2">
           <div class="cat-image cat-image-see"></div>
           <div class="cat-num">— 03</div>
           <h3 class="cat-title">See</h3>
@@ -580,7 +146,7 @@
             Mt. Myoko, a sacred mountain since the 8th century. Powder you have to ski to believe.
           </p>
         </a>
-        <a href="#" class="cat-card reveal reveal-d3">
+        <a href="/stay.html" class="cat-card reveal reveal-d3">
           <div class="cat-image cat-image-stay"></div>
           <div class="cat-num">— 04</div>
           <h3 class="cat-title">Stay</h3>
@@ -602,7 +168,7 @@
         <h2 class="section-title reveal reveal-d1">Four very different places.</h2>
       </div>
       <div class="season-grid">
-        <div class="season-card season-winter reveal">
+        <a href="/winter.html" class="season-card season-winter reveal">
           <div>
             <div class="season-kanji">冬</div>
             <div class="season-name">Winter</div>
@@ -612,8 +178,8 @@
             Thirteen to sixteen meters of snow. Steam rising from outdoor onsen.
             New sake pressed in the breweries. The quietest season.
           </p>
-        </div>
-        <div class="season-card season-spring reveal reveal-d1">
+        </a>
+        <a href="/spring.html" class="season-card season-spring reveal reveal-d1">
           <div>
             <div class="season-kanji">春</div>
             <div class="season-name">Spring</div>
@@ -623,8 +189,8 @@
             Four thousand cherry trees light up around Takada Castle.
             Snowmelt fills the rivers. The rice paddies turn to mirrors.
           </p>
-        </div>
-        <div class="season-card season-summer reveal reveal-d2">
+        </a>
+        <a href="/summer.html" class="season-card season-summer reveal reveal-d2">
           <div>
             <div class="season-kanji">夏</div>
             <div class="season-name">Summer</div>
@@ -634,8 +200,8 @@
             Mountain hiking above the clouds. Lotus blooms on the castle moat.
             Festival lanterns through the gangi at night.
           </p>
-        </div>
-        <div class="season-card season-autumn reveal reveal-d3">
+        </a>
+        <a href="/autumn.html" class="season-card season-autumn reveal reveal-d3">
           <div>
             <div class="season-kanji">秋</div>
             <div class="season-name">Autumn</div>
@@ -645,7 +211,7 @@
             Rice harvest. New-crop sake. Foliage from the peaks down to the sea.
             The clearest skies of the year.
           </p>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -706,10 +272,36 @@
     </div>
   </section>
 
+  <!-- ══════ UNDER CONSTRUCTION ══════ -->
+  <section class="wip">
+    <div class="wip-inner">
+      <div class="wip-label reveal">How this site is made</div>
+      <h2 class="reveal reveal-d1">Written by AI.<br>Directed by someone who lives here.</h2>
+      <p class="reveal reveal-d2">
+        This guide is built with Claude, an AI, under the creative direction of Sho — a local
+        who spent two decades abroad and came back to a 130-year-old farmhouse in snow country.
+        The AI writes. Sho decides what matters, what's true, and what you'd actually want to know.
+        Neither could make this alone.
+      </p>
+      <p class="reveal reveal-d2">
+        The site is an ongoing project. Pages arrive as they're ready. If you want the unfiltered
+        version — the village, the snow, the life behind this — that's on Instagram.
+      </p>
+      <a href="https://instagram.com/shoxkiwi" target="_blank" rel="noopener" class="wip-ig reveal reveal-d3">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="2" y="2" width="20" height="20" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+        </svg>
+        Follow @shoxkiwi for the real thing →
+      </a>
+    </div>
+  </section>
+
   <!-- ══════ FOOTER ══════ -->
   <footer>
     <div class="foot">
-      <div class="foot-logo">myokojoetsu.com</div>
+      <a href="/" class="foot-logo">myokojoetsu.com</a>
       <div class="foot-meta">© 2026 — An editorial guide to Niigata snow country.</div>
     </div>
   </footer>

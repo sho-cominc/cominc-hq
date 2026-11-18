@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  PAGE-SPECIFIC: Update title and meta for each page     ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <title>Shop — myokojoetsu.com</title>
+  <meta name="description" content="Pottery, hand-forged blades, textiles, and fermented goods from Joetsu and Myoko. Things worth carrying home from Niigata snow country.">
+
+  <!-- ╔══════════════════════════════════════════════════════════╗
+       ║  SHARED: Fonts — identical across all pages             ║
+       ╚══════════════════════════════════════════════════════════╝ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&family=Noto+Serif+JP:wght@400;500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════
+       SHARED: NAV — Identical across all pages.
+       Update .active class on the current page's link.
+       ══════════════════════════════════════════════════════════ -->
+  <nav class="topnav">
+    <a href="/" class="logo">myokojoetsu.com</a>
+    <div class="topnav-right">
+      <ul class="topnav-links" id="navLinks">
+        <li>
+          <a href="#" class="active">Discover</a>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-inner">
+              <a href="/shop.html">Shop <span class="nav-jp">買</span></a>
+              <a href="/eat.html">Eat <span class="nav-jp">食</span></a>
+              <a href="/see.html">See <span class="nav-jp">観</span></a>
+              <a href="/stay.html">Stay <span class="nav-jp">泊</span></a>
+            </div>
+          </div>
+        </li>
+        <li>
+          <a href="#">Seasons</a>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-inner">
+              <a href="/winter.html">Winter <span class="nav-jp">冬</span></a>
+              <a href="/spring.html">Spring <span class="nav-jp">春</span></a>
+              <a href="/summer.html">Summer <span class="nav-jp">夏</span></a>
+              <a href="/autumn.html">Autumn <span class="nav-jp">秋</span></a>
+            </div>
+          </div>
+        </li>
+        <li><a href="/shop.html">Shop</a></li>
+        <li><a href="/#access">Access</a></li>
+      </ul>
+      <div class="sns">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="#" aria-label="X">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+      </div>
+      <button class="nav-toggle" aria-label="Menu" onclick="document.getElementById('navLinks').classList.toggle('open')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════════
+       PAGE-SPECIFIC: PAGE HERO
+       Update: eyebrow, h1, .page-hero-jp, .page-hero-desc
+       ══════════════════════════════════════════════════════════ -->
+  <section class="page-hero">
+    <div class="page-hero-eyebrow reveal">Discover</div>
+    <h1 class="reveal reveal-d1">Shop</h1>
+    <div class="page-hero-jp reveal reveal-d2">買 / kau</div>
+    <p class="page-hero-desc reveal reveal-d3">
+      Things worth carrying home from snow country.
+    </p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       PAGE-SPECIFIC: EDITORIAL INTRO
+       Update: label text, body text
+       ══════════════════════════════════════════════════════════ -->
+  <section class="editorial-intro">
+    <div class="container">
+      <div class="editorial-intro-grid">
+        <div class="editorial-intro-label reveal">What we mean by shop</div>
+        <div class="editorial-intro-body reveal reveal-d1">
+          This isn't a souvenir list. It's a small, slowly-built guide
+          to <em>things that actually come from this region</em> —
+          made by people who still live and work here, with materials
+          that belong to these mountains and this coast.
+          <br><br>
+          We write about the maker, the method, and where to find it.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       PAGE-SPECIFIC: FEATURE GRID
+       Update: section header, individual cards
+       Add/remove cards as needed. Maintain reveal-dN stagger.
+       ══════════════════════════════════════════════════════════ -->
+  <section class="features">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow reveal">Featured</div>
+        <h2 class="section-title reveal reveal-d1">From the workshops.</h2>
+      </div>
+      <div class="feature-grid">
+
+        <div class="feature-card reveal">
+          <div class="feature-image" style="background: linear-gradient(160deg, #D4C9B5 0%, #B8A88E 100%);"></div>
+          <div class="feature-num">— 01</div>
+          <h3 class="feature-title">Kanzuri</h3>
+          <div class="feature-jp">かんずり</div>
+          <p class="feature-desc">
+            Chili paste fermented for three years on snow. Made in Myoko
+            since the Edo period — one family, one recipe, no shortcuts.
+          </p>
+          <a href="#" class="feature-link">Read the story</a>
+        </div>
+
+        <div class="feature-card reveal reveal-d1">
+          <div class="feature-image" style="background: linear-gradient(160deg, #C9B8A0 0%, #8B7355 100%);"></div>
+          <div class="feature-num">— 02</div>
+          <h3 class="feature-title">Takada Knives</h3>
+          <div class="feature-jp">高田打刃物</div>
+          <p class="feature-desc">
+            Hand-forged blades from a 400-year tradition. Blacksmiths
+            in Takada still hammer each knife individually over charcoal.
+          </p>
+          <a href="#" class="feature-link">Read the story</a>
+        </div>
+
+        <div class="feature-card reveal reveal-d2">
+          <div class="feature-image" style="background: linear-gradient(160deg, #C5D4C9 0%, #4A6A4A 100%);"></div>
+          <div class="feature-num">— 03</div>
+          <h3 class="feature-title">Joetsu Sake</h3>
+          <div class="feature-jp">上越の酒</div>
+          <p class="feature-desc">
+            From breweries that draw from springs that never freeze.
+            The snow country water makes a sake you won't find in Tokyo.
+          </p>
+          <a href="#" class="feature-link">Read the story</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       PAGE-SPECIFIC: CALLOUT / QUOTE
+       Update: quote text, attribution
+       ══════════════════════════════════════════════════════════ -->
+  <section class="callout">
+    <div class="container">
+      <div class="callout-inner">
+        <blockquote class="callout-quote reveal">
+          "The things worth buying are the things that teach you
+          something about a place. They carry the weather,
+          the water, the hands that shaped them."
+        </blockquote>
+        <div class="callout-rule reveal reveal-d1"></div>
+        <div class="callout-attr reveal reveal-d1">— From the editors</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       PAGE-SPECIFIC: RELATED PAGES (Continue exploring)
+       Update: links, titles, descriptions for each page.
+       Show 4 cards linking to other relevant pages.
+       ══════════════════════════════════════════════════════════ -->
+  <section class="related">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow reveal">Continue exploring</div>
+        <h2 class="section-title reveal reveal-d1">More to discover.</h2>
+      </div>
+      <div class="related-grid">
+
+        <a href="/eat.html" class="related-card reveal">
+          <div>
+            <div class="related-category">Discover</div>
+            <div class="related-title">Eat</div>
+            <div class="related-jp">食 / taberu</div>
+          </div>
+          <div>
+            <p class="related-desc">
+              Hegi soba, sake from the 1800s, and sea fish that still tastes of morning.
+            </p>
+            <div class="related-arrow">Read more →</div>
+          </div>
+        </a>
+
+        <a href="/see.html" class="related-card reveal reveal-d1">
+          <div>
+            <div class="related-category">Discover</div>
+            <div class="related-title">See</div>
+            <div class="related-jp">観 / miru</div>
+          </div>
+          <div>
+            <p class="related-desc">
+              Night sakura, sacred mountains, and powder snow you have to ski to believe.
+            </p>
+            <div class="related-arrow">Read more →</div>
+          </div>
+        </a>
+
+        <a href="/winter.html" class="related-card reveal reveal-d2">
+          <div>
+            <div class="related-category">Seasons</div>
+            <div class="related-title">Winter</div>
+            <div class="related-jp">冬 / fuyu</div>
+          </div>
+          <div>
+            <p class="related-desc">
+              Thirteen meters of snow. Steam from outdoor onsen. The quietest season.
+            </p>
+            <div class="related-arrow">Read more →</div>
+          </div>
+        </a>
+
+        <a href="/stay.html" class="related-card reveal reveal-d3">
+          <div>
+            <div class="related-category">Discover</div>
+            <div class="related-title">Stay</div>
+            <div class="related-jp">泊 / tomaru</div>
+          </div>
+          <div>
+            <p class="related-desc">
+              Hot-spring inns, mountain lodges, and quiet farmhouses in the rice fields.
+            </p>
+            <div class="related-arrow">Read more →</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       SHARED: FOOTER — Identical across all pages.
+       ══════════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="foot">
+      <a href="/" class="foot-logo">myokojoetsu.com</a>
+      <div class="foot-meta">© 2026 — An editorial guide to Niigata snow country.</div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════════════
+       SHARED: SCROLL REVEAL — Identical across all pages.
+       ══════════════════════════════════════════════════════════ -->
+  <script>
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
