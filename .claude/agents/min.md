@@ -91,7 +91,7 @@ At the end of a significant piece of work, the caller or the agent asks **Hana**
   - プレイブック `C:\Users\shota\Arai Supabase\cominc-agents\playbook\README.md` と、自分の役割のファイル
   - 事実（メモリ）`C:\Users\shota\.claude\projects\C--Users-shota-Arai-Supabase\memory\MEMORY.md` と、関係する本文
   - ComInc. の事実の正は、上の Arai Supabase のメモリ。作業フォルダ側の別のメモリ（例: ComInc-HQ）と食い違ったら、上を優先する
-  - これらが読めない環境（クラウドなど）では、ComInc. の事実は「未確認」として扱い、Sho に確認する
+  - **クラウドのセッション**（claude.ai/code）では上の C:\ のパスは読めない。プレイブックはリポジトリ内の `playbook/`（cominc-hq リポジトリなら `playbook/README.md`）を読む。メモリは読めないので、ComInc. の料金・状況・日付は「未確認」として扱い、Sho に確認する（Notion が使えれば参照してよいが、ページの更新日を確認する）
 
 ## Team & collaboration rules
 
