@@ -2,7 +2,7 @@
 
 置き場所: 燕ハイランドホテル、Address Akakura、Matsuya の受付と客室。サイズ案: はがき大（受付は立てるタイプ、客室は卓上）。
 フォーム: https://form.jotform.com/263237446968067
-特典の行（★）は Law の確認（tsubame_survey_legal_check_2026-11-21.md）が出たら、その文言に差し替える。
+特典の行（★）は Law の確認（tsubame_survey_legal_check_2026-11-21.md）を反映済み（2026-11-21）。
 
 ---
 
@@ -14,7 +14,8 @@ Come back for hot springs, Mt. Myoko and wood-fired pizza at 1,100 m.
 [QR]
 
 **Scan to register (1 min)**
-★ Get a free drink and 10% off a direct booking at Tsubame Highland Hotel in 2027. Share with friends: they get it too.
+★ Register with your email: 10% off a direct booking at Tsubame Highland Hotel in 2027, plus a free drink for hotel guests. Share with friends: they get it too.
+<small>Valid if the 2027 green season goes ahead. No alcohol for under-20s or drivers.</small>
 
 ---
 
@@ -24,7 +25,8 @@ Come back for hot springs, Mt. Myoko and wood-fired pizza at 1,100 m.
 [QR]
 
 **読み取って登録（1分）**
-★ 2027年、燕ハイランドホテルで1杯サービス＋直接予約で宿泊10%オフ。お友達にもシェアすると、お友達にも同じ特典。
+★ メール登録で、2027年に燕ハイランドホテルへの直接予約が宿泊10%オフ＋ご宿泊の方に1杯サービス。お友達にもシェアすると、お友達にも同じ特典。
+<small>2027年グリーンシーズンに営業する場合に有効。20歳未満の方・運転される方にはアルコールをお出しできません。</small>
 
 ---
 
@@ -35,5 +37,5 @@ Plans for 2027 are not final yet. We will email registered guests when details a
 2027年の営業内容は予定です。決まり次第、登録された方にメールでご案内します。
 
 ## 受付での一言（スタッフ用）
-- EN: "We're opening in the green season next year. If you'd like a free drink when you come back, scan this. It takes a minute."
-- JP: 「来年は春から秋も営業予定なんです。また来てくださる方に1杯サービスがあるので、よかったら1分だけ登録してください。」
+- EN: "We're opening in the green season next year. If you register, you get 10% off a direct booking and a free drink when you stay. It takes a minute."
+- JP: 「来年は春から秋も営業予定なんです。登録すると、直接予約で10%オフと、泊まったときに1杯サービスがあるので、よかったら1分だけ登録してください。」
