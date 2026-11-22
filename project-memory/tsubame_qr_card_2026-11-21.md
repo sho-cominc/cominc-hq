@@ -1,6 +1,6 @@
 # QR カードの文面（T30 下書き, 2026-11-21）
 
-置き場所: 燕ハイランドホテル、Address Akakura、Matsuya の受付と客室。サイズ案: はがき大（受付は立てるタイプ、客室は卓上）。
+置き場所: 燕ハイランドロッジ、Address Akakura、Matsuya の受付と客室。サイズ案: はがき大（受付は立てるタイプ、客室は卓上）。
 フォーム: https://form.jotform.com/263237446968067
 特典の行（★）は Law の確認（tsubame_survey_legal_check_2026-11-21.md）を反映済み（2026-11-21）。
 
@@ -14,7 +14,7 @@ Come back for hot springs, Mt. Myoko and wood-fired pizza at 1,100 m.
 [QR]
 
 **Scan to register (1 min)**
-★ Register with your email: 10% off a direct booking at Tsubame Highland Hotel in 2027, plus a free drink for hotel guests. Share with friends: they get it too.
+★ Register with your email: 10% off a direct booking at Tsubame Highland Lodge in 2027, plus a free drink for hotel guests. Share with friends: they get it too.
 <small>Valid if the 2027 green season goes ahead. No alcohol for under-20s or drivers.</small>
 
 ---
@@ -25,13 +25,13 @@ Come back for hot springs, Mt. Myoko and wood-fired pizza at 1,100 m.
 [QR]
 
 **読み取って登録（1分）**
-★ メール登録で、2027年に燕ハイランドホテルへの直接予約が宿泊10%オフ＋ご宿泊の方に1杯サービス。お友達にもシェアすると、お友達にも同じ特典。
+★ メール登録で、2027年に燕ハイランドロッジへの直接予約が宿泊10%オフ＋ご宿泊の方に1杯サービス。お友達にもシェアすると、お友達にも同じ特典。
 <small>2027年グリーンシーズンに営業する場合に有効。20歳未満の方・運転される方にはアルコールをお出しできません。</small>
 
 ---
 
 ## 裏（小さく）
-Tsubame Highland Hotel / 燕ハイランドホテル
+Tsubame Highland Lodge / 燕ハイランドロッジ
 Tsubame Onsen, Myoko, Niigata / 新潟県妙高市 燕温泉
 Plans for 2027 are not final yet. We will email registered guests when details are confirmed.
 2027年の営業内容は予定です。決まり次第、登録された方にメールでご案内します。
