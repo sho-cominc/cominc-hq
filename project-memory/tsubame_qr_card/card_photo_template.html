@@ -1,0 +1,71 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<title>Tsubame QR Card Photo</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
+<style>
+@page{size:148mm 100mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Noto Sans JP","IPAPGothic",sans-serif;color:#1f3a2e}
+.card{width:148mm;height:100mm;position:relative;overflow:hidden;page-break-after:always;background:#f4f1e8}
+/* PHOTO: replace the background of .ph with url('photo.jpg') center/cover when real photos arrive */
+.ph{position:absolute;background-size:cover;background-position:center}
+.ph .tag{position:absolute;left:2mm;bottom:2mm;font-size:5.5pt;color:#fff;background:rgba(0,0,0,.45);padding:.5mm 1.5mm;border-radius:1mm}
+.hero{left:0;top:0;width:78mm;height:100mm}
+.hero-text{position:absolute;left:7mm;top:8mm;right:6mm;color:#fff;text-shadow:0 .4mm 1.5mm rgba(0,0,0,.45)}
+.lead{font-family:"Noto Serif JP",serif;font-size:16pt;line-height:1.2;font-weight:600}
+.lead-ja{font-family:"Noto Serif JP",serif;font-size:10pt;margin-top:2mm}
+.hero-foot{position:absolute;left:7mm;bottom:6mm;color:#fff;font-weight:700;font-size:9pt;letter-spacing:.05em;text-shadow:0 .4mm 1.5mm rgba(0,0,0,.5)}
+.hero-foot span{display:block;font-weight:400;font-size:7pt;letter-spacing:0}
+.side{position:absolute;left:78mm;top:0;width:70mm;height:100mm;padding:7mm 7mm 6mm 7mm;display:flex;flex-direction:column;align-items:center}
+.sub{font-size:7pt;line-height:1.45;color:#3b5a4b;text-align:center}
+.qr{background:#fff;padding:2.5mm;border-radius:2mm;width:38mm;height:38mm;margin-top:3mm;box-shadow:0 .5mm 2mm rgba(0,0,0,.08)}
+.qr svg{width:100%;height:100%}
+.scan{font-weight:700;font-size:8.5pt;margin-top:1.8mm}
+.scan-ja{font-size:7pt}
+.perk{margin-top:3mm;font-size:6.3pt;line-height:1.45;background:#fff;border-left:1.6mm solid #d9822b;padding:1.5mm 2mm;width:100%}
+.fine{margin-top:1.5mm;font-size:5pt;color:#3b5a4b;line-height:1.35;width:100%}
+/* back */
+.back{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:52mm 1fr;}
+.back .ph{position:relative}
+.back .info{grid-column:1/-1;padding:6mm 10mm 7mm;display:flex;flex-direction:column;justify-content:space-between}
+.back h2{font-family:"Noto Serif JP",serif;font-size:14pt}
+.back h2 small{font-family:"Noto Sans JP",sans-serif;font-size:9pt;font-weight:400;margin-left:2mm}
+.back p{font-size:7pt;line-height:1.55;margin-top:1.5mm}
+.back .row{display:flex;justify-content:space-between;font-size:6.5pt;border-top:.3mm solid #1f3a2e;padding-top:2mm}
+/* sample "photos" (placeholders drawn with CSS) */
+.s-hero{background:linear-gradient(180deg,#8fb7c9 0%,#cfe0d6 45%,#6f9a7f 46%,#3f6b55 70%,#24432f 100%)}
+.s-onsen{background:radial-gradient(circle at 50% 70%,#e9efe9 0 18%,#9fbfb0 19% 40%,#5c7f6c 41%)}
+.s-pizza{background:radial-gradient(circle at 50% 55%,#c8452c 0 22%,#e8b04b 23% 30%,#7a4a2a 31% 36%,#3a2a22 37%)}
+.s-trail{background:linear-gradient(160deg,#a9c7a0 0%,#5d8a63 50%,#2f5038 100%)}
+</style></head><body>
+<section class="card">
+  <div class="ph hero s-hero">
+    <svg style="position:absolute;inset:0;width:100%;height:100%" viewBox="0 0 78 100" preserveAspectRatio="none"><path d="M0 62 L18 40 L30 52 L46 30 L62 50 L78 42 L78 100 L0 100Z" fill="#2f5a43" opacity=".9"/><path d="M0 76 L22 62 L40 72 L58 60 L78 70 L78 100 L0 100Z" fill="#1f3a2e"/><rect x="44" y="66" width="14" height="8" fill="#f4f1e8" opacity=".9"/><path d="M42 66 L51 60 L60 66Z" fill="#7a4a2a"/></svg>
+    <span class="tag">SAMPLE: 夏の外観・妙高山</span>
+    <div class="hero-text">
+      <div class="lead">Myoko is green<br>from April<br>to November.</div>
+      <div class="lead-ja">妙高は、4月から11月まで緑の季節。</div>
+    </div>
+    <div class="hero-foot">TSUBAME HIGHLAND LODGE<span>燕ハイランドロッジ · Tsubame Onsen, Myoko</span></div>
+  </div>
+  <div class="side">
+    <div class="sub">Hot springs at 1,100 m, Mt. Myoko<br>and wood-fired pizza.<br>標高1,100mの温泉と妙高山、薪窯ピザ。</div>
+    <div class="qr">QR_HERE</div>
+    <div class="scan">Scan to register · 1 min</div>
+    <div class="scan-ja">読み取って登録（1分）</div>
+    <div class="perk"><b>Register with your email:</b> 10% off a direct booking + a free drink for lodge guests in 2027. Share with friends, they get it too.<br><b>メール登録で</b>直接予約10%オフ＋ご宿泊の方に1杯サービス。お友達にも同じ特典。</div>
+    <div class="fine">Valid if the 2027 green season goes ahead. No alcohol for under-20s or drivers. / 2027年グリーンシーズンに営業する場合に有効。20歳未満の方・運転される方にはアルコールをお出しできません。</div>
+  </div>
+</section>
+<section class="card back">
+  <div class="ph s-onsen"><span class="tag">SAMPLE: 温泉・冷泉</span></div>
+  <div class="ph s-pizza"><span class="tag">SAMPLE: 薪窯ピザとビール</span></div>
+  <div class="ph s-trail"><span class="tag">SAMPLE: 妙高山の登山道</span></div>
+  <div class="info">
+    <div>
+      <h2>Tsubame Highland Lodge<small>燕ハイランドロッジ</small></h2>
+      <p>A small hot-spring lodge at the end of Tsubame Onsen, near the Mt. Myoko trailhead. Plans for the 2027 green season are not final yet; we will email registered guests when details are confirmed.<br>燕温泉のいちばん奥、妙高山の登山口近くにある小さな温泉宿です。2027年の営業内容は予定です。決まり次第、登録された方にメールでご案内します。</p>
+    </div>
+    <div class="row"><span>〒949-2235 新潟県妙高市大字関山 妙高山国有林内 · Myoko-san Kokuyurin-nai, Sekiyama, Myoko, Niigata</span><span>sho@cominc.co</span></div>
+  </div>
+</section>
+</body></html>
