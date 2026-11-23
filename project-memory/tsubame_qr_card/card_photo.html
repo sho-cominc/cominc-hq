@@ -8,7 +8,7 @@ body{font-family:"Noto Sans JP","IPAPGothic",sans-serif;color:#1f3a2e}
 .card{width:148mm;height:100mm;position:relative;overflow:hidden;page-break-after:always;background:#f4f1e8}
 /* PHOTO: replace the background of .ph with url('photo.jpg') center/cover when real photos arrive */
 .ph{position:absolute;background-size:cover;background-position:center}
-.ph .tag{position:absolute;left:2mm;bottom:2mm;font-size:5.5pt;color:#fff;background:rgba(0,0,0,.45);padding:.5mm 1.5mm;border-radius:1mm}
+.ph .tag{position:absolute;right:2mm;bottom:2mm;font-size:5.5pt;color:#fff;background:rgba(0,0,0,.45);padding:.5mm 1.5mm;border-radius:1mm}
 .hero{left:0;top:0;width:78mm;height:100mm}
 .hero-text{position:absolute;left:7mm;top:8mm;right:6mm;color:#fff;text-shadow:0 .4mm 1.5mm rgba(0,0,0,.45)}
 .lead{font-family:"Noto Serif JP",serif;font-size:16pt;line-height:1.2;font-weight:600}
@@ -32,15 +32,14 @@ body{font-family:"Noto Sans JP","IPAPGothic",sans-serif;color:#1f3a2e}
 .back p{font-size:7pt;line-height:1.55;margin-top:1.5mm}
 .back .row{display:flex;justify-content:space-between;font-size:6.5pt;border-top:.3mm solid #1f3a2e;padding-top:2mm}
 /* sample "photos" (placeholders drawn with CSS) */
-.s-hero{background:linear-gradient(180deg,#8fb7c9 0%,#cfe0d6 45%,#6f9a7f 46%,#3f6b55 70%,#24432f 100%)}
-.s-onsen{background:radial-gradient(circle at 50% 70%,#e9efe9 0 18%,#9fbfb0 19% 40%,#5c7f6c 41%)}
-.s-pizza{background:radial-gradient(circle at 50% 55%,#c8452c 0 22%,#e8b04b 23% 30%,#7a4a2a 31% 36%,#3a2a22 37%)}
-.s-trail{background:linear-gradient(160deg,#a9c7a0 0%,#5d8a63 50%,#2f5038 100%)}
+.s-hero{background-image:linear-gradient(180deg,rgba(20,30,25,.55) 0%,rgba(20,30,25,0) 40%,rgba(20,30,25,0) 70%,rgba(20,30,25,.6) 100%),url('photo_room.jpg');background-position:center 60%}
+.s-onsen{background-image:url('photo_waterfall.jpg');background-position:70% center}
+.s-pizza{background-image:url('photo_myoko.jpg');background-position:30% 70%}
+.s-trail{background-image:url('photo_room_corner.jpg');background-position:60% center}
 </style></head><body>
 <section class="card">
   <div class="ph hero s-hero">
-    <svg style="position:absolute;inset:0;width:100%;height:100%" viewBox="0 0 78 100" preserveAspectRatio="none"><path d="M0 62 L18 40 L30 52 L46 30 L62 50 L78 42 L78 100 L0 100Z" fill="#2f5a43" opacity=".9"/><path d="M0 76 L22 62 L40 72 L58 60 L78 70 L78 100 L0 100Z" fill="#1f3a2e"/><rect x="44" y="66" width="14" height="8" fill="#f4f1e8" opacity=".9"/><path d="M42 66 L51 60 L60 66Z" fill="#7a4a2a"/></svg>
-    <span class="tag">SAMPLE: 夏の外観・妙高山</span>
+        <span class="tag">客室からの眺め / View from a guest room</span>
     <div class="hero-text">
       <div class="lead">Myoko is green<br>from April<br>to November.</div>
       <div class="lead-ja">妙高は、4月から11月まで緑の季節。</div>
@@ -58,9 +57,9 @@ body{font-family:"Noto Sans JP","IPAPGothic",sans-serif;color:#1f3a2e}
   </div>
 </section>
 <section class="card back">
-  <div class="ph s-onsen"><span class="tag">SAMPLE: 温泉・冷泉</span></div>
-  <div class="ph s-pizza"><span class="tag">SAMPLE: 薪窯ピザとビール</span></div>
-  <div class="ph s-trail"><span class="tag">SAMPLE: 妙高山の登山道</span></div>
+  <div class="ph s-onsen"><span class="tag">燕温泉の沢 / Tsubame Onsen stream</span></div>
+  <div class="ph s-pizza"><span class="tag">妙高山 / Mt. Myoko</span></div>
+  <div class="ph s-trail"><span class="tag">客室 / Guest room</span></div>
   <div class="info">
     <div>
       <h2>Tsubame Highland Lodge<small>燕ハイランドロッジ</small></h2>
