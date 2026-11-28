@@ -2,7 +2,7 @@
 
 `~/.claude/agents/*.md` のエージェントが **ComInc. の事業の仕事をするときに読む、事業ごとの細かいルール**（会社全体の方針はエージェント定義側にある）。役割ごとのファイル（`<name>.md`）とあわせて読む。汎用定義の汎用部分と食い違ったら、こちらが優先する。ただし定義の「会社の方針（ComInc.）」節はこちらより優先する。
 
-役割とファイルの対応: Min → `min.md` / Cat → `cat.md` / Hana → `hana.md` / Kai → `kai.md` / Fin → `fin.md` / Law → `law.md` / Prod → `prod.md` / Webber・Dev・Clare・Yuri → `web.md` / Ottar → この README だけ（委任するときは、相手の役割のファイルを読むよう指示する）
+役割とファイルの対応: Min → `min.md` / Cat → `cat.md` / Hana → `hana.md` / Kai → `kai.md` / Fin → `fin.md` / Law → `law.md` / Prod → `prod.md` / Webber・Dev・Clare・Yuri → `web.md` / Ottar → `ottar.md`（振り分け表・シフト制・ブリーフのテンプレ。委任するときは、相手の役割のファイルを読むよう指示する）
 
 **このフォルダにも動く情報（料金・状況・日付）は書かない。** 事実は下の読み先にある。
 
