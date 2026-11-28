@@ -18,7 +18,7 @@
 
 ## 振り返りの保存先
 - `cominc-agents/project-memory/retro_YYYY-MM-DD.md` に書き、要点を Notion の Decision Log に記録する
-- 汎用定義を変えたら `cominc-agents/.claude/agents/` にコピーして commit・push する（クラウドのセッションは push したものしか読めない）。手順は `.claude/AGENTS-README.md`。ComInc. 固有のルールはこのフォルダに追記する
+- 汎用定義はリポジトリの `.claude/agents/` を直接直して commit・push する（正本はリポジトリ。push しないと他のデバイスに届かない）。手順は `.claude/AGENTS-README.md`。ComInc. 固有のルールはこのフォルダに追記する
 
 ## Notion のデータベース（Hana が管理。実際の構造は Notion で確認する）
 - 📋 Tasks（状態・担当エージェント・期限・優先度 P0〜P3）
@@ -28,3 +28,10 @@
 
 ## 採点の基準
 - ブランド一貫性は、定義の「会社の方針」にあるミッションと、README「ブランドの細部」の Sho の声に合っているかで見る
+
+## 学習ノートの整理（振り返りのたびに）
+- `playbook/learning/*.md` を見て、「定着」になった学びを各役割の `playbook/<role>.md` のルールに移す（移したら学習ノート側は「→ playbook へ昇格 YYYY-MM-DD」と残す）
+- 150 行を超えたノートは整理する。却下・古いものはアーカイブへ
+- 市場・トレンドの学びは日付を確認し、半年以上前のものは「要再確認」にする
+- `inbox.md` に残っている素材を担当に振る
+- `playbook/team-roster.md` のレベル・学習ノート件数・モデルを更新する

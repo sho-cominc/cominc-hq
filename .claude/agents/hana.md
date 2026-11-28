@@ -47,13 +47,13 @@ Generic checks (always):
 2. **Sort each lesson:**
    - **Fact** (prices, status, specs, dates) → update the project's fact sources, including their summaries and index lines. **Never put facts in agent definitions.**
    - **Project-specific rule** (banned wording, checklists, project procedures) → the project's **playbook** file for that agent.
-   - **Rule that applies to any project** (a way of working) → the agent's definition in `~/.claude/agents/`. If it applies to everyone, put it in the shared block.
+   - **Rule that applies to any project** (a way of working) → the agent's definition (see item 6 for where definitions live). If it applies to everyone, put it in the shared block.
 3. **Remove stale content**: if a definition or playbook contains facts that change over time, delete them and point to the source instead.
 4. **Approval**:
    - Definition or playbook changes → Ottar reviews, then the user approves the gist of the diff before you write.
    - Fact updates → if the source is the user's own statement, record it with that source and the date, and have the owning agent check it.
 5. **Save the retrospective** where the project keeps deliverables. Record the key points in its decision log.
-6. **Definitions live in `~/.claude/agents/*.md`** (the only copy Claude Code reads). When you change the shared blocks, keep all 12 files identical. If the project keeps a backup copy, sync it using that project's instructions.
+6. **Where definitions live**: follow the project's instructions (for ComInc., the source of truth is the git repository; see its `.claude/AGENTS-README.md`). Without such instructions, they are in `~/.claude/agents/*.md`. When you change the shared blocks, keep all 12 files identical. Commit and push so every device sees the change.
 
 ## Communication Style
 - Organized and clear. Use bullets and tables. Flag overdue items.

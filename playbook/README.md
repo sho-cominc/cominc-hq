@@ -2,7 +2,7 @@
 
 `~/.claude/agents/*.md` のエージェントが **ComInc. の事業の仕事をするときに読む、事業ごとの細かいルール**（会社全体の方針はエージェント定義側にある）。役割ごとのファイル（`<name>.md`）とあわせて読む。汎用定義の汎用部分と食い違ったら、こちらが優先する。ただし定義の「会社の方針（ComInc.）」節はこちらより優先する。
 
-役割とファイルの対応: Min → `min.md` / Cat → `cat.md` / Hana → `hana.md` / Kai → `kai.md` / Fin → `fin.md` / Law → `law.md` / Prod → `prod.md` / Webber・Dev・Clare・Yuri → `web.md` / Ottar → この README だけ（委任するときは、相手の役割のファイルを読むよう指示する）
+役割とファイルの対応: Min → `min.md` / Cat → `cat.md` / Hana → `hana.md` / Kai → `kai.md` / Fin → `fin.md` / Law → `law.md` / Prod → `prod.md` / Webber・Dev・Clare・Yuri → `web.md` / Ottar → `ottar.md`（振り分け表・シフト制・ブリーフのテンプレ。委任するときは、相手の役割のファイルを読むよう指示する）
 
 **このフォルダにも動く情報（料金・状況・日付）は書かない。** 事実は下の読み先にある。
 
@@ -15,6 +15,13 @@
 1. **メモリ**（事実の正）: `C:\Users\shota\.claude\projects\C--Users-shota-Arai-Supabase\memory\MEMORY.md` と本文。Cominca-stay. に触れる作業では必ず `project_cominca_stay.md` の本文を読む。索引の行と description は要約なので、数字は本文から取る
 2. **Notion「📝 Sho's Notes」** https://www.notion.so/334860170c1781949710cc1db811afc4 — 最終更新日を確認する。古ければメモリを優先する
 3. 作業ルートの `CLAUDE.md`（プロジェクトの地図・デプロイ方法・開発サーバー）と、各リポジトリの `CLAUDE.md` / README
+
+## 学習ノート（レベルアップの仕組み）
+- **仕事の最初に `playbook/learning/<自分の名前>.md` を読み、関係する学びを提案に使う**（使ったら「学習ノート #n を適用」と書く）
+- Sho から素材（リンク・スクショ・「これいい / 違う」）を受け取ったら、`playbook/learning/README.md` の手順で自分のノートに追記する
+- `playbook/learning/inbox.md` に未処理の素材があり、自分の担当なら、仕事の終わりに処理を提案する
+- 定着した学びをこのプレイブックのルールへ移すのは、Hana の振り返りで行う
+- 全員のレベルと現在地は `playbook/team-roster.md`（Hana が振り返りのたびに更新）
 
 ## 成果物の保存先
 | 成果物 | 保存先 |
@@ -61,5 +68,5 @@
 役割・呼び出し名・レビューの流れは、エージェント定義とこのプレイブックが正。部署の表記などで Notion の組織図と食い違ったら、Hana が Sho に確認してどちらかに揃える。
 
 ## 定義・プレイブックの同期
-- 汎用定義の正は `~/.claude/agents/*.md`。`cominc-agents/agents/` はそのバックアップ（手順は `agents/README.md`）
+- 汎用定義の正は**このリポジトリの `.claude/agents/*.md`**（2026-11-28 から）。PC の `~/.claude/agents` はそこへのリンク。手順は `.claude/AGENTS-README.md`
 - ComInc. 固有のルールの追加先は**このフォルダ**。追加の仕方は Hana の振り返り手順に従う
