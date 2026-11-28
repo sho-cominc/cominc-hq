@@ -18,7 +18,7 @@
 
 ## 振り返りの保存先
 - `cominc-agents/project-memory/retro_YYYY-MM-DD.md` に書き、要点を Notion の Decision Log に記録する
-- 汎用定義を変えたら `cominc-agents/.claude/agents/` にコピーして commit・push する（クラウドのセッションは push したものしか読めない）。手順は `.claude/AGENTS-README.md`。ComInc. 固有のルールはこのフォルダに追記する
+- 汎用定義はリポジトリの `.claude/agents/` を直接直して commit・push する（正本はリポジトリ。push しないと他のデバイスに届かない）。手順は `.claude/AGENTS-README.md`。ComInc. 固有のルールはこのフォルダに追記する
 
 ## Notion のデータベース（Hana が管理。実際の構造は Notion で確認する）
 - 📋 Tasks（状態・担当エージェント・期限・優先度 P0〜P3）

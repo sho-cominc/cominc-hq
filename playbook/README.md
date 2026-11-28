@@ -68,5 +68,5 @@
 役割・呼び出し名・レビューの流れは、エージェント定義とこのプレイブックが正。部署の表記などで Notion の組織図と食い違ったら、Hana が Sho に確認してどちらかに揃える。
 
 ## 定義・プレイブックの同期
-- 汎用定義の正は `~/.claude/agents/*.md`。`cominc-agents/agents/` はそのバックアップ（手順は `agents/README.md`）
+- 汎用定義の正は**このリポジトリの `.claude/agents/*.md`**（2026-11-28 から）。PC の `~/.claude/agents` はそこへのリンク。手順は `.claude/AGENTS-README.md`
 - ComInc. 固有のルールの追加先は**このフォルダ**。追加の仕方は Hana の振り返り手順に従う
