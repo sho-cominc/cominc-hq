@@ -1,0 +1,55 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8">
+<title>Tsubame QR Card</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
+<style>
+@page{size:148mm 100mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Noto Sans JP","IPAPGothic",sans-serif;color:#1f3a2e}
+.card{width:148mm;height:100mm;position:relative;overflow:hidden;page-break-after:always;background:#f4f1e8}
+.front{display:grid;grid-template-columns:1fr 46mm;gap:6mm;padding:9mm 9mm 8mm 10mm}
+.band{position:absolute;left:0;right:0;bottom:0;height:16mm;background:#1f3a2e}
+.mtn{position:absolute;left:-10mm;width:165mm;bottom:15.8mm;height:12mm}
+.lead{font-family:"Noto Serif JP",serif;font-size:15pt;line-height:1.25;font-weight:600}
+.lead-ja{font-family:"Noto Serif JP",serif;font-size:10.5pt;margin-top:2mm;line-height:1.45}
+.sub{font-size:7.5pt;margin-top:2.5mm;line-height:1.45;color:#3b5a4b}
+.perk{position:relative;z-index:2;margin-top:3mm;font-size:7pt;line-height:1.45;background:#fff;border-left:2mm solid #d9822b;padding:1.8mm 2.5mm}
+.right{position:relative;z-index:2;text-align:center}
+.qr{background:#fff;padding:3mm;border-radius:2mm;width:44mm;height:44mm}
+.qr svg{width:100%;height:100%}
+.scan{font-weight:700;font-size:9pt;margin-top:2mm}
+.scan-ja{font-size:7.5pt}
+.foot{position:absolute;left:10mm;right:9mm;bottom:4.5mm;z-index:2;color:#f4f1e8;font-size:7pt;display:flex;justify-content:space-between;align-items:baseline}
+.foot b{font-size:9.5pt;letter-spacing:.04em}
+.fine{position:relative;z-index:2;margin-top:1.5mm;font-size:5.6pt;color:#3b5a4b;line-height:1.4}
+.back{padding:12mm 12mm;display:flex;flex-direction:column;justify-content:space-between}
+.back h2{font-family:"Noto Serif JP",serif;font-size:16pt}
+.back .ja{font-size:10pt;margin-top:1mm}
+.back p{font-size:7.5pt;line-height:1.6;margin-top:3mm}
+.back .row{display:flex;justify-content:space-between;align-items:flex-end;font-size:7pt;border-top:.3mm solid #1f3a2e;padding-top:3mm}
+</style></head><body>
+<section class="card front">
+  <svg class="mtn" viewBox="0 0 560 80" preserveAspectRatio="none"><path d="M0 80 L0 55 L70 30 L120 48 L210 8 L290 44 L350 26 L430 52 L500 34 L560 50 L560 80Z" fill="#7fa38a" opacity=".55"/><path d="M0 80 L0 64 L90 46 L160 60 L250 34 L330 58 L420 42 L560 62 L560 80Z" fill="#4e7562"/></svg>
+  <div>
+    <div class="lead">Myoko is green<br>from April to November.</div>
+    <div class="lead-ja">妙高は、4月から11月まで緑の季節。</div>
+    <div class="sub">Hot springs at 1,100 m, Mt. Myoko and pellet-oven pizza.<br>標高1,100mの温泉と妙高山、ペレット窯ピザで、もう一度。</div>
+    <div class="perk"><b>Register with your email:</b> 10% off a direct booking + a free drink for lodge guests in 2027. Share with friends, they get it too.<br><b>メール登録で</b>直接予約10%オフ＋ご宿泊の方に1杯サービス。お友達にも同じ特典。</div>
+    <div class="fine">Valid if the 2027 green season goes ahead. No alcohol for under-20s or drivers.<br>2027年グリーンシーズンに営業する場合に有効。20歳未満の方・運転される方にはアルコールをお出しできません。</div>
+  </div>
+  <div class="right">
+    <div class="qr">QR_HERE</div>
+    <div class="scan">Scan to register · 1 min</div>
+    <div class="scan-ja">読み取って登録（1分）</div>
+  </div>
+  <div class="band"></div>
+  <div class="foot"><b>TSUBAME HIGHLAND LODGE</b><span>燕ハイランドロッジ · Tsubame Onsen, Myoko</span></div>
+</section>
+<section class="card back">
+  <div>
+    <h2>Tsubame Highland Lodge</h2>
+    <div class="ja">燕ハイランドロッジ</div>
+    <p>A small hot-spring lodge at the end of Tsubame Onsen, near the Mt. Myoko trailhead. Plans for the 2027 green season are not final yet. We will email registered guests when details are confirmed.<br>燕温泉のいちばん奥、妙高山の登山口近くにある小さな温泉宿です。2027年の営業内容は予定です。決まり次第、登録された方にメールでご案内します。</p>
+  </div>
+  <div class="row"><span>〒949-2235 新潟県妙高市大字関山 妙高山国有林内<br>Myoko-san Kokuyurin-nai, Sekiyama, Myoko, Niigata</span><span>sho@cominc.co</span></div>
+</section>
+</body></html>
