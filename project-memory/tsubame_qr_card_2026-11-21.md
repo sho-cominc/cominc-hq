@@ -9,7 +9,7 @@
 ## 表（英語を大きく、日本語を下に）
 
 **Myoko is green from April to November.**
-Come back for hot springs, Mt. Myoko and wood-fired pizza at 1,100 m.
+Come back for hot springs, Mt. Myoko and pellet-oven pizza at 1,100 m.
 
 [QR]
 
@@ -20,7 +20,7 @@ Come back for hot springs, Mt. Myoko and wood-fired pizza at 1,100 m.
 ---
 
 妙高は、4月から11月まで緑の季節。
-標高1,100mの温泉と妙高山、薪窯ピザで、もう一度。
+標高1,100mの温泉と妙高山、ペレット窯ピザで、もう一度。
 
 [QR]
 
